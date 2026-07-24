@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bo7il8n8y5uky"]
+
+[node name="lockedPin" type="Node2D" unique_id=2100525248]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1380724279]
+offset_right = 17.0
+offset_bottom = 29.0
+color = Color(0.31980708, 0.2892819, 0.22403166, 1)

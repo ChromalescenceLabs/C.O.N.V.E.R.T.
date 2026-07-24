@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://y3jvekxplqhv"]
+
+[ext_resource type="Script" uid="uid://c85vbh0ndjss7" path="res://scripts/unlocked_pin.gd" id="1_ehgyq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_060gk"]
+size = Vector2(19, 20)
+
+[node name="unlockedPin" type="Node2D" unique_id=1130497477]
+script = ExtResource("1_ehgyq")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1051973014]
+offset_right = 17.0
+offset_bottom = 29.0
+color = Color(0.8666667, 0.68235296, 0.4745098, 1)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=163731063]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1552686307]
+position = Vector2(8.5, 22)
+shape = SubResource("RectangleShape2D_060gk")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
