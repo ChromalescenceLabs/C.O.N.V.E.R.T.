@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://coxh8yixjx6jf"]
 
-[ext_resource type="Script" uid="uid://cr38v5eb02ydy" path="res://Scripts/lockpicking_scene.gd" id="1_o0kaa"]
-[ext_resource type="Script" uid="uid://hvjyrbx8r8d4" path="res://Scripts/lockpick.gd" id="2_36kgi"]
-[ext_resource type="PackedScene" uid="uid://bo7il8n8y5uky" path="res://Scenes/locked_pin.tscn" id="2_w5biu"]
-[ext_resource type="PackedScene" uid="uid://y3jvekxplqhv" path="res://Scenes/unlocked_pin.tscn" id="3_vn4w1"]
+[ext_resource type="Script" uid="uid://cr38v5eb02ydy" path="res://scripts/lockpicking_scene.gd" id="1_o0kaa"]
+[ext_resource type="Script" uid="uid://hvjyrbx8r8d4" path="res://scripts/lockpick.gd" id="2_36kgi"]
+[ext_resource type="PackedScene" uid="uid://bo7il8n8y5uky" path="res://scenes/locked_pin.tscn" id="2_w5biu"]
+[ext_resource type="PackedScene" uid="uid://y3jvekxplqhv" path="res://scenes/unlocked_pin.tscn" id="3_vn4w1"]
 [ext_resource type="FontFile" uid="uid://cy7fopfyqe1sb" path="res://Fonts/Bree_Serif/BreeSerif-Regular.ttf" id="5_vn4w1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p3nbc"]
@@ -51,14 +51,15 @@ lockedPin = ExtResource("2_w5biu")
 unlockedPin = ExtResource("3_vn4w1")
 
 [node name="camBg" type="ColorRect" parent="." unique_id=1411303050]
-offset_left = -170.0
-offset_top = -87.0
-offset_right = 406.0
-offset_bottom = 237.0
+offset_left = -223.0
+offset_top = -117.0
+offset_right = 476.0
+offset_bottom = 286.0
 color = Color(0.14512813, 0.1509448, 0.18533576, 1)
 
-[node name="Camera2D" type="Camera2D" parent="camBg" unique_id=403337680]
-position = Vector2(288, 162)
+[node name="Camera2D" type="Camera2D" parent="." unique_id=403337680]
+position = Vector2(118, 75)
+scale = Vector2(1.1982507, 2.0885305)
 zoom = Vector2(2, 2)
 
 [node name="bg" type="ColorRect" parent="." unique_id=1873464727]
@@ -144,10 +145,10 @@ W - go up"
 [node name="black" type="ColorRect" parent="." unique_id=1311005623]
 modulate = Color(1, 1, 1, 0)
 z_index = 100
-offset_left = -186.0
-offset_top = -103.0
-offset_right = 1013.0
-offset_bottom = 603.0
+offset_left = -464.0
+offset_top = -262.0
+offset_right = 735.0
+offset_bottom = 444.0
 color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="black" unique_id=294205124]
