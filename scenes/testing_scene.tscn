@@ -30,8 +30,13 @@ shape = SubResource("RectangleShape2D_ifns1")
 [node name="Player" parent="." unique_id=1866997068 instance=ExtResource("1_ifns1")]
 position = Vector2(165, 225)
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1828688111]
-zoom = Vector2(1.58, 1.58)
+[node name="PlayerCam" type="Camera2D" parent="Player" unique_id=1117197161]
+zoom = Vector2(2.155, 2.155)
+limit_left = 0
+limit_top = 0
+limit_right = 1280
+limit_bottom = 720
+position_smoothing_enabled = true
 
 [node name="NPC" parent="." unique_id=1011810883 node_paths=PackedStringArray("points") instance=ExtResource("2_2j2p2")]
 position = Vector2(383, 186)
@@ -53,3 +58,7 @@ position = Vector2(348, 48)
 
 [node name="Distraction" type="Marker2D" parent="Node2D" unique_id=859279693]
 position = Vector2(510, 258)
+
+[node name="OverallCam" type="Camera2D" parent="." unique_id=307815127]
+anchor_mode = 0
+enabled = false

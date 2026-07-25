@@ -11,7 +11,8 @@ var prompt = [
 	"Water is good, Llyod is water, Lloyd is good!",
 	"You want to know who Bam is? Bam is just Bam.",
 	"Dojka. Starting now, we're going to read everything again.",
-	"Avery, what's in your inventory?"
+	"Avery, what's in your inventory?",
+	"And apparently, Mech was here."
 ]
 
 func getPrompt() -> String:
