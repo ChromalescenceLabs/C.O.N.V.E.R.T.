@@ -7,7 +7,7 @@ var speed : float = 100
 enum STATE { IDLE, PATH, DISTRACTED }
 var current_state : STATE = STATE.PATH
 var current_pos : Vector2
-var stay
+var stay = false
 
 @export var points : Array[Marker2D]
 
