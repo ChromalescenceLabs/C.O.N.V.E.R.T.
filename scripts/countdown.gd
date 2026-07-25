@@ -3,6 +3,7 @@ extends Node2D
 @onready var timer: Timer = $Timer
 @onready var pulse_timer: Timer = $PulseTimer
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var sprite_2d: Sprite2D = $Node2D/Sprite2D
 
 const MISSION_END = preload("uid://brtmt3juhpp44")
 
@@ -11,6 +12,8 @@ const MISSION_END = preload("uid://brtmt3juhpp44")
 var shake = false
 
 func _ready() -> void:
+	create_tween().tween_property(sprite_2d, "modulate:a", 1, 1)
+	create_tween().tween_property(timer_label, "modulate:a", 1, 1)
 	timer.wait_time = mins * 60
 	timer.start()
 
@@ -44,4 +47,4 @@ func _on_pulse_timer_timeout() -> void:
 func _on_timer_timeout() -> void:
 	var end = MISSION_END.instantiate()
 	end.status = "Fail"
-	add_child(end)
+	get_parent().add_child(end)

@@ -22,4 +22,5 @@ func _show_fail():
 	create_tween().tween_property(reenlist, "modulate:a", 1, 0.5).set_ease(Tween.EASE_IN_OUT)
 	
 	reenlist.disabled = false
+	reenlist.mouse_filter = Control.MOUSE_FILTER_STOP
 	

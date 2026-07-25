@@ -9,6 +9,7 @@ var previous_scene_path : String
 var use_sub_threads : bool = true
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	set_process(false)
 	
 func load_scene(_scene_path: String, slduration: float) -> void:

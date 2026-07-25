@@ -97,10 +97,12 @@ speed_scale = 1.34
 [node name="Node2D" type="Node2D" parent="." unique_id=952190036]
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=34735580]
+modulate = Color(1, 1, 1, 0)
 scale = Vector2(52, 48)
 texture = SubResource("PlaceholderTexture2D_c8cft")
 
 [node name="TimerLabel" type="Label" parent="Node2D" unique_id=962797046]
+modulate = Color(1, 1, 1, 0)
 z_as_relative = false
 anchors_preset = 8
 anchor_left = 0.5
