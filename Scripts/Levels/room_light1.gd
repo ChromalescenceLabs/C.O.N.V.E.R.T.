@@ -57,7 +57,7 @@ func _on_r_5_body_entered(body: Node2D) -> void:
 func _on_r_1_body_exited(body: Node2D) -> void:
 	if body is Player:
 		$Room1.enabled = false
-		print($Room1.enabled)
+		print("BYE")
 
 
 func _on_r_2_body_exited(body: Node2D) -> void:
