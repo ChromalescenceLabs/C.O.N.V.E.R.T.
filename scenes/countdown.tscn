@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dcnqgatj8d0wl"]
+
+[ext_resource type="Script" uid="uid://whltremrefsx" path="res://scripts/countdown.gd" id="1_c8cft"]
+
+[node name="Countdown" type="Node2D" unique_id=1102513215]
+script = ExtResource("1_c8cft")
+
+[node name="TimerLabel" type="Label" parent="." unique_id=962797046]
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 99.0
+offset_top = 52.0
+offset_right = 141.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "00:00"
+
+[node name="Timer" type="Timer" parent="." unique_id=16637147]
+wait_time = 300.0
+autostart = true
