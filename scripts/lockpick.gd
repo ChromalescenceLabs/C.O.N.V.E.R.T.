@@ -32,7 +32,9 @@ func _input(_event: InputEvent) -> void:
 						unlock = false
 						break
 				if unlock == true:
-					print("Unlocked!")
+					$"../black/AnimationPlayer".play("fade in")
+					await $"../black/AnimationPlayer".animation_finished
+					queue_free()
 					
 		else:
 			for pin in get_tree().get_nodes_in_group("unlockedPins"):

@@ -11,23 +11,27 @@ func _ready() -> void:
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey and not event.is_echo() and event.unicode > 0:
 		var keyTyped= char(event.unicode)
-		
 		var prompt = $Sentence.getPrompt()
 		var nextChar = prompt.substr(currentLetterInd, 1)
+
 		if keyTyped == nextChar:
 			print("yay correct")
 			currentLetterInd += 1
 			$Sentence.setNextChar(currentLetterInd)
-			
+
 			if currentLetterInd == prompt.length():
 				sentenceNum += 1
-				
+
 				if sentenceNum <= randomSentence:
 					currentLetterInd = 0
 					$Sentence.start()
 					$Sentence.setNextChar(currentLetterInd)
 				else:
 					print ("done")
+					$black/AnimationPlayer.play("fade in")
+					await $black/AnimationPlayer.animation_finished
+					queue_free()
+
 		else:
 			print("its %s not %s" % [nextChar,keyTyped])
 			$Sentence.shake() 

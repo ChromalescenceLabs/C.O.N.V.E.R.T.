@@ -9,6 +9,8 @@ extends ColorRect
 @export var future= Color("9c98c6ff")
 @export var bg = Color("2a2a41ff")
 
+var ogPos = position
+
 func _ready() -> void:
 	start()
 
@@ -33,7 +35,6 @@ func getColorTag(color: Color):
 
 func shake():
 	var tween = create_tween()
-	var ogPos = position
 	var shakeInt = 8.0
 	var shakeSpeed = 0.04
 
