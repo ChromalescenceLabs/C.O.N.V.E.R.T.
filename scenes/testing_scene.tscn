@@ -67,3 +67,4 @@ enabled = false
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=620556133]
 
 [node name="CountdownDisplay" parent="CanvasLayer" unique_id=1102513215 instance=ExtResource("4_dh6dg")]
+mins = 2

@@ -3,8 +3,9 @@ extends Node2D
 @onready var timer: Timer = $Timer
 @onready var pulse_timer: Timer = $PulseTimer
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
-@onready var color_rect: ColorRect = $ColorRect
+@onready var color_rect: ColorRect = $Node2D2/ColorRect
 @onready var node_2d: Node2D = $Node2D
+@onready var button: Button = $Node2D2/Button
 
 @export var mins : int
 
@@ -44,3 +45,10 @@ func _on_pulse_timer_timeout() -> void:
 func _on_timer_timeout() -> void:
 	create_tween().tween_property(color_rect, "modulate:a", 1, 0.5).set_ease(Tween.EASE_IN_OUT)
 	create_tween().tween_property(node_2d, "scale", Vector2(0, 0), 0.5).set_ease(Tween.EASE_IN_OUT)
+	var tw = create_tween().tween_property(button, "modulate:a", 1, 0.5).set_ease(Tween.EASE_IN_OUT)
+	await tw.finished
+	button.disabled = false
+
+
+func _on_button_pressed() -> void:
+	get_tree().reload_current_scene()
