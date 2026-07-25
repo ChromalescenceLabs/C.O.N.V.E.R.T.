@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://mjqvux53fn2c"]
 
-[ext_resource type="Script" uid="uid://bid6yw7hddtng" path="res://scripts/hacking_scene.gd" id="1_oq843"]
-[ext_resource type="Script" uid="uid://csknh7cxskref" path="res://scripts/sentence.gd" id="2_gr3u0"]
+[ext_resource type="Script" uid="uid://bid6yw7hddtng" path="res://Scripts/hacking_scene.gd" id="1_oq843"]
+[ext_resource type="Script" uid="uid://csknh7cxskref" path="res://Scripts/sentence.gd" id="2_gr3u0"]
 [ext_resource type="FontFile" uid="uid://c04vl4o21budm" path="res://Fonts/Sixtyfour/Sixtyfour-Regular-VariableFont_BLED,SCAN.ttf" id="3_o6c0m"]
 
 [sub_resource type="Environment" id="Environment_gr3u0"]
