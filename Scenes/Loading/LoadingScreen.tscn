@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://chgdopktb0d2w"]
 
-[ext_resource type="Script" uid="uid://c5gy7si52iahk" path="res://Scripts/loading_screen.gd" id="1_qregr"]
+[ext_resource type="Script" uid="uid://c5gy7si52iahk" path="res://scripts/loading_screen.gd" id="1_qregr"]
 
 [sub_resource type="Animation" id="Animation_kstye"]
 resource_name = "FadeOut"
@@ -39,7 +39,8 @@ _data = {
 }
 
 [node name="LoadingScreen" type="Node2D" unique_id=2017146105]
-z_index = 1000
+process_mode = 3
+z_index = 4096
 script = ExtResource("1_qregr")
 
 [node name="FadeScreen" type="ColorRect" parent="." unique_id=2124430119]
