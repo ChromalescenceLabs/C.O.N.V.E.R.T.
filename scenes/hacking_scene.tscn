@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://mjqvux53fn2c"]
+
+[ext_resource type="Script" uid="uid://bid6yw7hddtng" path="res://scripts/hacking_scene.gd" id="1_oq843"]
+[ext_resource type="Script" uid="uid://csknh7cxskref" path="res://scripts/sentence.gd" id="2_gr3u0"]
+[ext_resource type="FontFile" uid="uid://c04vl4o21budm" path="res://Fonts/Sixtyfour/Sixtyfour-Regular-VariableFont_BLED,SCAN.ttf" id="3_o6c0m"]
+
+[sub_resource type="Environment" id="Environment_gr3u0"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 1.0
+
+[node name="HackingScene" type="Node2D" unique_id=1620557320]
+position = Vector2(1, 0)
+script = ExtResource("1_oq843")
+
+[node name="Sentence" type="ColorRect" parent="." unique_id=883989657]
+offset_right = 1151.0
+offset_bottom = 648.0
+color = Color(0.098751165, 0.09152926, 0.16192952, 1)
+script = ExtResource("2_gr3u0")
+past = Color(0, 0.93924433, 0.5573444, 1)
+future = Color(0.48932534, 0.25574878, 0.99997455, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Sentence" unique_id=1909012096]
+modulate = Color(2.299, 2.299, 2.299, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -497.75
+offset_top = -138.0
+offset_right = 513.75
+offset_bottom = 245.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_separation = 15
+theme_override_fonts/normal_font = ExtResource("3_o6c0m")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "Hello Everybody I like you bro"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+justification_flags = 171
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Sentence" unique_id=1805849727]
+modulate = Color(0.5359268, 0.68269014, 0.5798511, 0.32941177)
+position = Vector2(582, 0)
+amount = 20
+lifetime = 1.2
+randomness = 0.46
+emission_shape = 3
+emission_rect_extents = Vector2(650, 1)
+spread = 107.11
+scale_amount_min = 40.0
+scale_amount_max = 40.0
+color = Color(0.70980394, 0.81960785, 0.88235295, 0.18039216)
+hue_variation_min = 0.55
+hue_variation_max = 0.86
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Sentence" unique_id=518890344]
+environment = SubResource("Environment_gr3u0")
+
+[node name="instructions" type="RichTextLabel" parent="Sentence" unique_id=1077807518]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -420.5
+offset_top = 80.0
+offset_right = 420.5
+offset_bottom = 138.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(1.6588712, 3.5362437, 3.3680613, 1)
+theme_override_fonts/normal_font = ExtResource("3_o6c0m")
+theme_override_font_sizes/normal_font_size = 40
+text = "Copy the sentence"
+tab_size = 3
+horizontal_alignment = 1
