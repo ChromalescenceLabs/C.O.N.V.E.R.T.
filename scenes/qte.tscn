@@ -1,0 +1,171 @@
+[gd_scene format=3 uid="uid://dogkhu0vyw73e"]
+
+[ext_resource type="Script" uid="uid://c1kf1jt706yho" path="res://scripts/qte.gd" id="1_dbj1j"]
+[ext_resource type="FontFile" uid="uid://cy7fopfyqe1sb" path="res://Fonts/Bree_Serif/BreeSerif-Regular.ttf" id="2_1k5uo"]
+[ext_resource type="Shader" uid="uid://do1ix7qqip6e8" path="res://shader/qte.gdshader" id="2_lbcdu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1k5uo"]
+resource_local_to_scene = true
+shader = ExtResource("2_lbcdu")
+shader_parameter/first_color = Color(0.25431952, 0.5835333, 0.49928796, 1)
+shader_parameter/second_color = Color(0.8413787, 0.6939488, 0.4358506, 1)
+shader_parameter/third_color = Color(1, 0.3821784, 0.64349085, 1)
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/unfilled_color = Color(0.443, 0.443, 0.443, 1)
+shader_parameter/value = 0.999999977648
+shader_parameter/smooth_ = 0.005
+shader_parameter/width_in = 0.68
+shader_parameter/width_out = 0.86
+shader_parameter/border_width = 0.05
+
+[sub_resource type="Animation" id="Animation_lbcdu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_1k5uo"]
+resource_name = "fade in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e5op3"]
+_data = {
+&"RESET": SubResource("Animation_lbcdu"),
+&"fade in": SubResource("Animation_1k5uo")
+}
+
+[sub_resource type="Environment" id="Environment_lbcdu"]
+background_mode = 3
+glow_enabled = true
+glow_intensity = 0.82
+
+[node name="QTE" type="Control" unique_id=1854816739]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dbj1j")
+
+[node name="bg" type="ColorRect" parent="." unique_id=984153072]
+layout_mode = 0
+offset_right = 1185.0
+offset_bottom = 705.0
+color = Color(0.120316945, 0.10719266, 0.21187964, 1)
+
+[node name="round" type="RichTextLabel" parent="bg" unique_id=85229025]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 16.0
+offset_right = 383.0
+offset_bottom = 86.0
+theme_override_colors/default_color = Color(2.5203042, 2.5203042, 2.5203042, 1)
+theme_override_fonts/normal_font = ExtResource("2_1k5uo")
+theme_override_font_sizes/normal_font_size = 50
+text = "Round: 6/7"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1046685542]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_1k5uo")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -60.0
+offset_top = -60.0
+offset_right = 132.0
+offset_bottom = 132.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Success" type="Label" parent="ColorRect" unique_id=1001506929]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -119.0
+offset_top = -84.0
+offset_right = -66.17444
+offset_bottom = 26.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = -0.5270249
+theme_override_colors/font_color = Color(4.0271416, 4.0271416, 4.0271416, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/font_size = 80
+text = "!"
+horizontal_alignment = 1
+
+[node name="Key" type="RichTextLabel" parent="ColorRect" unique_id=1779002370]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.75
+offset_top = -54.0
+offset_right = 40.75
+offset_bottom = 54.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(2.4225423, 2.4225423, 2.4225423, 1)
+theme_override_constants/outline_size = 10
+theme_override_font_sizes/normal_font_size = 70
+text = "A"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="ColorRect" unique_id=1515182522]
+modulate = Color(0.5359268, 0.68269014, 0.5798511, 0.32941177)
+position = Vector2(37, -255)
+amount = 20
+lifetime = 1.2
+randomness = 0.46
+emission_shape = 3
+emission_rect_extents = Vector2(650, 1)
+spread = 107.11
+scale_amount_min = 40.0
+scale_amount_max = 40.0
+color = Color(0.70980394, 0.81960785, 0.88235295, 0.18039216)
+hue_variation_min = 0.55
+hue_variation_max = 0.86
+
+[node name="black" type="ColorRect" parent="." unique_id=468693897]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 1199.0
+offset_bottom = 706.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="black" unique_id=1954487432]
+libraries/ = SubResource("AnimationLibrary_e5op3")
+
+[node name="CPUParticles2D2" type="WorldEnvironment" parent="." unique_id=5051156]
+environment = SubResource("Environment_lbcdu")
