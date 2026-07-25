@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://euqf1tvxyhrn" path="res://scenes/Levels/level_base.tscn" id="1_16p8j"]
 [ext_resource type="Texture2D" uid="uid://v0kas1moddc3" path="res://assets/level_placeholders/lvl1.png" id="2_1ukdm"]
+[ext_resource type="Script" uid="uid://ch55eo1pa3bs0" path="res://scripts/level_1.gd" id="2_klhba"]
 [ext_resource type="Script" uid="uid://cvvigmbt7348e" path="res://scripts/Levels/room_light1.gd" id="3_1ukdm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_16p8j"]
@@ -115,6 +116,7 @@ size = Vector2(20, 100.50894)
 polygon = PackedVector2Array(-10.196167, -46.787125, 10.210632, -44.651337, 10.944153, 49.958237, -9.659912, 50.643967)
 
 [node name="Level" unique_id=89423142 instance=ExtResource("1_16p8j")]
+script = ExtResource("2_klhba")
 
 [node name="Lvl1" type="Sprite2D" parent="Map" parent_id_path=PackedInt32Array(398342888) index="0" unique_id=1526086206]
 position = Vector2(642.4811, 346.99695)
@@ -413,8 +415,17 @@ occluder_light_mask = 1023
 [node name="Player" parent="." index="1" unique_id=1866997068]
 position = Vector2(1062, 674)
 
+[node name="Camera2D" type="Camera2D" parent="Player" index="2" unique_id=1960302298]
+zoom = Vector2(3, 3)
+limit_left = 0
+limit_top = 0
+limit_right = 1280
+limit_bottom = 720
+limit_smoothed = true
+
 [node name="Camera2D" parent="." index="3" unique_id=2043686662]
 position = Vector2(0, -3)
+enabled = false
 limit_enabled = false
 limit_left = 1367
 limit_top = 193
