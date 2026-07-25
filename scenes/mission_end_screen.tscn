@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://brtmt3juhpp44"]
+
+[ext_resource type="Script" uid="uid://col42bocpnh25" path="res://scripts/mission_end_screen.gd" id="1_t75y0"]
+[ext_resource type="Script" uid="uid://p8qrqkdxm5s1" path="res://scripts/mission_failed.gd" id="2_occd4"]
+
+[sub_resource type="Animation" id="Animation_138xr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FAILSAFE:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ghack"]
+resource_name = "failsafe_flash"
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FAILSAFE:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pekyc"]
+_data = {
+&"RESET": SubResource("Animation_138xr"),
+&"failsafe_flash": SubResource("Animation_ghack")
+}
+
+[node name="MissionEndScreen" type="CanvasLayer" unique_id=268768750]
+process_mode = 3
+layer = 2000
+script = ExtResource("1_t75y0")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1450909450]
+modulate = Color(1, 1, 1, 0)
+offset_left = -30.0
+offset_top = -23.0
+offset_right = 1305.0
+offset_bottom = 748.0
+color = Color(0, 0, 0, 1)
+
+[node name="MissionFailed" type="Node2D" parent="." unique_id=1120680930]
+script = ExtResource("2_occd4")
+
+[node name="FAILSAFE" type="RichTextLabel" parent="MissionFailed" unique_id=820103938]
+offset_left = 63.0
+offset_top = 190.0
+offset_right = 1235.0
+offset_bottom = 303.0
+theme_override_font_sizes/normal_font_size = 82
+bbcode_enabled = true
+text = "[FAILSAFE ACTIVATED]"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="FAILED" type="RichTextLabel" parent="MissionFailed" unique_id=464200122]
+modulate = Color(1, 1, 1, 0)
+offset_left = 72.0
+offset_top = 264.0
+offset_right = 1227.0
+offset_bottom = 377.0
+theme_override_font_sizes/normal_font_size = 82
+bbcode_enabled = true
+text = "MISSION FAILED"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MissionFailed" unique_id=1859225312]
+libraries/ = SubResource("AnimationLibrary_pekyc")
+speed_scale = 1.5
+
+[node name="Reenlist" type="Button" parent="MissionFailed" unique_id=2014657608]
+modulate = Color(1, 1, 1, 0)
+offset_left = 523.0
+offset_top = 495.0
+offset_right = 732.0
+offset_bottom = 576.0
+theme_override_font_sizes/font_size = 30
+disabled = true
+text = "RE-ENLIST?"
+
+[connection signal="pressed" from="MissionFailed/Reenlist" to="." method="_on_reenlist_pressed"]
