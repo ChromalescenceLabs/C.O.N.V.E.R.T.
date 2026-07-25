@@ -18,6 +18,8 @@ offset_right = 1151.0
 offset_bottom = 648.0
 color = Color(0.098751165, 0.09152926, 0.16192952, 1)
 script = ExtResource("2_gr3u0")
+past = Color(0, 0.93924433, 0.5573444, 1)
+future = Color(0.48932534, 0.25574878, 0.99997455, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Sentence" unique_id=1909012096]
 modulate = Color(2.299, 2.299, 2.299, 1)
