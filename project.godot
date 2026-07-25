@@ -11,12 +11,18 @@ config_version=5
 [application]
 
 config/name="C.O.N.V.E.R.T"
+run/main_scene="uid://b6u51oj4l0ahl"
 config/features=PackedStringArray("4.6", "GL Compatibility")
+boot_splash/bg_color=Color(0, 0, 0, 1)
+boot_splash/stretch_mode=0
+boot_splash/use_filter=false
+boot_splash/image="uid://d1tkev257t2qu"
 config/icon="res://assets/sprites/icon.svg"
 
 [autoload]
 
 SentencePrompts="*uid://blfyoss1y5ot1"
+SceneLoader="*uid://jauffil1d42j"
 
 [display]
 
