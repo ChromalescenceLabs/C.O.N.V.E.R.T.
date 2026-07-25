@@ -1,4 +1,5 @@
 extends CharacterBody2D
+class_name Player
 
 const SPEED : int = 150
 const ACCELERATION : int = 5

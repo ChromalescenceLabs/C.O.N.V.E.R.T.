@@ -14,3 +14,6 @@ scale = Vector2(0.8, 0.8)
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2043686662]
 anchor_mode = 0
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=921657011]
+color = Color(0.17641911, 0.17641908, 0.17641908, 1)
