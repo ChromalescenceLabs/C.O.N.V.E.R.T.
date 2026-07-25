@@ -37,6 +37,8 @@ func _state_set() -> void:
 		current_pos = points.back().global_position
 	elif current_state == STATE.TARGET and player:
 		nav.target_position = player.global_position
+	elif current_state == STATE.IDLE:
+		return
 
 func _navigate():
 	match current_state:
@@ -62,14 +64,15 @@ func _navigate():
 
 
 func _on_navigation_agent_2d_target_reached() -> void:
-	set_physics_process(false)
 	if current_state == STATE.DISTRACTED and stay == true:
+		current_state = STATE.IDLE
 		return
 	else:
 		current_state = STATE.IDLE
 		await get_tree().create_timer(randi_range(4, 5)).timeout
-		current_state = STATE.PATH
-		set_physics_process(true)
+		
+		if current_state != STATE.DISTRACTED:
+			current_state = STATE.PATH
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
