@@ -527,7 +527,7 @@ theme_override_styles/pressed = SubResource("StyleBoxEmpty_352yk")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_bnhpx")
 text = "space"
 
-[node name="Quit" type="Button" parent="OptionsMenu" unique_id=763315176]
+[node name="back" type="Button" parent="OptionsMenu" unique_id=763315176]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
@@ -568,3 +568,4 @@ hue_variation_max = 0.86
 [connection signal="pressed" from="MainTexts/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MainTexts/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MainTexts/Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="OptionsMenu/back" to="." method="_on_back_pressed"]

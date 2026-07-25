@@ -15,7 +15,6 @@ extends Control
 func _ready() -> void:
 	bloody.hide()
 	mainTexts.show()
-	$MainTexts/Options.hide()
 	optionsMenu.hide()
 	flickerLights()
 	flickerTitle()
@@ -54,3 +53,7 @@ func _on_options_pressed() -> void:
 
 func _on_quit_pressed() -> void:
 	get_tree().quit() 
+
+func _on_back_pressed() -> void:
+	optionsMenu.hide()
+	mainTexts.show()
