@@ -1,10 +1,25 @@
 [gd_scene format=3 uid="uid://cplpl7j2tbep3"]
 
 [ext_resource type="Script" uid="uid://bqw427ysb3dky" path="res://Scripts/npc.gd" id="1_nh2m4"]
-[ext_resource type="Texture2D" uid="uid://by12bj5k4s6pr" path="res://Assets/sprites/icon.svg" id="2_abqhh"]
+[ext_resource type="Texture2D" uid="uid://by12bj5k4s6pr" path="res://assets/sprites/icon.svg" id="2_abqhh"]
+[ext_resource type="Shader" uid="uid://do1ix7qqip6e8" path="res://shader/qte.gdshader" id="3_rv78h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tcuxl"]
 radius = 15.033297
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rv78h"]
+resource_local_to_scene = true
+shader = ExtResource("3_rv78h")
+shader_parameter/first_color = Color(0.25431952, 0.5835333, 0.49928796, 1)
+shader_parameter/second_color = Color(0.8413787, 0.6939488, 0.4358506, 1)
+shader_parameter/third_color = Color(1, 0.3821784, 0.64349085, 1)
+shader_parameter/outline_color = Color(0, 0, 0, 1)
+shader_parameter/unfilled_color = Color(0.443, 0.443, 0.443, 1)
+shader_parameter/value = 0.999999977648
+shader_parameter/smooth_ = 0.005
+shader_parameter/width_in = 0.58
+shader_parameter/width_out = 0.86
+shader_parameter/border_width = 0.05
 
 [node name="NPC" type="CharacterBody2D" unique_id=1011810883 node_paths=PackedStringArray("points")]
 script = ExtResource("1_nh2m4")
@@ -17,9 +32,36 @@ shape = SubResource("CircleShape2D_tcuxl")
 scale = Vector2(0.23437499, 0.23437476)
 texture = ExtResource("2_abqhh")
 
+[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=710778795]
+rotation = 1.5707964
+scale = Vector2(4.266667, 4.266671)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/Area2D" unique_id=87064079]
+polygon = PackedVector2Array(0, 0, 128, -56, 128, 56, 0, 0)
+
+[node name="Polygon2D" type="Polygon2D" parent="Sprite2D/Area2D" unique_id=558079404]
+color = Color(0.93333334, 0.57254905, 0.70980394, 0.6745098)
+polygon = PackedVector2Array(128, 56, 128, -56, 0, 0)
+
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=51221625]
 avoidance_enabled = true
-radius = 20.0
+radius = 2.0
 debug_enabled = true
 
+[node name="CIRCLE" type="ColorRect" parent="." unique_id=1074134260]
+material = SubResource("ShaderMaterial_rv78h")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -14.0
+offset_top = -48.0
+offset_right = 14.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="body_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Sprite2D/Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="target_reached" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_target_reached"]
