@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dmbhslapygqd7" path="res://scenes/player.tscn" id="1_ifns1"]
 [ext_resource type="Script" uid="uid://df5gbchxfspqm" path="res://scripts/testing_scene.gd" id="1_v6rby"]
 [ext_resource type="PackedScene" uid="uid://cplpl7j2tbep3" path="res://scenes/npc.tscn" id="2_2j2p2"]
+[ext_resource type="PackedScene" uid="uid://dcnqgatj8d0wl" path="res://scenes/countdown.tscn" id="4_dh6dg"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_365ag"]
 
@@ -62,3 +63,7 @@ position = Vector2(510, 258)
 [node name="OverallCam" type="Camera2D" parent="." unique_id=307815127]
 anchor_mode = 0
 enabled = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=620556133]
+
+[node name="CountdownDisplay" parent="CanvasLayer" unique_id=1102513215 instance=ExtResource("4_dh6dg")]
