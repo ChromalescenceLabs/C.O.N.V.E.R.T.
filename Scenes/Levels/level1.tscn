@@ -95,7 +95,7 @@ polygon = PackedVector2Array(-9, -91, 4, -91, 8, 90, -4, 90)
 size = Vector2(20, 100.50894)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ay16s"]
-polygon = PackedVector2Array(-10.423157, -63.814987, 11.557251, -53.771988, 10.944153, 49.958237, -9.659912, 50.643967)
+polygon = PackedVector2Array(-10.196167, -46.787125, 10.210632, -44.651337, 10.944153, 49.958237, -9.659912, 50.643967)
 
 [sub_resource type="Gradient" id="Gradient_16p8j"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
