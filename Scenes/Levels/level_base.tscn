@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://euqf1tvxyhrn"]
+
+[ext_resource type="PackedScene" uid="uid://dmbhslapygqd7" path="res://Scenes/player.tscn" id="1_lad7l"]
+
+[node name="Level" type="Node2D" unique_id=89423142]
+
+[node name="Map" type="Node2D" parent="." unique_id=398342888]
+
+[node name="Player" parent="." unique_id=1866997068 instance=ExtResource("1_lad7l")]
+position = Vector2(631, 362)
+scale = Vector2(0.8, 0.8)
+
+[node name="Enemies" type="Node2D" parent="." unique_id=853981403]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2043686662]
+anchor_mode = 0
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=921657011]
+color = Color(0.17641911, 0.17641908, 0.17641908, 1)
