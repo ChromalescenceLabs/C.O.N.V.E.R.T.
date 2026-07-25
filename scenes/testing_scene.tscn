@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://rmb3gje5nwsm"]
 
 [ext_resource type="PackedScene" uid="uid://dmbhslapygqd7" path="res://scenes/player.tscn" id="1_ifns1"]
-[ext_resource type="Script" path="res://Scripts/testing_scene.gd" id="1_v6rby"]
+[ext_resource type="Script" uid="uid://df5gbchxfspqm" path="res://scripts/testing_scene.gd" id="1_v6rby"]
 [ext_resource type="PackedScene" uid="uid://cplpl7j2tbep3" path="res://scenes/npc.tscn" id="2_2j2p2"]
+[ext_resource type="PackedScene" uid="uid://dcnqgatj8d0wl" path="res://scenes/countdown.tscn" id="4_dh6dg"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_365ag"]
 
@@ -30,8 +31,13 @@ shape = SubResource("RectangleShape2D_ifns1")
 [node name="Player" parent="." unique_id=1866997068 instance=ExtResource("1_ifns1")]
 position = Vector2(165, 225)
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1828688111]
-zoom = Vector2(1.58, 1.58)
+[node name="PlayerCam" type="Camera2D" parent="Player" unique_id=1117197161]
+zoom = Vector2(2.155, 2.155)
+limit_left = 0
+limit_top = 0
+limit_right = 1280
+limit_bottom = 720
+position_smoothing_enabled = true
 
 [node name="NPC" parent="." unique_id=1011810883 node_paths=PackedStringArray("points") instance=ExtResource("2_2j2p2")]
 position = Vector2(383, 186)
@@ -53,3 +59,12 @@ position = Vector2(348, 48)
 
 [node name="Distraction" type="Marker2D" parent="Node2D" unique_id=859279693]
 position = Vector2(510, 258)
+
+[node name="OverallCam" type="Camera2D" parent="." unique_id=307815127]
+anchor_mode = 0
+enabled = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=620556133]
+
+[node name="CountdownDisplay" parent="CanvasLayer" unique_id=1102513215 instance=ExtResource("4_dh6dg")]
+mins = 2
