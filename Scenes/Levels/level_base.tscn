@@ -6,6 +6,10 @@
 
 [node name="Map" type="Node2D" parent="." unique_id=398342888]
 
+[node name="OuterWall" type="Node2D" parent="Map" unique_id=1196197006]
+
+[node name="InnerWall" type="Node2D" parent="Map" unique_id=1358634834]
+
 [node name="Player" parent="." unique_id=1866997068 instance=ExtResource("1_lad7l")]
 position = Vector2(631, 362)
 scale = Vector2(0.8, 0.8)
@@ -17,3 +21,4 @@ anchor_mode = 0
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=921657011]
 color = Color(0.17641911, 0.17641908, 0.17641908, 1)
+blend_mode = 1
