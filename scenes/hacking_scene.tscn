@@ -46,12 +46,11 @@ _data = {
 }
 
 [node name="HackingScene" type="Node2D" unique_id=1620557320]
-position = Vector2(1, 0)
 script = ExtResource("1_oq843")
 
 [node name="Sentence" type="ColorRect" parent="." unique_id=883989657]
-offset_right = 1279.0
-offset_bottom = 720.0
+offset_right = 1285.0
+offset_bottom = 731.0
 color = Color(0.098751165, 0.09152926, 0.16192952, 1)
 script = ExtResource("2_gr3u0")
 
