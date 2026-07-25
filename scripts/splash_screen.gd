@@ -22,5 +22,4 @@ func _ready() -> void:
 	
 	var TextFadeOut = create_tween().tween_property(CLText, "modulate:a", 0, 2.6).set_delay(2).set_ease(Tween.EASE_IN_OUT)
 	await TextFadeOut.finished
-	
-	SceneLoader.load_scene("", 0)
+	SceneLoader.load_scene("res://scenes/main_screen.tscn", 0)
