@@ -8,6 +8,7 @@
 background_mode = 3
 glow_enabled = true
 glow_intensity = 1.0
+glow_bloom = 0.18
 
 [sub_resource type="Animation" id="Animation_lbcdu"]
 length = 0.001
@@ -54,6 +55,7 @@ offset_right = 1279.0
 offset_bottom = 720.0
 color = Color(0.098751165, 0.09152926, 0.16192952, 1)
 script = ExtResource("2_gr3u0")
+bg = Color(0.108765, 0.108729325, 0.17649347, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Sentence" unique_id=1909012096]
 modulate = Color(2.299, 2.299, 2.299, 1)
@@ -69,6 +71,7 @@ offset_right = 513.75
 offset_bottom = 245.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/default_color = Color(1.3119808, 1.3119808, 1.3119808, 1)
 theme_override_constants/line_separation = 15
 theme_override_fonts/normal_font = ExtResource("3_o6c0m")
 theme_override_font_sizes/normal_font_size = 50
@@ -116,8 +119,8 @@ horizontal_alignment = 1
 
 [node name="black" type="ColorRect" parent="." unique_id=1914811952]
 modulate = Color(1, 1, 1, 0)
-offset_right = 1170.0
-offset_bottom = 696.0
+offset_right = 1338.0
+offset_bottom = 782.0
 color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="black" unique_id=1173552852]
