@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://brnavpy720b6r"]
 
-[ext_resource type="PackedScene" uid="uid://euqf1tvxyhrn" path="res://Scenes/Levels/level_base.tscn" id="1_16p8j"]
-[ext_resource type="Texture2D" uid="uid://v0kas1moddc3" path="res://Assets/level_placeholders/lvl1.png" id="2_1ukdm"]
-[ext_resource type="Script" uid="uid://cvvigmbt7348e" path="res://Scripts/Levels/room_light1.gd" id="3_1ukdm"]
+[ext_resource type="PackedScene" uid="uid://euqf1tvxyhrn" path="res://scenes/Levels/level_base.tscn" id="1_16p8j"]
+[ext_resource type="Texture2D" uid="uid://v0kas1moddc3" path="res://assets/level_placeholders/lvl1.png" id="2_1ukdm"]
+[ext_resource type="Script" uid="uid://cvvigmbt7348e" path="res://scripts/Levels/room_light1.gd" id="3_1ukdm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_16p8j"]
 size = Vector2(30.75, 377.5)
