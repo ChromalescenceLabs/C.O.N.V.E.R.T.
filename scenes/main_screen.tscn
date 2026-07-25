@@ -550,6 +550,21 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_bnhpx")
 text = "Back
 "
 
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1776671143]
+modulate = Color(0.5359268, 0.68269014, 0.5798511, 0.32941177)
+position = Vector2(625, -10)
+amount = 20
+lifetime = 1.2
+randomness = 0.46
+emission_shape = 3
+emission_rect_extents = Vector2(650, 1)
+spread = 107.11
+scale_amount_min = 40.0
+scale_amount_max = 40.0
+color = Color(0.70980394, 0.81960785, 0.88235295, 0.18039216)
+hue_variation_min = 0.55
+hue_variation_max = 0.86
+
 [connection signal="pressed" from="MainTexts/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MainTexts/Options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="MainTexts/Quit" to="." method="_on_quit_pressed"]
