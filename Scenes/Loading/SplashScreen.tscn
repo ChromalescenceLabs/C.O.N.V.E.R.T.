@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://b6u51oj4l0ahl"]
+
+[ext_resource type="Texture2D" uid="uid://c8a2nvxw0akfq" path="res://Assets/Splash Screen/CL Splash Screen Image.png" id="1_acvwv"]
+[ext_resource type="Script" uid="uid://du10abau2hoi1" path="res://Scripts/splash_screen.gd" id="1_pufkq"]
+[ext_resource type="Texture2D" uid="uid://d1tkev257t2qu" path="res://Assets/Splash Screen/CL Logo.png" id="2_lus2m"]
+
+[node name="Splash Screen" type="Node2D" unique_id=564730703]
+script = ExtResource("1_pufkq")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1038808121]
+offset_left = -72.0
+offset_top = -149.0
+offset_right = 2125.0
+offset_bottom = 1374.0
+color = Color(0, 0, 0, 1)
+
+[node name="CL_Text" type="Sprite2D" parent="." unique_id=585691683]
+position = Vector2(17, 19.000002)
+scale = Vector2(1.0833333, 1.0833333)
+texture = ExtResource("1_acvwv")
+
+[node name="CL_Logo" type="Sprite2D" parent="." unique_id=500007138]
+position = Vector2(646, 370)
+texture = ExtResource("2_lus2m")

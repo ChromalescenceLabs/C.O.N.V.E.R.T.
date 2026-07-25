@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://coxh8yixjx6jf"]
 
-[ext_resource type="Script" uid="uid://cr38v5eb02ydy" path="res://scripts/lockpicking_scene.gd" id="1_o0kaa"]
-[ext_resource type="Script" uid="uid://hvjyrbx8r8d4" path="res://scripts/lockpick.gd" id="2_36kgi"]
-[ext_resource type="PackedScene" uid="uid://bo7il8n8y5uky" path="res://scenes/locked_pin.tscn" id="2_w5biu"]
-[ext_resource type="PackedScene" uid="uid://y3jvekxplqhv" path="res://scenes/unlocked_pin.tscn" id="3_vn4w1"]
+[ext_resource type="Script" uid="uid://cr38v5eb02ydy" path="res://Scripts/lockpicking_scene.gd" id="1_o0kaa"]
+[ext_resource type="Script" uid="uid://hvjyrbx8r8d4" path="res://Scripts/lockpick.gd" id="2_36kgi"]
+[ext_resource type="PackedScene" uid="uid://bo7il8n8y5uky" path="res://Scenes/locked_pin.tscn" id="2_w5biu"]
+[ext_resource type="PackedScene" uid="uid://y3jvekxplqhv" path="res://Scenes/unlocked_pin.tscn" id="3_vn4w1"]
 [ext_resource type="FontFile" uid="uid://cy7fopfyqe1sb" path="res://Fonts/Bree_Serif/BreeSerif-Regular.ttf" id="5_vn4w1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p3nbc"]

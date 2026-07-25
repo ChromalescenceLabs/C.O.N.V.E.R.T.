@@ -1,49 +1,13 @@
 [gd_scene format=3 uid="uid://mjqvux53fn2c"]
 
-[ext_resource type="Script" uid="uid://bid6yw7hddtng" path="res://Scripts/hacking_scene.gd" id="1_oq843"]
-[ext_resource type="Script" uid="uid://csknh7cxskref" path="res://Scripts/sentence.gd" id="2_gr3u0"]
+[ext_resource type="Script" uid="uid://bid6yw7hddtng" path="res://scripts/hacking_scene.gd" id="1_oq843"]
+[ext_resource type="Script" uid="uid://csknh7cxskref" path="res://scripts/sentence.gd" id="2_gr3u0"]
 [ext_resource type="FontFile" uid="uid://c04vl4o21budm" path="res://Fonts/Sixtyfour/Sixtyfour-Regular-VariableFont_BLED,SCAN.ttf" id="3_o6c0m"]
 
 [sub_resource type="Environment" id="Environment_gr3u0"]
 background_mode = 3
 glow_enabled = true
 glow_intensity = 1.0
-
-[sub_resource type="Animation" id="Animation_lbcdu"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_1k5uo"]
-resource_name = "fade in"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_iv3o6"]
-_data = {
-&"RESET": SubResource("Animation_lbcdu"),
-&"fade in": SubResource("Animation_1k5uo")
-}
 
 [node name="HackingScene" type="Node2D" unique_id=1620557320]
 position = Vector2(1, 0)
@@ -54,6 +18,8 @@ offset_right = 1151.0
 offset_bottom = 648.0
 color = Color(0.098751165, 0.09152926, 0.16192952, 1)
 script = ExtResource("2_gr3u0")
+past = Color(0, 0.93924433, 0.5573444, 1)
+future = Color(0.48932534, 0.25574878, 0.99997455, 1)
 
 [node name="RichTextLabel" type="RichTextLabel" parent="Sentence" unique_id=1909012096]
 modulate = Color(2.299, 2.299, 2.299, 1)
@@ -94,7 +60,7 @@ color = Color(0.70980394, 0.81960785, 0.88235295, 0.18039216)
 hue_variation_min = 0.55
 hue_variation_max = 0.86
 
-[node name="CPUParticles2D2" type="WorldEnvironment" parent="Sentence" unique_id=518890344]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Sentence" unique_id=518890344]
 environment = SubResource("Environment_gr3u0")
 
 [node name="instructions" type="RichTextLabel" parent="Sentence" unique_id=1077807518]
@@ -113,12 +79,3 @@ theme_override_font_sizes/normal_font_size = 40
 text = "Copy the sentence"
 tab_size = 3
 horizontal_alignment = 1
-
-[node name="black" type="ColorRect" parent="." unique_id=1914811952]
-modulate = Color(1, 1, 1, 0)
-offset_right = 1170.0
-offset_bottom = 696.0
-color = Color(0, 0, 0, 1)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="black" unique_id=1173552852]
-libraries/ = SubResource("AnimationLibrary_iv3o6")
