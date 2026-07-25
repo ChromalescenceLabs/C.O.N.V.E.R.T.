@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cplpl7j2tbep3"]
 
-[ext_resource type="Script" uid="uid://bqw427ysb3dky" path="res://Scripts/npc.gd" id="1_nh2m4"]
+[ext_resource type="Script" uid="uid://bqw427ysb3dky" path="res://scripts/npc.gd" id="1_nh2m4"]
 [ext_resource type="Texture2D" uid="uid://by12bj5k4s6pr" path="res://assets/sprites/icon.svg" id="2_abqhh"]
 [ext_resource type="Shader" uid="uid://do1ix7qqip6e8" path="res://shader/qte.gdshader" id="3_rv78h"]
 
@@ -45,7 +45,7 @@ polygon = PackedVector2Array(128, 56, 128, -56, 0, 0)
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=51221625]
 avoidance_enabled = true
-radius = 2.0
+radius = 1.0
 debug_enabled = true
 
 [node name="CIRCLE" type="ColorRect" parent="." unique_id=1074134260]

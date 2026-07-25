@@ -11,17 +11,21 @@ var current_state : STATE = STATE.PATH
 var current_pos : Vector2
 var stay = false
 var tween: Tween
-var isInRange: bool = false 
+var isChasing: bool = false 
 var player
 
 @export var points : Array[Marker2D]
 
 func _ready() -> void:
-	circle.modulate.a=0
+	circle.modulate.a=0.0
 
 func _physics_process(_delta: float) -> void:
 	_state_set()
 	_navigate()
+	
+	if isChasing:
+		current_state = STATE.TARGET
+		set_physics_process(true)
 
 func _pick_point():
 	var randpoint = points.pick_random()
@@ -60,7 +64,6 @@ func _navigate():
 		sprite_2d.rotation = lerp_angle(sprite_2d.rotation, finalAngle, 0.01)
 		move_and_slide()
 
-
 func _on_navigation_agent_2d_target_reached() -> void:
 	set_physics_process(false)
 	if current_state == STATE.DISTRACTED and stay == true:
@@ -71,18 +74,15 @@ func _on_navigation_agent_2d_target_reached() -> void:
 		current_state = STATE.PATH
 		set_physics_process(true)
 
-
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		print("RUNNN")
-		isInRange = true
 		
 		if tween:
 			tween.kill()
-	
+		
+		circle.modulate.a=1.0
 		tween = create_tween()
-		tween.set_parallel(true)
-		tween.tween_property(circle, "modulate:a", 1.0, 1.0)
 		tween.tween_property(circle, "material:shader_parameter/value", 0.0, 1.0)
 		tween.finished.connect(tweenTarget)
 
@@ -94,19 +94,21 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 			tween.kill()
 
 		tween = create_tween()
-		tween.set_parallel(true)
 		tween.tween_property(circle, "material:shader_parameter/value", 1.0, 3.0)
-		tween.tween_property(circle, "modulate:a", 0.0, 3.0)
 		tween.finished.connect(tweenPath)
 
 
 #please DONT ask why this works, it just does
 #you don't know how much i spent on this thing im crashing out
 func tweenTarget():
+	print("finished")
+	isChasing=true
 	set_physics_process(true)
 	current_state = STATE.TARGET
 
 func tweenPath():
-	if current_state== STATE.TARGET:
-		set_physics_process(true)
-		current_state = STATE.PATH
+	print("END ALREADY")
+	isChasing=false
+	current_state = STATE.PATH
+	set_physics_process(true)
+	circle.modulate.a=0.0
