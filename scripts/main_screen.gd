@@ -46,8 +46,8 @@ func flickerTitle():
 		await get_tree().create_timer(randi_range(3,6)).timeout
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/testing_scene.tscn")
-	
+	SceneLoader.load_scene("res://scenes/Levels/level1.tscn", 0)
+		
 func _on_options_pressed() -> void:
 	mainTexts.hide()
 	optionsMenu.show()
