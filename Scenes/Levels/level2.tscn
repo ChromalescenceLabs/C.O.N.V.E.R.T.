@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://euqf1tvxyhrn" path="res://Scenes/Levels/level_base.tscn" id="1_qoeng"]
 [ext_resource type="Texture2D" uid="uid://cto3tpt5j1r3e" path="res://Assets/level_placeholders/lvl2.png" id="2_pqo0d"]
-[ext_resource type="Script" uid="uid://ccyvc6dgo180d" path="res://Scenes/Levels/room_light2.gd" id="3_pqo0d"]
+[ext_resource type="Script" uid="uid://ccyvc6dgo180d" path="res://Scripts/Levels/room_light2.gd" id="3_pqo0d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qoeng"]
 size = Vector2(1244.0135, 9.25)
