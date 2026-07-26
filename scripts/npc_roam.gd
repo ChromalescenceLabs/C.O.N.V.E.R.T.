@@ -2,8 +2,6 @@ extends CharacterBody2D
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var nav: NavigationAgent2D = $NavigationAgent2D
-@onready var detection = $Sprite2D/Area2D
-@onready var circle = $CIRCLE
 
 var speed : float = 100
 enum STATE { IDLE, PATH, DISTRACTED, TARGET }
@@ -21,9 +19,6 @@ const MISSION_END = preload("uid://brtmt3juhpp44")
 @export var points : Array[Marker2D]
 @export var mintime : int = 0
 @export var maxtime : int = 0
-
-func _ready() -> void:
-	circle.modulate.a=0.0
 
 func _physics_process(_delta: float) -> void:
 	_state_set()
@@ -59,10 +54,8 @@ func _navigate():
 		velocity = (
 			global_position.direction_to(next_path_position) * speed
 		)
-		move_and_slide()
 		
-		sprite_2d.rotation = velocity.angle() - (TAU / 4)
-		
+		nav.velocity = velocity
 
 func _on_navigation_agent_2d_target_reached() -> void:
 	if current_state == STATE.DISTRACTED and stay == true:
@@ -77,6 +70,8 @@ func _on_navigation_agent_2d_target_reached() -> void:
 
 
 func _on_navigation_agent_2d_velocity_computed(safe_velocity: Vector2) -> void:
-	velocity += safe_velocity
+	velocity = safe_velocity
 	move_and_slide()
-	sprite_2d.rotation = safe_velocity.angle()
+	
+	if velocity.length() > 0.1:
+		sprite_2d.rotation = velocity.angle() - (TAU / 4)

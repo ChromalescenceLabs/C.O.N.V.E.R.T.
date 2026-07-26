@@ -4,15 +4,16 @@
 [ext_resource type="Script" uid="uid://df5gbchxfspqm" path="res://scripts/testing_scene.gd" id="1_v6rby"]
 [ext_resource type="PackedScene" uid="uid://cplpl7j2tbep3" path="res://scenes/npc.tscn" id="2_2j2p2"]
 [ext_resource type="PackedScene" uid="uid://dcnqgatj8d0wl" path="res://scenes/countdown.tscn" id="4_dh6dg"]
+[ext_resource type="PackedScene" uid="uid://4y004av2xwbp" path="res://scenes/npc_roam.tscn" id="5_ejtda"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_365ag"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ifns1"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_ifns1"]
-vertices = PackedVector2Array(417.70313, 15.59375, 457.10156, 92.5625, 547.59375, 279.14063, 34.671875, 318.22656, 205, 121.27344, 26.21875, 41.96875, 85.32031, 20.976563, 113.40625, 118.796875, 205, 67.84375)
+vertices = PackedVector2Array(418.1172, 26.046875, 1197.8438, 651.8906, 52.796875, 675.3281, 45.242188, 328.46875, 215.25, 131.79688, 36.6875, 49.132813, 78.47656, 34.289063, 105.63281, 128.84375, 215.25, 75.88281)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(5, 6, 7, 3), PackedInt32Array(4, 8, 0), PackedInt32Array(4, 3, 7)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(25, 329, 563, 288, 423, 4, 195, 60, 195, 111, 121, 109, 92, 8, 16, 35)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(25, 329, 33, 696, 1254, 671, 423, 4, 195, 60, 195, 111, 121, 109, 92, 8, 16, 35)])
 agent_radius = 20.25
 
 [node name="TestingScene" type="Node2D" unique_id=177702522]
@@ -69,3 +70,27 @@ enabled = false
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=620556133]
 
 [node name="CountdownDisplay" parent="CanvasLayer" unique_id=1102513215 instance=ExtResource("4_dh6dg")]
+
+[node name="Node2D2" type="Node2D" parent="." unique_id=551460805]
+
+[node name="Marker2D" type="Marker2D" parent="Node2D2" unique_id=443086575]
+position = Vector2(588, 612)
+
+[node name="Marker2D2" type="Marker2D" parent="Node2D2" unique_id=1386341006]
+position = Vector2(722, 392)
+
+[node name="NpcRoam" parent="Node2D2" unique_id=1484197153 node_paths=PackedStringArray("points") instance=ExtResource("5_ejtda")]
+position = Vector2(686, 513)
+points = [NodePath("../Marker2D"), NodePath("../Marker2D2")]
+
+[node name="Node2D3" type="Node2D" parent="." unique_id=1157654532]
+
+[node name="Marker2D" type="Marker2D" parent="Node2D3" unique_id=922088534]
+position = Vector2(746, 556)
+
+[node name="Marker2D2" type="Marker2D" parent="Node2D3" unique_id=908558473]
+position = Vector2(600, 484)
+
+[node name="NpcRoam" parent="Node2D3" unique_id=175484850 node_paths=PackedStringArray("points") instance=ExtResource("5_ejtda")]
+position = Vector2(773, 568)
+points = [NodePath("../Marker2D"), NodePath("../Marker2D2")]
