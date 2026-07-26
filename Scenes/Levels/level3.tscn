@@ -286,8 +286,8 @@ texture = SubResource("GradientTexture2D_jwpnw")
 
 [node name="Room4" type="PointLight2D" parent="Map/RoomLights" index="3" unique_id=2060262470]
 light_mask = 2
-position = Vector2(360.00003, 210.24998)
-scale = Vector2(10.531249, 5.3671875)
+position = Vector2(360.00003, 211.24998)
+scale = Vector2(10.531249, 5.3984375)
 color = Color(1, 1, 0.79607844, 1)
 energy = 0.5
 shadow_enabled = true
@@ -295,8 +295,8 @@ texture = SubResource("GradientTexture2D_jwpnw")
 
 [node name="Room4_1" type="PointLight2D" parent="Map/RoomLights" index="4" unique_id=2006092672]
 light_mask = 2
-position = Vector2(355.25003, 550.125)
-scale = Vector2(10.3671875, 5.0039063)
+position = Vector2(355.25003, 547.125)
+scale = Vector2(10.3671875, 5.0976563)
 color = Color(1, 1, 0.79607844, 1)
 energy = 0.5
 shadow_enabled = true
