@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dvxf5cs27fm0q"]
 
 [ext_resource type="PackedScene" uid="uid://euqf1tvxyhrn" path="res://Scenes/Levels/level_base.tscn" id="1_2wdis"]
-[ext_resource type="Texture2D" uid="uid://cbjevo6iunc0c" path="res://Assets/level_placeholders/lvl4.png" id="2_y5prx"]
+[ext_resource type="Texture2D" uid="uid://cbjevo6iunc0c" path="res://Assets/level_maps/lvl4.png" id="2_y5prx"]
 [ext_resource type="Script" uid="uid://bjbkryb84pon7" path="res://Scripts/Levels/room_light4.gd" id="3_icm2c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5bbg0"]
