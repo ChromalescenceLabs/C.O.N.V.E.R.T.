@@ -6,7 +6,8 @@ const ACCELERATION : int = 5
 const FRICT : int = 8
 
 func _physics_process(delta: float) -> void:
-	get_player_input(delta)
+	if GlobalVars.is_interacting == false:
+		get_player_input(delta)
 
 func get_player_input(delta):
 	var input = Vector2(

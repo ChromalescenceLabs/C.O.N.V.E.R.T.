@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://bo80tcnotim01"]
+
+[ext_resource type="Script" uid="uid://dxmyhcdoc2yki" path="res://scripts/key.gd" id="1_wy8tx"]
+[ext_resource type="Texture2D" uid="uid://bpl1vwnbv4bl4" path="res://assets/sprites/key-removebg-preview.png" id="2_brs3p"]
+[ext_resource type="Texture2D" uid="uid://dfux7mjddiclp" path="res://assets/sprites/keyh-removebg-preview.png" id="3_jcln5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b4qnb"]
+radius = 37.01351
+
+[node name="Key" type="Area2D" unique_id=2109840467]
+script = ExtResource("1_wy8tx")
+
+[node name="Key" type="Sprite2D" parent="." unique_id=1556754377]
+position = Vector2(2.27, 0)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("2_brs3p")
+
+[node name="KeyH" type="Sprite2D" parent="." unique_id=995518892]
+visible = false
+position = Vector2(2.27, 0)
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("3_jcln5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=242586480]
+position = Vector2(-1, 1)
+shape = SubResource("CircleShape2D_b4qnb")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

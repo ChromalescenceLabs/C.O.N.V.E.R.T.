@@ -36,6 +36,7 @@ func reset():
 size = Vector2(21, 20)
 
 [node name="unlockedPin" type="Node2D" unique_id=897485861]
+process_mode = 3
 script = SubResource("GDScript_b0fcd")
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=1650619116]

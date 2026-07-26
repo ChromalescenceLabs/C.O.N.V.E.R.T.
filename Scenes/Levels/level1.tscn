@@ -6,6 +6,9 @@
 [ext_resource type="Script" uid="uid://cvvigmbt7348e" path="res://scripts/Levels/room_light1.gd" id="3_1ukdm"]
 [ext_resource type="PackedScene" uid="uid://cplpl7j2tbep3" path="res://scenes/npc.tscn" id="5_ifky7"]
 [ext_resource type="Script" uid="uid://cu0fg5dvoeuhn" path="res://scripts/Levels/Lvl1Target.gd" id="6_c6375"]
+[ext_resource type="PackedScene" uid="uid://b835m4itbrm1m" path="res://scenes/door.tscn" id="7_ylpj7"]
+[ext_resource type="Script" uid="uid://bxmegus6iay4j" path="res://scripts/door_instructions.gd" id="8_ar5rt"]
+[ext_resource type="PackedScene" uid="uid://bo80tcnotim01" path="res://scenes/key.tscn" id="9_a4rx7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_16p8j"]
 size = Vector2(30.75, 377.5)
@@ -119,6 +122,9 @@ polygon = PackedVector2Array(-10.196167, -46.787125, 10.210632, -44.651337, 10.9
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ifky7"]
 radius = 21.023796
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ylpj7"]
+size = Vector2(101.54175, 40.283936)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_c6375"]
 vertices = PackedVector2Array(21.15625, 210.61719, 20.65625, 87.61719, 27.296875, 139.11719, 312.03906, 125.46094, 315.1875, 108.09375, 312.3125, 208.85938)
@@ -532,17 +538,46 @@ position = Vector2(312, 100)
 [node name="Marker2D5" type="Marker2D" parent="NPCs/Target" index="5" unique_id=1889230060]
 position = Vector2(404, 97)
 
-[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." index="6" unique_id=1788768191]
+[node name="Doors" type="Node2D" parent="." index="6" unique_id=502388018]
+
+[node name="Door" parent="Doors" index="0" unique_id=411034440 instance=ExtResource("7_ylpj7")]
+position = Vector2(414.99997, 322.99997)
+rotation = -0.8377581
+
+[node name="Instructions" type="Area2D" parent="Doors/Door" index="3" unique_id=556469321]
+script = ExtResource("8_ar5rt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door/Instructions" index="0" unique_id=1084377869]
+shape = SubResource("RectangleShape2D_ylpj7")
+
+[node name="Door3" parent="Doors" index="1" unique_id=1638988913 instance=ExtResource("7_ylpj7")]
+position = Vector2(176, 424)
+opened = true
+
+[node name="Door2" parent="Doors" index="2" unique_id=190011158 instance=ExtResource("7_ylpj7")]
+position = Vector2(1045, 413)
+
+[node name="ColorRect" parent="Doors/Door2" index="1" unique_id=818202410]
+offset_left = -58.0
+offset_right = 58.0
+
+[node name="Instructions" type="Area2D" parent="Doors/Door2" index="3" unique_id=2097169994]
+script = ExtResource("8_ar5rt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door2/Instructions" index="0" unique_id=478000878]
+shape = SubResource("RectangleShape2D_ylpj7")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." index="7" unique_id=1788768191]
 position = Vector2(877, 78)
 navigation_polygon = SubResource("NavigationPolygon_c6375")
 metadata/_edit_lock_ = true
 
-[node name="NavigationRegion2D3" type="NavigationRegion2D" parent="." index="7" unique_id=865754294]
+[node name="NavigationRegion2D3" type="NavigationRegion2D" parent="." index="8" unique_id=865754294]
 position = Vector2(61, 247)
 navigation_polygon = SubResource("NavigationPolygon_ylpj7")
 metadata/_edit_lock_ = true
 
-[node name="NavigationRegion2D2" type="NavigationRegion2D" parent="." index="8" unique_id=324645293]
+[node name="NavigationRegion2D2" type="NavigationRegion2D" parent="." index="9" unique_id=324645293]
 position = Vector2(528, 110)
 navigation_polygon = SubResource("NavigationPolygon_ifky7")
 metadata/_edit_lock_ = true
@@ -551,7 +586,7 @@ metadata/_edit_lock_ = true
 color = Color(1, 1, 1, 0)
 polygon = PackedVector2Array(-39, 327, -44, 457, 191, 457, 187, 328)
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." index="9" unique_id=356167517]
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="10" unique_id=356167517]
 
 [node name="KillLabel" type="Label" parent="CanvasLayer" index="0" unique_id=2040105819]
 visible = false
@@ -561,6 +596,21 @@ offset_right = 1266.0
 offset_bottom = 711.0
 theme_override_font_sizes/font_size = 58
 text = "[E] KILL"
+
+[node name="LockpickLabel" type="Label" parent="CanvasLayer" index="1" unique_id=1039206648]
+visible = false
+offset_left = 70.0
+offset_top = 45.0
+offset_right = 274.0
+offset_bottom = 124.0
+scale = Vector2(0.605, 0.605)
+theme_override_font_sizes/font_size = 58
+text = "[L] LOCKPICK
+[O] OPEN"
+
+[node name="Key" parent="." index="11" unique_id=2109840467 instance=ExtResource("9_a4rx7")]
+position = Vector2(693, 507)
+rotation = 0.7330383
 
 [connection signal="body_entered" from="Map/Room Light/r1" to="Map/Room Light" method="_on_r_1_body_entered"]
 [connection signal="body_exited" from="Map/Room Light/r1" to="Map/Room Light" method="_on_r_1_body_exited"]
@@ -574,3 +624,10 @@ text = "[E] KILL"
 [connection signal="body_exited" from="Map/Room Light/r5" to="Map/Room Light" method="_on_r_5_body_exited"]
 [connection signal="body_entered" from="NPCs/Target/NPC/KillArea" to="NPCs/Target" method="_on_kill_area_body_entered"]
 [connection signal="body_exited" from="NPCs/Target/NPC/KillArea" to="NPCs/Target" method="_on_kill_area_body_exited"]
+[connection signal="body_entered" from="Doors/Door/Instructions" to="Doors/Door/Instructions" method="_on_body_entered"]
+[connection signal="body_exited" from="Doors/Door/Instructions" to="Doors/Door/Instructions" method="_on_body_exited"]
+[connection signal="body_entered" from="Doors/Door2/Instructions" to="Doors/Door2/Instructions" method="_on_body_entered"]
+[connection signal="body_exited" from="Doors/Door2/Instructions" to="Doors/Door2/Instructions" method="_on_body_exited"]
+
+[editable path="Doors/Door3"]
+[editable path="Doors/Door2"]

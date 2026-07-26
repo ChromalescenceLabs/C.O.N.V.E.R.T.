@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://b835m4itbrm1m"]
+
+[ext_resource type="Script" uid="uid://hh6xl27v66yi" path="res://scripts/door_interact.gd" id="1_hpvv5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5f452"]
+size = Vector2(98, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hpvv5"]
+size = Vector2(102, 40)
+
+[node name="Door" type="StaticBody2D" unique_id=411034440]
+script = ExtResource("1_hpvv5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=670395670]
+shape = SubResource("RectangleShape2D_5f452")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=818202410]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -9.0
+offset_right = 51.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.63591796, 0.37399426, 0.24457124, 1)
+
+[node name="DoorInteract" type="Area2D" parent="." unique_id=1400001827]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorInteract" unique_id=1275663308]
+shape = SubResource("RectangleShape2D_hpvv5")
+
+[connection signal="body_entered" from="DoorInteract" to="." method="_on_door_interact_body_entered"]
+[connection signal="body_exited" from="DoorInteract" to="." method="_on_door_interact_body_exited"]

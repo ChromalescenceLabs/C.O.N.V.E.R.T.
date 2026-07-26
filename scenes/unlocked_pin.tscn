@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://y3jvekxplqhv"]
 
-[ext_resource type="Script" uid="uid://c85vbh0ndjss7" path="res://Scripts/unlocked_pin.gd" id="1_ehgyq"]
+[ext_resource type="Script" uid="uid://c85vbh0ndjss7" path="res://scripts/unlocked_pin.gd" id="1_ehgyq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_060gk"]
 size = Vector2(19, 20)
 
 [node name="unlockedPin" type="Node2D" unique_id=1130497477]
+process_mode = 3
 script = ExtResource("1_ehgyq")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1051973014]
