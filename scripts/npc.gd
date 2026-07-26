@@ -21,9 +21,11 @@ const MISSION_END = preload("uid://brtmt3juhpp44")
 @export var points : Array[Marker2D]
 @export var mintime : int = 0
 @export var maxtime : int = 0
+@export var robot: CompressedTexture2D
 
 func _ready() -> void:
 	circle.modulate.a=0.0
+	sprite_2d.texture = robot
 
 func _physics_process(_delta: float) -> void:
 	_state_set()

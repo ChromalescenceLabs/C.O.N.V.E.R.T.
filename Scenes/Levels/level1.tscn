@@ -1,20 +1,27 @@
 [gd_scene format=3 uid="uid://brnavpy720b6r"]
 
-[ext_resource type="PackedScene" uid="uid://euqf1tvxyhrn" path="res://scenes/Levels/level_base.tscn" id="1_16p8j"]
-[ext_resource type="Texture2D" uid="uid://v0kas1moddc3" path="res://assets/level_placeholders/lvl1.png" id="2_1ukdm"]
-[ext_resource type="Script" uid="uid://ch55eo1pa3bs0" path="res://scripts/Levels/level_1.gd" id="2_klhba"]
-[ext_resource type="Script" uid="uid://cvvigmbt7348e" path="res://scripts/Levels/room_light1.gd" id="3_1ukdm"]
-[ext_resource type="PackedScene" uid="uid://cplpl7j2tbep3" path="res://scenes/npc.tscn" id="5_ifky7"]
-[ext_resource type="Script" uid="uid://cu0fg5dvoeuhn" path="res://scripts/Levels/Lvl1Target.gd" id="6_c6375"]
-[ext_resource type="PackedScene" uid="uid://b835m4itbrm1m" path="res://scenes/door.tscn" id="7_ylpj7"]
-[ext_resource type="Script" uid="uid://bxmegus6iay4j" path="res://scripts/door_instructions.gd" id="8_ar5rt"]
-[ext_resource type="PackedScene" uid="uid://bo80tcnotim01" path="res://scenes/key.tscn" id="9_a4rx7"]
+[ext_resource type="PackedScene" uid="uid://euqf1tvxyhrn" path="res://Scenes/Levels/level_base.tscn" id="1_16p8j"]
+[ext_resource type="Texture2D" uid="uid://nuj7vyx11abh" path="res://Assets/level_maps/lvl1.png" id="2_1ukdm"]
+[ext_resource type="Script" uid="uid://ch55eo1pa3bs0" path="res://Scripts/Levels/level_1.gd" id="2_klhba"]
+[ext_resource type="Script" uid="uid://cvvigmbt7348e" path="res://Scripts/Levels/room_light1.gd" id="3_1ukdm"]
+[ext_resource type="PackedScene" uid="uid://cplpl7j2tbep3" path="res://Scenes/npc.tscn" id="5_ifky7"]
+[ext_resource type="Script" uid="uid://cu0fg5dvoeuhn" path="res://Scripts/Levels/Lvl1Target.gd" id="6_c6375"]
+[ext_resource type="PackedScene" uid="uid://b835m4itbrm1m" path="res://Scenes/door.tscn" id="7_ylpj7"]
+[ext_resource type="Script" uid="uid://bxmegus6iay4j" path="res://Scripts/door_instructions.gd" id="8_ar5rt"]
+[ext_resource type="PackedScene" uid="uid://bo80tcnotim01" path="res://Scenes/key.tscn" id="9_a4rx7"]
+
+[sub_resource type="Gradient" id="Gradient_hkfpk"]
+offsets = PackedFloat32Array(0.15172414)
+colors = PackedColorArray(0.28118682, 0.28118688, 0.28118682, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ir7pk"]
+gradient = SubResource("Gradient_hkfpk")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_16p8j"]
 size = Vector2(30.75, 377.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ukdm"]
-size = Vector2(420, 20)
+size = Vector2(420, 27)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i36j2"]
 size = Vector2(1198, 9.25)
@@ -103,6 +110,89 @@ size = Vector2(20, 100.50894)
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ay16s"]
 polygon = PackedVector2Array(-10.196167, -46.787125, 10.210632, -44.651337, 10.944153, 49.958237, -9.659912, 50.643967)
 
+[sub_resource type="Gradient" id="Gradient_1ukdm"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_1ukdm"]
+gradient = SubResource("Gradient_1ukdm")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xe7un"]
+size = Vector2(359, 213)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ilsv2"]
+size = Vector2(357, 379)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bvs0b"]
+size = Vector2(278, 250)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ay16s"]
+size = Vector2(80, 156)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6748a"]
+size = Vector2(62, 128)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5y6uu"]
+radius = 24.186773
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m4h5f"]
+size = Vector2(136, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2e0u"]
+size = Vector2(59.978058, 68.288086)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f8if4"]
+size = Vector2(217.5824, 94.505615)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_60msr"]
+size = Vector2(430.76904, 48.351563)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xs7e"]
+size = Vector2(65.93384, 369.23083)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ilop2"]
+size = Vector2(43.54126, 175.82434)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ilop2"]
+radius = 79.31902
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j5o2p"]
+size = Vector2(43.54126, 44.203186)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5y6uu"]
+size = Vector2(43.54126, 153.84618)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqrgo"]
+size = Vector2(32.967102, 140.65936)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7e7vy"]
+size = Vector2(235.16486, 140.65936)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3gtsu"]
+size = Vector2(284.61536, 107.69241)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iqpl7"]
+size = Vector2(190.65929, 28.571411)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ij04u"]
+size = Vector2(50.549423, 79.12073)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_awofh"]
+radius = 34.083668
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rr7wi"]
+radius = 47.252686
+
+[sub_resource type="Gradient" id="Gradient_ir7pk"]
+offsets = PackedFloat32Array(0, 0.25172412, 0.62413794, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.3448276, 0.3448276, 0.3448276, 1, 0.04974758, 0.04974758, 0.04974758, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ilsv2"]
+gradient = SubResource("Gradient_ir7pk")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_ifky7"]
 radius = 21.023796
 
@@ -126,41 +216,29 @@ vertices = PackedVector2Array(244.20313, 336, 241.32031, 513.0625, 199.04688, 46
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(2, 1, 5, 6), PackedInt32Array(7, 8, 9, 10, 11), PackedInt32Array(6, 5, 8, 7), PackedInt32Array(12, 13, 14, 4, 15), PackedInt32Array(3, 7, 11, 16, 17), PackedInt32Array(3, 17, 15, 4)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-191, 335, -145.34845, 335.10284, -154, 514, 249, 521, 252, 336, 252, 211, 314, 205, 332, 109, 282, 111, 139, 129, 28, 123, -3, 117, -67, 188)])
 agent_radius = 7.8
-[sub_resource type="Gradient" id="Gradient_1ukdm"]
-colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_1ukdm"]
-gradient = SubResource("Gradient_1ukdm")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_xe7un"]
-size = Vector2(359, 213)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ilsv2"]
-size = Vector2(357, 379)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bvs0b"]
-size = Vector2(278, 250)
 
 [node name="Level" unique_id=89423142 instance=ExtResource("1_16p8j")]
 script = ExtResource("2_klhba")
 
-[node name="Lvl1" type="Sprite2D" parent="Map" parent_id_path=PackedInt32Array(398342888) index="0" unique_id=1526086206]
-position = Vector2(642.4811, 346.99695)
-scale = Vector2(1.0351856, 1.0527862)
-texture = ExtResource("2_1ukdm")
-metadata/_edit_lock_ = true
+[node name="Sprite2D" type="Sprite2D" parent="Map" parent_id_path=PackedInt32Array(398342888) index="0" unique_id=1285020841]
+position = Vector2(677.5, 372)
+scale = Vector2(6.2929688, 854)
+texture = SubResource("GradientTexture1D_ir7pk")
 
-[node name="border" type="StaticBody2D" parent="Map" parent_id_path=PackedInt32Array(398342888) index="1" unique_id=251642636]
+[node name="Lvl1" type="Sprite2D" parent="Map" parent_id_path=PackedInt32Array(398342888) index="1" unique_id=715830871]
+position = Vector2(648, 347.5)
+scale = Vector2(1.0265625, 1.0458333)
+texture = ExtResource("2_1ukdm")
+
+[node name="border" type="StaticBody2D" parent="Map" parent_id_path=PackedInt32Array(398342888) index="2" unique_id=251642636]
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Map/border" index="0" unique_id=2076595690]
-position = Vector2(1289.625, 526.75)
+position = Vector2(1265, 531)
 shape = SubResource("RectangleShape2D_16p8j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/border" index="1" unique_id=1687703869]
-position = Vector2(1071, 728)
+position = Vector2(1071, 708.5)
 shape = SubResource("RectangleShape2D_1ukdm")
 
 [node name="Outer Wall" type="StaticBody2D" parent="Map/OuterWall" parent_id_path=PackedInt32Array(1196197006) index="0" unique_id=1980500774]
@@ -366,7 +444,7 @@ metadata/_edit_group_ = true
 occluder = SubResource("OccluderPolygon2D_ay16s")
 occluder_light_mask = 1023
 
-[node name="Room Light" type="Node2D" parent="Map" parent_id_path=PackedInt32Array(398342888) index="4" unique_id=548466789]
+[node name="Room Light" type="Node2D" parent="Map" parent_id_path=PackedInt32Array(398342888) index="5" unique_id=548466789]
 script = ExtResource("3_1ukdm")
 
 [node name="Room1" type="PointLight2D" parent="Map/Room Light" index="0" unique_id=2063477918]
@@ -375,6 +453,7 @@ scale = Vector2(5.90625, 3.78125)
 color = Color(1, 1, 0.79607844, 1)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_1ukdm")
+metadata/_edit_lock_ = true
 
 [node name="Room2" type="PointLight2D" parent="Map/Room Light" index="1" unique_id=343015235]
 position = Vector2(1054, 240)
@@ -382,6 +461,7 @@ scale = Vector2(6.937502, 6.75)
 color = Color(1, 1, 0.79607844, 1)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_1ukdm")
+metadata/_edit_lock_ = true
 
 [node name="Room3" type="PointLight2D" parent="Map/Room Light" index="2" unique_id=1660966830]
 position = Vector2(610, 360.00003)
@@ -389,6 +469,7 @@ scale = Vector2(9.4375, 11)
 color = Color(1, 1, 0.79607844, 1)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_1ukdm")
+metadata/_edit_lock_ = true
 
 [node name="Room4" type="PointLight2D" parent="Map/Room Light" index="3" unique_id=812982564]
 position = Vector2(252, 233)
@@ -396,6 +477,7 @@ scale = Vector2(8.250001, 7.476563)
 color = Color(1, 1, 0.79607844, 1)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_1ukdm")
+metadata/_edit_lock_ = true
 
 [node name="Room5" type="PointLight2D" parent="Map/Room Light" index="4" unique_id=142822980]
 position = Vector2(200.00002, 548)
@@ -403,8 +485,10 @@ scale = Vector2(5.0937495, 5.218751)
 color = Color(1, 1, 0.79607844, 1)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_1ukdm")
+metadata/_edit_lock_ = true
 
 [node name="r1" type="Area2D" parent="Map/Room Light" index="5" unique_id=1969528812]
+visible = false
 position = Vector2(1053, 518)
 metadata/_edit_group_ = true
 
@@ -412,6 +496,7 @@ metadata/_edit_group_ = true
 shape = SubResource("RectangleShape2D_xe7un")
 
 [node name="r2" type="Area2D" parent="Map/Room Light" index="6" unique_id=1926256682]
+visible = false
 position = Vector2(1059, 233)
 metadata/_edit_group_ = true
 
@@ -420,6 +505,7 @@ position = Vector2(-3.5, -10.5)
 shape = SubResource("RectangleShape2D_ilsv2")
 
 [node name="r3" type="Area2D" parent="Map/Room Light" index="7" unique_id=1614266813]
+visible = false
 position = Vector2(632, 358)
 metadata/_edit_group_ = true
 
@@ -427,6 +513,7 @@ metadata/_edit_group_ = true
 polygon = PackedVector2Array(-115, -320, -115, -143, -304, 66, -301, 326, 238, 325, 238, -320)
 
 [node name="r4" type="Area2D" parent="Map/Room Light" index="8" unique_id=451642018]
+visible = false
 position = Vector2(222, 226)
 metadata/_edit_group_ = true
 
@@ -434,14 +521,142 @@ metadata/_edit_group_ = true
 polygon = PackedVector2Array(-170, -187, -174, 204, 106, 206, 183, 107, 293, -15, 290, -190)
 
 [node name="r5" type="Area2D" parent="Map/Room Light" index="9" unique_id=1517250330]
+visible = false
 position = Vector2(185, 561)
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Room Light/r5" index="0" unique_id=2054624625]
 shape = SubResource("RectangleShape2D_bvs0b")
 
+[node name="obstacles" type="StaticBody2D" parent="Map" parent_id_path=PackedInt32Array(398342888) index="6" unique_id=1112588912]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/obstacles" index="0" unique_id=1150338698]
+position = Vector2(1192, 530)
+shape = SubResource("RectangleShape2D_ay16s")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Map/obstacles" index="1" unique_id=1268009275]
+position = Vector2(903, 557)
+shape = SubResource("RectangleShape2D_6748a")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Map/obstacles" index="2" unique_id=1437083127]
+position = Vector2(907, 460)
+shape = SubResource("CircleShape2D_5y6uu")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Map/obstacles" index="3" unique_id=1043176654]
+position = Vector2(1151, 341)
+shape = SubResource("RectangleShape2D_m4h5f")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Map/obstacles" index="4" unique_id=1678429729]
+position = Vector2(942, 343)
+shape = SubResource("RectangleShape2D_m4h5f")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Map/obstacles" index="5" unique_id=118399490]
+position = Vector2(1052, 89)
+shape = SubResource("RectangleShape2D_m4h5f")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Map/obstacles" index="6" unique_id=1826301015]
+position = Vector2(966.9726, 163.76193)
+rotation = -0.89011794
+scale = Vector2(0.91, 0.91)
+shape = SubResource("RectangleShape2D_d2e0u")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Map/obstacles" index="7" unique_id=759907196]
+position = Vector2(1128, 161)
+rotation = -2.220059
+scale = Vector2(0.91, 0.91)
+shape = SubResource("RectangleShape2D_d2e0u")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Map/obstacles" index="8" unique_id=1576580627]
+position = Vector2(614, 502.00003)
+scale = Vector2(0.91, 0.91)
+shape = SubResource("RectangleShape2D_f8if4")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Map/obstacles" index="9" unique_id=411829294]
+position = Vector2(658.00006, 665)
+scale = Vector2(0.91, 0.91)
+shape = SubResource("RectangleShape2D_60msr")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Map/obstacles" index="10" unique_id=1586484896]
+position = Vector2(830.00006, 513)
+scale = Vector2(0.91, 0.91)
+shape = SubResource("RectangleShape2D_4xs7e")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Map/obstacles" index="11" unique_id=1486831280]
+position = Vector2(358.00003, 541.00006)
+scale = Vector2(0.91, 0.91)
+shape = SubResource("RectangleShape2D_ilop2")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Map/obstacles" index="12" unique_id=1415440644]
+position = Vector2(672, 167)
+scale = Vector2(0.91, 0.91)
+shape = SubResource("CircleShape2D_ilop2")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Map/obstacles" index="13" unique_id=1719957363]
+position = Vector2(568.00006, 207)
+rotation = -0.39269912
+scale = Vector2(0.91, 0.91)
+shape = SubResource("RectangleShape2D_j5o2p")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Map/obstacles" index="14" unique_id=656262970]
+position = Vector2(788.0001, 184.99998)
+rotation = 0.27227136
+scale = Vector2(0.91, 0.91)
+shape = SubResource("RectangleShape2D_j5o2p")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Map/obstacles" index="15" unique_id=1760311412]
+position = Vector2(783.0001, 118.00001)
+rotation = -2.2410028
+scale = Vector2(0.91, 0.91)
+shape = SubResource("RectangleShape2D_j5o2p")
+
+[node name="CollisionShape2D25" type="CollisionShape2D" parent="Map/obstacles" index="16" unique_id=716499516]
+position = Vector2(571, 111.99994)
+rotation = -1.0576695
+scale = Vector2(0.91, 0.91)
+shape = SubResource("RectangleShape2D_j5o2p")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Map/obstacles" index="17" unique_id=890406694]
+position = Vector2(485, 140.00002)
+scale = Vector2(0.91, 0.91)
+shape = SubResource("RectangleShape2D_5y6uu")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Map/obstacles" index="18" unique_id=1796264736]
+position = Vector2(80.00001, 312)
+scale = Vector2(0.91, 0.91)
+shape = SubResource("RectangleShape2D_lqrgo")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="Map/obstacles" index="19" unique_id=476254760]
+position = Vector2(173, 138)
+scale = Vector2(0.91, 0.91)
+shape = SubResource("RectangleShape2D_7e7vy")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="Map/obstacles" index="20" unique_id=267813481]
+position = Vector2(194.5, 643)
+scale = Vector2(0.91, 0.91)
+shape = SubResource("RectangleShape2D_3gtsu")
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="Map/obstacles" index="21" unique_id=1222584779]
+position = Vector2(149.25002, 580.00006)
+scale = Vector2(0.91, 0.91)
+shape = SubResource("RectangleShape2D_iqpl7")
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="Map/obstacles" index="22" unique_id=617467108]
+position = Vector2(85, 501)
+scale = Vector2(0.91, 0.91)
+shape = SubResource("RectangleShape2D_ij04u")
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="Map/obstacles" index="23" unique_id=843852101]
+position = Vector2(298, 499.00003)
+scale = Vector2(0.91, 0.91)
+shape = SubResource("CircleShape2D_awofh")
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="Map/obstacles" index="24" unique_id=1647452265]
+position = Vector2(402.00003, 690.00006)
+scale = Vector2(0.91, 0.91)
+shape = SubResource("CircleShape2D_rr7wi")
+
 [node name="Player" parent="." index="1" unique_id=1866997068]
-position = Vector2(1062, 674)
+position = Vector2(1043, 671)
 
 [node name="Camera2D" type="Camera2D" parent="Player" index="2" unique_id=1960302298]
 zoom = Vector2(3, 3)
@@ -450,6 +665,14 @@ limit_top = 0
 limit_right = 1280
 limit_bottom = 720
 limit_smoothed = true
+
+[node name="Room1" type="PointLight2D" parent="Player" index="3" unique_id=457087946]
+position = Vector2(-7.1525574e-06, -1.5258789e-05)
+scale = Vector2(5.0000024, 4.804687)
+color = Color(1, 1, 0.79607844, 1)
+energy = 0.36
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_ilsv2")
 
 [node name="Camera2D" parent="." index="3" unique_id=2043686662]
 position = Vector2(0, -3)
@@ -582,6 +805,7 @@ navigation_polygon = SubResource("NavigationPolygon_ifky7")
 metadata/_edit_lock_ = true
 
 [node name="Polygon2D" type="Polygon2D" parent="NavigationRegion2D2" index="0" unique_id=1593690113]
+visible = false
 color = Color(1, 1, 1, 0)
 polygon = PackedVector2Array(-39, 327, -44, 457, 191, 457, 187, 328)
 
