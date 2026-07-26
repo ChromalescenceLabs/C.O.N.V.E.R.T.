@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dcnqgatj8d0wl"]
 
 [ext_resource type="Script" uid="uid://whltremrefsx" path="res://scripts/countdown.gd" id="1_c8cft"]
+[ext_resource type="Texture2D" uid="uid://nb3b0jn4aon0" path="res://assets/sprites/brain.png" id="2_c4awr"]
 
 [sub_resource type="Animation" id="Animation_c8cft"]
 length = 0.001
@@ -14,7 +15,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(52, 48)]
+"values": [Vector2(0.03, 0.028)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -46,7 +47,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.6980468, 1),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(52, 48), Vector2(55.6, 51.323), Vector2(52, 48)]
+"values": [Vector2(0.03, 0.028), Vector2(0.035, 0.033), Vector2(0.03, 0.028)]
 }
 
 [sub_resource type="Animation" id="Animation_4rwbn"]
@@ -75,8 +76,6 @@ _data = {
 &"shake": SubResource("Animation_4rwbn")
 }
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_c8cft"]
-
 [node name="CountdownDisplay" type="Node2D" unique_id=1102513215]
 position = Vector2(1202, 68)
 scale = Vector2(2, 2)
@@ -97,9 +96,8 @@ speed_scale = 1.34
 [node name="Node2D" type="Node2D" parent="." unique_id=952190036]
 
 [node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=34735580]
-modulate = Color(1, 1, 1, 0)
-scale = Vector2(52, 48)
-texture = SubResource("PlaceholderTexture2D_c8cft")
+scale = Vector2(0.03, 0.028)
+texture = ExtResource("2_c4awr")
 
 [node name="TimerLabel" type="Label" parent="Node2D" unique_id=962797046]
 modulate = Color(1, 1, 1, 0)
@@ -109,10 +107,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -21.0
-offset_top = -11.5
-offset_right = 21.0
-offset_bottom = 11.5
+offset_left = -20.5
+offset_top = -15.0
+offset_right = 21.5
+offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "00:00"
