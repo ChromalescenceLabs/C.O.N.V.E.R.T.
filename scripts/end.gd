@@ -6,7 +6,9 @@ extends Node2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
 func _ready() -> void:
+	
 	await get_tree().create_timer(1.0).timeout
+	Sfx.beep.play()
 	
 	rich_text_label.show()
 	
@@ -27,7 +29,10 @@ func _ready() -> void:
 	rich_text_label_3.show()
 	
 	await get_tree().create_timer(3.0).timeout
+	Sfx.beep.stop()
+	Sfx.boom.play()
 	
 	create_tween().tween_property(rich_text_label_3, "modulate:a", 0, 1).set_ease(Tween.EASE_IN_OUT)
 	create_tween().tween_property(canine_logo, "modulate:a", 1, 1).set_ease(Tween.EASE_IN_OUT)
 	animation_player.play("growl")
+	Sfx.growl.play()

@@ -10,14 +10,18 @@ config_version=5
 
 [application]
 
-config/name="C.O.N.V.E.R.T"
-run/main_scene="uid://b6u51oj4l0ahl"
+config/name="C.A.N.I.N.E"
+run/main_scene="uid://c3pcxuo80jduy"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/stretch_mode=0
 boot_splash/use_filter=false
 boot_splash/image="uid://d1tkev257t2qu"
-config/icon="res://Assets/sprites/icon.svg"
+config/icon="uid://uagq5prsg07q"
+
+[audio]
+
+buses/default_bus_layout="uid://8tb3njwl5520"
 
 [autoload]
 
@@ -25,6 +29,7 @@ SentencePrompts="*uid://blfyoss1y5ot1"
 SceneLoader="*uid://jauffil1d42j"
 GlobalVars="*uid://blxl4sge3m5s5"
 Music="*uid://cwpfdb1yi3evk"
+Sfx="*uid://by1untrqkoie8"
 
 [display]
 

@@ -48,3 +48,4 @@ func _on_timer_timeout() -> void:
 	var end = MISSION_END.instantiate()
 	end.status = "Fail"
 	get_parent().add_child(end)
+	Sfx.boom.play()

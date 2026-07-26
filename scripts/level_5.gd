@@ -9,6 +9,13 @@ var systems_accessed = false
 
 var confront : bool = false
 
+func _ready() -> void:
+	Music.lvl_1.stop()
+	Music.title_screen.stop()
+	Music.lvl_2.stop()
+	Music.lvl_3.play()
+	Music.dead.stop()
+
 func _process(_delta: float) -> void:
 	if systems_accessed:
 		static_body_2d.process_mode = Node.PROCESS_MODE_DISABLED
@@ -20,6 +27,7 @@ func _input(event: InputEvent) -> void:
 	if confront:
 		if event.is_action_pressed("Kill"):
 			SceneLoader.load_scene("uid://hkowteb4uvpv", 2)
+			create_tween().tween_property(Music.lvl_3, "volume_db", -80, 2)
 
 func camToggle():
 	if player_cam.enabled:

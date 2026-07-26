@@ -13,6 +13,7 @@ extends Control
 #SO YEAH SHHHH
 
 func _ready() -> void:
+	Music.title_screen.play()
 	bloody.hide()
 	mainTexts.show()
 	optionsMenu.hide()
@@ -46,6 +47,8 @@ func flickerTitle():
 
 func _on_start_pressed() -> void:
 	SceneLoader.load_scene("uid://brnavpy720b6r", 2)
+	create_tween().tween_property(Music.title_screen, "volume_db", -80, 1)
+	Music.title_screen.stop()
 	
 func _on_options_pressed() -> void:
 	mainTexts.hide()

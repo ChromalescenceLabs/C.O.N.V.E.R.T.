@@ -21,6 +21,11 @@ const MISSION_END = preload("uid://brtmt3juhpp44")
 
 func _ready() -> void:
 	GlobalVars.has_key = false
+	Music.lvl_1.stop()
+	Music.title_screen.stop()
+	Music.lvl_2.play()
+	Music.lvl_3.stop()
+	Music.dead.stop()
 
 func _input(event: InputEvent) -> void:
 	if in_note == false:
@@ -29,7 +34,7 @@ func _input(event: InputEvent) -> void:
 	if allow_kill and kill_vacinity:
 			var end = MISSION_END.instantiate()
 			end.status = "Success"
-			end.next_scene = "uid://nrjfmedp5qge"
+			end.next_scene = "uid://oew0jxo2b2v3"
 			add_child(end)
 	else:
 		if event.is_action_pressed("click"):
