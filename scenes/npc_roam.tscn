@@ -13,7 +13,7 @@ script = ExtResource("1_vx2kk")
 shape = SubResource("CircleShape2D_tcuxl")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1435172679]
-scale = Vector2(0.23437499, 0.23437476)
+scale = Vector2(0.025, 0.025)
 texture = ExtResource("2_81yxx")
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=51221625]

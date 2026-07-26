@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+@export var texture : Texture2D
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var nav: NavigationAgent2D = $NavigationAgent2D
 
@@ -19,6 +20,9 @@ const MISSION_END = preload("uid://brtmt3juhpp44")
 @export var points : Array[Marker2D]
 @export var mintime : int = 0
 @export var maxtime : int = 0
+
+func _ready() -> void:
+	sprite_2d.texture = texture
 
 func _physics_process(_delta: float) -> void:
 	_state_set()

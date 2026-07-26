@@ -4,10 +4,17 @@
 [ext_resource type="Script" uid="uid://djq0y4k4cda2d" path="res://scripts/Levels/level_3.gd" id="2_jkjn7"]
 [ext_resource type="Texture2D" uid="uid://btqbusauh7usy" path="res://assets/level_placeholders/lvl3.png" id="2_jwpnw"]
 [ext_resource type="Script" uid="uid://c7pj66a51nju" path="res://scripts/Levels/room_light3.gd" id="3_5oy68"]
+[ext_resource type="Texture2D" uid="uid://b34snqjbkahy0" path="res://assets/sprites/notefull.png" id="5_mdtll"]
 [ext_resource type="PackedScene" uid="uid://4y004av2xwbp" path="res://scenes/npc_roam.tscn" id="5_n5ck4"]
 [ext_resource type="Script" uid="uid://c6oharjj7vvrc" path="res://scripts/Levels/lvl3_pickpocket.gd" id="6_2iout"]
+[ext_resource type="Texture2D" uid="uid://bjf28ruc3dna4" path="res://assets/sprites/green-Photoroom.png" id="7_4ttg5"]
 [ext_resource type="PackedScene" uid="uid://b835m4itbrm1m" path="res://scenes/door.tscn" id="7_c3r25"]
 [ext_resource type="Script" uid="uid://bxmegus6iay4j" path="res://scripts/door_instructions.gd" id="8_55lrb"]
+[ext_resource type="Texture2D" uid="uid://n8p854spoper" path="res://assets/sprites/red-Photoroom.png" id="9_4ttg5"]
+[ext_resource type="PackedScene" uid="uid://dp8blysyoiolc" path="res://scenes/note.tscn" id="9_cpagj"]
+[ext_resource type="Texture2D" uid="uid://fx8cyqwsav4f" path="res://assets/sprites/blue-Photoroom.png" id="10_gc1ej"]
+[ext_resource type="Texture2D" uid="uid://drgvwbj1ghd0g" path="res://assets/sprites/brown-Photoroom.png" id="11_gc1ej"]
+[ext_resource type="Texture2D" uid="uid://bvoqvgitiv1kj" path="res://assets/sprites/752150707_1000527336128534_2451607893625324106_n-Photoroom.png" id="12_gc1ej"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5oy68"]
 size = Vector2(1244.0135, 9.25)
@@ -85,6 +92,9 @@ size = Vector2(521, 658)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_du1gc"]
 size = Vector2(207, 117)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_55lrb"]
+radius = 21.023796
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_n5ck4"]
 radius = 24.0
@@ -436,13 +446,37 @@ theme_override_font_sizes/font_size = 58
 text = "[L] LOCKPICK
 [O] OPEN"
 
+[node name="Back" type="ColorRect" parent="CanvasLayer" index="3" unique_id=539175675]
+modulate = Color(1, 1, 1, 0)
+offset_left = -44.00006
+offset_top = -30.0
+offset_right = 1325.0
+offset_bottom = 762.0
+color = Color(0, 0, 0, 1)
+
+[node name="FullNote" type="Sprite2D" parent="CanvasLayer" index="4" unique_id=1532196849]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(660, 376)
+scale = Vector2(1.072, 1.072)
+texture = ExtResource("5_mdtll")
+
 [node name="NPCS" type="Node2D" parent="." index="6" unique_id=307746708]
 
 [node name="NPC4" type="Node2D" parent="NPCS" index="0" unique_id=633176619]
 
 [node name="NpcRoam" parent="NPCS/NPC4" index="0" unique_id=1011810883 node_paths=PackedStringArray("points") instance=ExtResource("5_n5ck4")]
 position = Vector2(363, 484)
+texture = ExtResource("7_4ttg5")
 points = [NodePath("../Marker2D2"), NodePath("../Marker2D3"), NodePath("../Marker2D4")]
+mintime = 3
+maxtime = 4
+
+[node name="KillArea" type="Area2D" parent="NPCS/NPC4/NpcRoam" index="3" unique_id=8459535]
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCS/NPC4/NpcRoam/KillArea" index="0" unique_id=1011251706]
+shape = SubResource("CircleShape2D_55lrb")
 
 [node name="Marker2D2" type="Marker2D" parent="NPCS/NPC4" index="1" unique_id=8911771]
 position = Vector2(637, 544)
@@ -458,7 +492,10 @@ script = ExtResource("6_2iout")
 
 [node name="NpcRoam" parent="NPCS/NPC3" index="0" unique_id=1368092293 node_paths=PackedStringArray("points") instance=ExtResource("5_n5ck4")]
 position = Vector2(1151, 350)
+texture = ExtResource("9_4ttg5")
 points = [NodePath("../Marker2D2"), NodePath("../Marker2D3"), NodePath("../Marker2D4"), NodePath("../Distraction")]
+mintime = 3
+maxtime = 4
 
 [node name="Area2D" type="Area2D" parent="NPCS/NPC3/NpcRoam" index="3" unique_id=2051540249]
 
@@ -489,7 +526,10 @@ position = Vector2(993, 208)
 
 [node name="NpcRoam" parent="NPCS/NPC2" index="0" unique_id=1913170140 node_paths=PackedStringArray("points") instance=ExtResource("5_n5ck4")]
 position = Vector2(966, 125)
+texture = ExtResource("10_gc1ej")
 points = [NodePath("../Marker2D3"), NodePath("../Marker2D4")]
+mintime = 3
+maxtime = 4
 
 [node name="Marker2D3" type="Marker2D" parent="NPCS/NPC2" index="1" unique_id=1964893347]
 position = Vector2(1140, 125)
@@ -501,7 +541,10 @@ position = Vector2(903, 124)
 
 [node name="NpcRoam" parent="NPCS/NPC1" index="0" unique_id=176291217 node_paths=PackedStringArray("points") instance=ExtResource("5_n5ck4")]
 position = Vector2(299, 151)
+texture = ExtResource("11_gc1ej")
 points = [NodePath("../Marker2D2"), NodePath("../Marker2D3"), NodePath("../Marker2D4")]
+mintime = 2
+maxtime = 3
 
 [node name="Marker2D2" type="Marker2D" parent="NPCS/NPC1" index="1" unique_id=541216696]
 position = Vector2(1182, 603)
@@ -516,6 +559,7 @@ position = Vector2(127, 316)
 
 [node name="NpcRoam" parent="NPCS/Guard" index="0" unique_id=1477656043 node_paths=PackedStringArray("points") instance=ExtResource("5_n5ck4")]
 position = Vector2(1025, 392)
+texture = ExtResource("12_gc1ej")
 points = [NodePath("../Distraction")]
 
 [node name="GuardIndic" type="Label" parent="NPCS/Guard/NpcRoam" index="3" unique_id=860511351]
@@ -609,6 +653,9 @@ script = ExtResource("8_55lrb")
 position = Vector2(4.5, 0)
 shape = SubResource("RectangleShape2D_cpagj")
 
+[node name="Note" parent="." index="11" unique_id=1701194455 instance=ExtResource("9_cpagj")]
+position = Vector2(646, 238)
+
 [connection signal="body_entered" from="Map/RoomLights/r1" to="Map/RoomLights" method="_on_r_1_body_entered"]
 [connection signal="body_exited" from="Map/RoomLights/r1" to="Map/RoomLights" method="_on_r_1_body_exited"]
 [connection signal="body_entered" from="Map/RoomLights/r2" to="Map/RoomLights" method="_on_r_2_body_entered"]
@@ -619,6 +666,8 @@ shape = SubResource("RectangleShape2D_cpagj")
 [connection signal="body_exited" from="Map/RoomLights/r4" to="Map/RoomLights" method="_on_r_4_body_exited"]
 [connection signal="body_entered" from="Map/RoomLights/r5" to="Map/RoomLights" method="_on_r_5_body_entered"]
 [connection signal="body_exited" from="Map/RoomLights/r5" to="Map/RoomLights" method="_on_r_5_body_exited"]
+[connection signal="body_entered" from="NPCS/NPC4/NpcRoam/KillArea" to="." method="_on_kill_area_body_entered"]
+[connection signal="body_exited" from="NPCS/NPC4/NpcRoam/KillArea" to="." method="_on_kill_area_body_exited"]
 [connection signal="office_access" from="NPCS/NPC3" to="." method="_on_npc_3_office_access"]
 [connection signal="office_access" from="NPCS/NPC3" to="NPCS/NPC3" method="_on_office_access"]
 [connection signal="body_entered" from="NPCS/NPC3/NpcRoam/Area2D" to="NPCS/NPC3" method="_on_area_2d_body_entered"]
