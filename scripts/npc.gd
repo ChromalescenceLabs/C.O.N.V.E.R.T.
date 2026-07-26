@@ -13,8 +13,14 @@ var stay = false
 var tween: Tween
 var isChasing: bool = false 
 var player
+var being_detected : bool = false
+var stunned : bool = false
+
+const MISSION_END = preload("uid://brtmt3juhpp44")
 
 @export var points : Array[Marker2D]
+@export var mintime : int = 0
+@export var maxtime : int = 0
 
 func _ready() -> void:
 	circle.modulate.a=0.0
@@ -22,10 +28,6 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	_state_set()
 	_navigate()
-	
-	if isChasing:
-		current_state = STATE.TARGET
-		set_physics_process(true)
 
 func _pick_point():
 	var randpoint = points.pick_random()
@@ -53,8 +55,10 @@ func _navigate():
 		STATE.DISTRACTED:
 			speed = 100
 		STATE.TARGET:
-			player = get_node_or_null("../Player")
-			speed = 80
+			set_process(false)
+			var end = MISSION_END.instantiate()
+			end.status = "Fail"
+			get_parent().add_child(end)
 
 #moved because i noticed they have similar logic
 	if current_state != STATE.IDLE:
@@ -62,9 +66,19 @@ func _navigate():
 		velocity = (
 			global_position.direction_to(next_path_position) * speed
 		)
-		var finalAngle = velocity.angle() - (TAU / 4)
-		sprite_2d.rotation = lerp_angle(sprite_2d.rotation, finalAngle, 0.01)
 		move_and_slide()
+		
+		if not being_detected:
+			current_state = STATE.PATH
+		elif (being_detected and player) and not stunned:
+			current_state = STATE.IDLE
+			
+	if not being_detected:
+		sprite_2d.rotation = velocity.angle() - (TAU / 4)
+	elif (being_detected and player) and not stunned:
+		var dir_to_player = global_position.direction_to(player.global_position)
+		sprite_2d.rotation = dir_to_player.angle() - (TAU / 4)
+		
 
 func _on_navigation_agent_2d_target_reached() -> void:
 	if current_state == STATE.DISTRACTED and stay == true:
@@ -72,14 +86,16 @@ func _on_navigation_agent_2d_target_reached() -> void:
 		return
 	else:
 		current_state = STATE.IDLE
-		await get_tree().create_timer(randi_range(4, 5)).timeout
+		await get_tree().create_timer(randi_range(mintime, maxtime)).timeout
 		
 		if current_state != STATE.DISTRACTED:
 			current_state = STATE.PATH
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		print("RUNNN")
+		player = body
+		being_detected = true
+		stunned = false
 		
 		if tween:
 			tween.kill()
@@ -91,7 +107,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
-		print("Mustve been the wind")
+		stunned = true
 
 		if tween:
 			tween.kill()
@@ -104,14 +120,10 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 #please DONT ask why this works, it just does
 #you don't know how much i spent on this thing im crashing out
 func tweenTarget():
-	print("finished")
-	isChasing=true
-	set_physics_process(true)
 	current_state = STATE.TARGET
 
 func tweenPath():
-	print("END ALREADY")
-	isChasing=false
+	being_detected = false
+	stunned = false
 	current_state = STATE.PATH
-	set_physics_process(true)
 	circle.modulate.a=0.0

@@ -34,14 +34,14 @@ texture = ExtResource("2_abqhh")
 
 [node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=710778795]
 rotation = 1.5707964
-scale = Vector2(4.266667, 4.266671)
+scale = Vector2(2.552, 2.552)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/Area2D" unique_id=87064079]
 polygon = PackedVector2Array(0, 0, 128, -56, 128, 56, 0, 0)
 
 [node name="Polygon2D" type="Polygon2D" parent="Sprite2D/Area2D" unique_id=558079404]
 color = Color(0.93333334, 0.57254905, 0.70980394, 0.6745098)
-polygon = PackedVector2Array(128, 56, 128, -56, 0, 0)
+polygon = PackedVector2Array(128, 56, 127.999985, 0.83387756, 128, -56, 0, 0)
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=51221625]
 avoidance_enabled = true

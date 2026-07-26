@@ -42,6 +42,8 @@ position_smoothing_enabled = true
 [node name="NPC" parent="." unique_id=1011810883 node_paths=PackedStringArray("points") instance=ExtResource("2_2j2p2")]
 position = Vector2(383, 186)
 points = [NodePath("../Node2D/Marker2D"), NodePath("../Node2D/Marker2D2"), NodePath("../Node2D/Marker2D3"), NodePath("../Node2D/Distraction")]
+mintime = 3
+maxtime = 4
 
 [node name="Node2D" type="Node2D" parent="." unique_id=502214511]
 
