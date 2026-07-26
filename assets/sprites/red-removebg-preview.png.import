@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5df5ke1ifieb"
-path="res://.godot/imported/2210.q803.036.F.m012.c7.Blot_hand_grunge_texture_realistic-removebg-preview.png-fea8f7945907e88576ba5cb4893e3b74.ctex"
+uid="uid://bp0767nhcvhlg"
+path="res://.godot/imported/red-removebg-preview.png-1680abb0c9a4d196f510551c86fd6ec2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/bloodyhandprint/2210.q803.036.F.m012.c7.Blot_hand_grunge_texture_realistic-removebg-preview.png"
-dest_files=["res://.godot/imported/2210.q803.036.F.m012.c7.Blot_hand_grunge_texture_realistic-removebg-preview.png-fea8f7945907e88576ba5cb4893e3b74.ctex"]
+source_file="res://assets/sprites/red-removebg-preview.png"
+dest_files=["res://.godot/imported/red-removebg-preview.png-1680abb0c9a4d196f510551c86fd6ec2.ctex"]
 
 [params]
 

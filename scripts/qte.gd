@@ -63,8 +63,6 @@ func _input(event: InputEvent) -> void:
 				runAgain()
 			else:
 				tween.kill()
-				$black/AnimationPlayer.play("fade in")
-				await $black/AnimationPlayer.animation_finished
 				queue_free()
 
 		else:

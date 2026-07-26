@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c5df5ke1ifieb"
-path="res://.godot/imported/2210.q803.036.F.m012.c7.Blot_hand_grunge_texture_realistic-removebg-preview.png-fea8f7945907e88576ba5cb4893e3b74.ctex"
+uid="uid://drgvwbj1ghd0g"
+path="res://.godot/imported/brown-Photoroom.png-b57a522f16f529baef1d34651d5f1ebc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/bloodyhandprint/2210.q803.036.F.m012.c7.Blot_hand_grunge_texture_realistic-removebg-preview.png"
-dest_files=["res://.godot/imported/2210.q803.036.F.m012.c7.Blot_hand_grunge_texture_realistic-removebg-preview.png-fea8f7945907e88576ba5cb4893e3b74.ctex"]
+source_file="res://assets/sprites/brown-Photoroom.png"
+dest_files=["res://.godot/imported/brown-Photoroom.png-b57a522f16f529baef1d34651d5f1ebc.ctex"]
 
 [params]
 
