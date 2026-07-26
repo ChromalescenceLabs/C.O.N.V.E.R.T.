@@ -5,6 +5,16 @@ const SPEED : int = 150
 const ACCELERATION : int = 5
 const FRICT : int = 8
 
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("Down"):
+		self.rotation_degrees = 0
+	elif event.is_action_pressed("Up"):
+		self.rotation_degrees = 180
+	elif event.is_action_pressed("Right"):
+		self.rotation_degrees = 270
+	elif event.is_action_pressed("Left"):
+		self.rotation_degrees = 90
+
 func _physics_process(delta: float) -> void:
 	if GlobalVars.is_interacting == false:
 		get_player_input(delta)

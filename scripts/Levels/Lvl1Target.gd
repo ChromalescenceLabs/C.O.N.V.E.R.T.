@@ -10,7 +10,7 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("Kill"):
 		var end = MISSION_END.instantiate()
 		end.status = "Success"
-		end.next_scene = "uid://cqjc8fkilwk2g"
+		end.next_scene = "uid://nrjfmedp5qge"
 		get_parent().add_child(end)
 		
 func _on_kill_area_body_entered(body: Node2D) -> void:

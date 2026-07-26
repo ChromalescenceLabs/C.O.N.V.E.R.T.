@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://by1untrqkoie8"]
+
+[ext_resource type="Script" uid="uid://b3c5iglt53xqp" path="res://scripts/sfx.gd" id="1_4u0im"]
+[ext_resource type="AudioStream" uid="uid://d27ge1ndx26m8" path="res://assets/sound/freesound_community-super-deep-growl-86749.mp3" id="2_3b1dl"]
+[ext_resource type="AudioStream" uid="uid://dmhaehj684jc8" path="res://assets/sound/beeping.mp3" id="3_agiar"]
+[ext_resource type="AudioStream" uid="uid://c1fehakch3255" path="res://assets/sound/bomb.mp3" id="4_g4ugh"]
+
+[node name="SFX" type="Node" unique_id=2018041869]
+script = ExtResource("1_4u0im")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=841473700]
+stream = ExtResource("2_3b1dl")
+
+[node name="beep" type="AudioStreamPlayer" parent="." unique_id=873059501]
+stream = ExtResource("3_agiar")
+
+[node name="boom" type="AudioStreamPlayer" parent="." unique_id=387494591]
+stream = ExtResource("4_g4ugh")

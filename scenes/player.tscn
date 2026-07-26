@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://dmbhslapygqd7"]
 
-[ext_resource type="Script" uid="uid://loqury4xj5cd" path="res://Scripts/player.gd" id="1_3vyb7"]
-[ext_resource type="Texture2D" uid="uid://3p076i5tmyd8" path="res://Assets/player.png" id="2_cvnsp"]
+[ext_resource type="Script" uid="uid://loqury4xj5cd" path="res://scripts/player.gd" id="1_3vyb7"]
+[ext_resource type="Texture2D" uid="uid://3p076i5tmyd8" path="res://assets/player.png" id="2_cvnsp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u8vuu"]
 radius = 13.038404
 
 [node name="Player" type="CharacterBody2D" unique_id=1866997068]
+rotation = 1.6144296
 motion_mode = 1
 script = ExtResource("1_3vyb7")
 

@@ -14,11 +14,16 @@ var next_scene
 @onready var proceed: Button = $MissionSuccess/Proceed
 
 func _ready() -> void:
+	Music.lvl_1.stop()
+	Music.title_screen.stop()
+	Music.lvl_2.stop()
+	Music.lvl_3.stop()
 	get_tree().paused = true
 	var tw = create_tween().tween_property(color_rect, "modulate:a", 1, 0.5)
 	await tw.finished
 	
 	if status == "Fail":
+		Music.dead.play()
 		mission_failed._show_fail()
 	else:
 		mission_success._show_success()

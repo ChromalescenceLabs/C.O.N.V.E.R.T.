@@ -21,6 +21,11 @@ const MISSION_END = preload("uid://brtmt3juhpp44")
 
 func _ready() -> void:
 	GlobalVars.has_key = false
+	Music.lvl_1.stop()
+	Music.title_screen.stop()
+	Music.lvl_2.play()
+	Music.lvl_3.stop()
+	Music.dead.stop()
 
 func _input(event: InputEvent) -> void:
 	if in_note == false:

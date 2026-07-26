@@ -10,20 +10,26 @@ config_version=5
 
 [application]
 
-config/name="C.O.N.V.E.R.T"
-run/main_scene="uid://b6u51oj4l0ahl"
+config/name="C.A.N.I.N.E"
+run/main_scene="uid://c3pcxuo80jduy"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/stretch_mode=0
 boot_splash/use_filter=false
 boot_splash/image="uid://d1tkev257t2qu"
-config/icon="res://Assets/sprites/icon.svg"
+config/icon="uid://uagq5prsg07q"
+
+[audio]
+
+buses/default_bus_layout="uid://8tb3njwl5520"
 
 [autoload]
 
 SentencePrompts="*uid://blfyoss1y5ot1"
 SceneLoader="*uid://jauffil1d42j"
 GlobalVars="*uid://blxl4sge3m5s5"
+Music="*uid://cwpfdb1yi3evk"
+Sfx="*uid://by1untrqkoie8"
 
 [display]
 
@@ -101,6 +107,11 @@ Pickpocket={
 click={
 "deadzone": 0.2,
 "events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
+]
+}
+Hacking={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":72,"key_label":0,"unicode":72,"location":0,"echo":false,"script":null)
 ]
 }
 
