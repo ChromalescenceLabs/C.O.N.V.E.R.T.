@@ -467,150 +467,182 @@ metadata/_edit_lock_ = true
 
 [node name="Room1" type="PointLight2D" parent="Map/Room Light" index="0" unique_id=858906422]
 light_mask = 2
+z_index = 5
 position = Vector2(1092, 414.00003)
 scale = Vector2(5.2187486, 4.9062505)
 color = Color(1, 1, 0.79607844, 1)
 energy = 0.5
+range_z_max = 4
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_o7bax")
 
 [node name="Room1_1" type="PointLight2D" parent="Map/Room Light" index="1" unique_id=413091394]
 light_mask = 4
+z_index = 5
 position = Vector2(854.49994, 142)
 scale = Vector2(3.4531238, 3.3125)
 color = Color(1, 1, 0.79607844, 1)
 energy = 0.5
+range_z_max = 4
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_o7bax")
 
 [node name="Room1_2" type="PointLight2D" parent="Map/Room Light" index="2" unique_id=990828539]
+z_index = 5
 position = Vector2(1113.5, 167)
 scale = Vector2(4.6406255, 3.7343748)
 color = Color(1, 1, 0.79607844, 1)
 energy = 0.5
+range_z_max = 4
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_o7bax")
 
 [node name="Room2" type="PointLight2D" parent="Map/Room Light" index="3" unique_id=1627204893]
+z_index = 5
 position = Vector2(1100, 592)
 scale = Vector2(6.1874995, 3.96875)
 color = Color(1, 1, 0.79607844, 1)
 energy = 0.5
+range_z_max = 4
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_flysx")
 metadata/_edit_lock_ = true
 
 [node name="Room3" type="PointLight2D" parent="Map/Room Light" index="4" unique_id=1408472085]
+z_index = 5
 position = Vector2(670, 354)
 scale = Vector2(8.8984375, 3.96875)
 color = Color(1, 1, 0.79607844, 1)
 energy = 0.5
+range_z_max = 4
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_flysx")
 
 [node name="Room3_1" type="PointLight2D" parent="Map/Room Light" index="5" unique_id=345766500]
+z_index = 5
 position = Vector2(815.5, 592)
 scale = Vector2(2.546876, 3.5625)
 color = Color(1, 1, 0.79607844, 1)
 energy = 0.5
+range_z_max = 4
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_flysx")
 
 [node name="Room4" type="PointLight2D" parent="Map/Room Light" index="6" unique_id=284976717]
+z_index = 5
 position = Vector2(651.49994, 549)
 scale = Vector2(6.5468755, 4.9375005)
 color = Color(1, 1, 0.79607844, 1)
 energy = 0.5
+range_z_max = 4
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_flysx")
 metadata/_edit_lock_ = true
 
 [node name="Room5" type="PointLight2D" parent="Map/Room Light" index="7" unique_id=100245634]
+z_index = 5
 position = Vector2(358, 467)
 scale = Vector2(4.0312505, 7.75)
 color = Color(1, 1, 0.79607844, 1)
 energy = 0.5
+range_z_max = 4
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_flysx")
 
 [node name="Room5_1" type="PointLight2D" parent="Map/Room Light" index="8" unique_id=675582801]
+z_index = 5
 position = Vector2(115.000015, 590.5)
 scale = Vector2(3.78125, 4.1718764)
 color = Color(1, 1, 0.79607844, 1)
 energy = 0.5
+range_z_max = 4
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_flysx")
 
 [node name="Room6" type="PointLight2D" parent="Map/Room Light" index="9" unique_id=924802968]
+z_index = 5
 position = Vector2(125, 430.5)
 scale = Vector2(3.4062495, 4.3593745)
 color = Color(1, 1, 0.79607844, 1)
 energy = 0.5
+range_z_max = 4
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_flysx")
 metadata/_edit_lock_ = true
 
 [node name="Room7" type="PointLight2D" parent="Map/Room Light" index="10" unique_id=1182440955]
+z_index = 5
 position = Vector2(263.5, 192.99998)
 scale = Vector2(7.6406245, 4.9687495)
 color = Color(1, 1, 0.79607844, 1)
 energy = 0.5
+range_z_max = 4
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_flysx")
 metadata/_edit_lock_ = true
 
 [node name="Room8" type="PointLight2D" parent="Map/Room Light" index="11" unique_id=973957384]
+z_index = 5
 position = Vector2(587, 147)
 scale = Vector2(5.1250005, 3.1250005)
 color = Color(1, 1, 0.79607844, 1)
 energy = 0.5
+range_z_max = 4
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_flysx")
 metadata/_edit_lock_ = true
 
 [node name="r1" type="Area2D" parent="Map/Room Light" index="12" unique_id=1212454096]
+visible = false
 position = Vector2(1052, 283)
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Map/Room Light/r1" index="0" unique_id=1874755593]
 polygon = PackedVector2Array(-128, 225, 205, 225, 209, -239, -298, -241, -300, -40, -127, -40)
 
 [node name="r2" type="Area2D" parent="Map/Room Light" index="13" unique_id=1053282619]
+visible = false
 position = Vector2(1085, 616)
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Map/Room Light/r2" index="0" unique_id=499616302]
 polygon = PackedVector2Array(-140, -107, 147, -107, 146, 83, -141, 83)
 
 [node name="r3" type="Area2D" parent="Map/Room Light" index="14" unique_id=1205693376]
+visible = false
 position = Vector2(673, 359)
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Map/Room Light/r3" index="0" unique_id=1610316859]
 polygon = PackedVector2Array(-218, -107, 247, -108, 239, 339, 131, 339, 130, 160, 43, 68, -220, 69)
 
 [node name="r4" type="Area2D" parent="Map/Room Light" index="15" unique_id=1394042796]
+visible = false
 position = Vector2(612, 568)
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Map/Room Light/r4" index="0" unique_id=519383205]
 polygon = PackedVector2Array(-161, -132, 97, -134, 182, -45, 185, 132, -162, 133)
 
 [node name="r5" type="Area2D" parent="Map/Room Light" index="16" unique_id=1626061809]
+visible = false
 position = Vector2(315, 463)
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Map/Room Light/r5" index="0" unique_id=1458218056]
 polygon = PackedVector2Array(-90, -138, 133, -137, 129, 241, -288, 241, -287, 53, -91, 53)
 
 [node name="r6" type="Area2D" parent="Map/Room Light" index="17" unique_id=294656840]
+visible = false
 position = Vector2(119, 426)
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Map/Room Light/r6" index="0" unique_id=1438033190]
 polygon = PackedVector2Array(-89, -100, 97, -100, 96, 85, -90, 84)
 
 [node name="r7" type="Area2D" parent="Map/Room Light" index="18" unique_id=284271123]
+visible = false
 position = Vector2(232, 182)
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Map/Room Light/r7" index="0" unique_id=2063166461]
 polygon = PackedVector2Array(-200, -137, 218, -140, 215, 139, -203, 136)
 
 [node name="r8" type="Area2D" parent="Map/Room Light" index="19" unique_id=1645625943]
+visible = false
 position = Vector2(597, 151)
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Map/Room Light/r8" index="0" unique_id=857684340]
