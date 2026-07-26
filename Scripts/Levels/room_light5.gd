@@ -8,8 +8,6 @@ extends Node2D
 @onready var room_2_4: PointLight2D = $Room2_4
 @onready var room_3: PointLight2D = $Room3
 @onready var room_4: PointLight2D = $Room4
-@onready var room_5: PointLight2D = $Room5
-@onready var room_6: PointLight2D = $Room6
 @onready var room_7: PointLight2D = $Room7
 @onready var room_8: PointLight2D = $Room8
 @onready var room_9: PointLight2D = $Room9
@@ -25,8 +23,6 @@ func _ready() -> void:
 	$Room2_4.energy = 0.0
 	$Room3.energy = 0.0
 	$Room4.energy = 0.0
-	$Room5.energy = 0.0
-	$Room6.energy = 0.0
 	$Room7.energy = 0.0
 	$Room8.energy = 0.0
 	$Room9.energy = 0.0
@@ -76,22 +72,6 @@ func _on_r_4_body_entered(body: Node2D) -> void:
 		print("HEY")
 	else:
 		$Room4.energy = 0.0
-
-
-func _on_r_5_body_entered(body: Node2D) -> void:
-	if body is Player:
-		fade_light($Room5, 1.0, 0.25)
-		print("HEY")
-	else:
-		$Room5.energy = 0.0
-
-
-func _on_r_6_body_entered(body: Node2D) -> void:
-	if body is Player:
-		fade_light($Room6, 1.0, 0.25)
-		print("HEY")
-	else:
-		$Room6.energy = 0.0
 
 
 func _on_r_7_body_entered(body: Node2D) -> void:
@@ -151,18 +131,6 @@ func _on_r_3_body_exited(body: Node2D) -> void:
 func _on_r_4_body_exited(body: Node2D) -> void:
 	if body is Player:
 		fade_light($Room4, 0.0, 0.25)
-		print("BYE")
-
-
-func _on_r_5_body_exited(body: Node2D) -> void:
-	if body is Player:
-		fade_light($Room5, 0.0, 0.25)
-		print("BYE")
-
-
-func _on_r_6_body_exited(body: Node2D) -> void:
-	if body is Player:
-		fade_light($Room6, 0.0, 0.25)
 		print("BYE")
 
 

@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://euqf1tvxyhrn" path="res://Scenes/Levels/level_base.tscn" id="1_x0sqe"]
 [ext_resource type="Texture2D" uid="uid://cl0dhapy7sit0" path="res://Assets/level_maps/lvl5.png" id="2_dtfwk"]
+[ext_resource type="Texture2D" uid="uid://dhj3rxi0y5d0h" path="res://Assets/level_debug/Lvl5.png" id="2_myn83"]
 [ext_resource type="Script" uid="uid://c7g4b35clq4wk" path="res://Scripts/Levels/room_light5.gd" id="3_dtfwk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_myn83"]
@@ -10,101 +11,92 @@ size = Vector2(1244.0135, 9.25)
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wj752"]
 polygon = PackedVector2Array(-622, -6, 622, -6, 622, 4, -622, 4)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7nygn"]
-size = Vector2(10, 564)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pt0sv"]
+size = Vector2(29, 660)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_lkkcx"]
 polygon = PackedVector2Array(-5, -332, 5, -332, 5, 332, -5, 332)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7nygn"]
+size = Vector2(32, 662)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_08vl7"]
-size = Vector2(10, 564)
+size = Vector2(32, 564)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_pt0sv"]
 polygon = PackedVector2Array(-5, -293, 5, -293, 6, 282, -5, 282)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t788b"]
-size = Vector2(10, 456)
+size = Vector2(24, 490)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_f11tu"]
-polygon = PackedVector2Array(-5, -228, 5, -228, 5, 231, -5, 231)
+polygon = PackedVector2Array(-6, -248, 5, -248, 6, 247, -5, 247)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x0sqe"]
-size = Vector2(10, 374)
+size = Vector2(27, 396)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_dtfwk"]
-polygon = PackedVector2Array(-6, -176, 5, -176, 4, 200, -6, 200)
+polygon = PackedVector2Array(-6, -185, 4, -185, 4, 211, -6, 211)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wj752"]
-size = Vector2(10, 383)
+size = Vector2(21, 141)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_7nygn"]
-polygon = PackedVector2Array(-5, -182, 5, -182, 5, 204, -5, 204)
+polygon = PackedVector2Array(-5, -61, 5, -61, 6, 80, -4, 80)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lkkcx"]
-size = Vector2(10, 528)
+size = Vector2(31, 528)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_08vl7"]
 polygon = PackedVector2Array(-5, -266, 5, -266, 5, 264, -6, 264)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pt0sv"]
-size = Vector2(10, 114)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0cmla"]
+size = Vector2(10, 166)
 
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_t788b"]
-polygon = PackedVector2Array(-5, -60, 5, -60, 5, 57, -5, 57)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_f11tu"]
-size = Vector2(10, 198)
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ykvih"]
-polygon = PackedVector2Array(-5, -99, 5, -99, 5, 99, -5, 99)
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_xsvsw"]
+polygon = PackedVector2Array(-6, -84, 6, -84, 5, 83, -5, 83)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rp22a"]
-size = Vector2(10, 158)
+size = Vector2(20, 102)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_cow3m"]
-polygon = PackedVector2Array(-5, -79, 6, -79, 5, 79, -5, 79)
+polygon = PackedVector2Array(-5, -54, 6, -54, 6, 50, -5, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_36ddn"]
-size = Vector2(10, 54)
+size = Vector2(20, 54)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_x3xif"]
 polygon = PackedVector2Array(-5, -28, 5, -28, 5, 27, -5, 27)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1sss4"]
-size = Vector2(10, 36)
+size = Vector2(10, 46)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_agagt"]
-polygon = PackedVector2Array(-5, -18, 5, -18, 5, 14, -5, 14)
+polygon = PackedVector2Array(-5, -23, 5, -23, 5, 23, -5, 23)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qauki"]
-size = Vector2(206, 9.25)
+size = Vector2(230, 38)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_580di"]
-polygon = PackedVector2Array(-104, -5, 103, -5, 103, 5, -104, 5)
+polygon = PackedVector2Array(-118, -5, 117, -5, 117, 5, -118, 5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vsdsk"]
-size = Vector2(238, 9.25)
+size = Vector2(238, 14.625)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_6de43"]
-polygon = PackedVector2Array(-120, -5, 123, -5, 123, 5, -120, 5)
+polygon = PackedVector2Array(-120, -5, 118, -5, 118, 5, -120, 5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aba7e"]
-size = Vector2(100, 9.25)
+size = Vector2(120, 9.25)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_wpgnl"]
-polygon = PackedVector2Array(-50, -5, 50, -5, 50, 5, -50, 5)
+polygon = PackedVector2Array(-64, -5, 60, -5, 60, 5, -64, 5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vu4qo"]
-size = Vector2(112, 9.25)
+size = Vector2(238, 34.625)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_uf8ug"]
-polygon = PackedVector2Array(-57, -5, 56, -5, 56, 5, -57, 5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6jnbq"]
-size = Vector2(164, 9.25)
-
-[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_t7cd5"]
-polygon = PackedVector2Array(-82, -5, 83, -5, 83, 5, -82, 5)
+polygon = PackedVector2Array(-119, -5, 120, -5, 120, 5, -119, 5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qlpoc"]
 size = Vector2(88, 9.25)
@@ -123,45 +115,94 @@ fill_from = Vector2(0.5, 0.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dtfwk"]
 size = Vector2(270, 660)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ykvih"]
-size = Vector2(90, 448)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cow3m"]
-size = Vector2(90, 130)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x3xif"]
-size = Vector2(92, 308)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_agagt"]
-size = Vector2(110, 510)
+size = Vector2(123, 133)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_580di"]
-size = Vector2(102, 302)
+size = Vector2(224, 276)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6de43"]
-size = Vector2(98, 200)
+size = Vector2(223, 224)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wpgnl"]
-size = Vector2(244, 100)
+size = Vector2(244, 168)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uf8ug"]
-size = Vector2(244, 158)
+size = Vector2(244, 194)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f11tu"]
+size = Vector2(38, 86)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ykvih"]
+size = Vector2(56, 116)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x3xif"]
+size = Vector2(28, 96)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_agagt"]
+size = Vector2(28, 256)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6jnbq"]
+size = Vector2(28, 92)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t7cd5"]
+size = Vector2(144, 28)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j63b7"]
+size = Vector2(28, 86)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_shbvv"]
+size = Vector2(100, 46)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vqpho"]
+size = Vector2(14, 124)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_42b1k"]
+size = Vector2(78, 69)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eb58f"]
+size = Vector2(18, 50)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kig76"]
+size = Vector2(46, 62)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cn7mc"]
+size = Vector2(100, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dhvgi"]
+size = Vector2(60, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_foxgn"]
+size = Vector2(92, 218)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vvbdx"]
+size = Vector2(154, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ba0kd"]
+size = Vector2(82, 68)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xlpgn"]
+size = Vector2(56, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e58nn"]
+size = Vector2(50, 94)
 
 [node name="Level" unique_id=89423142 instance=ExtResource("1_x0sqe")]
 
-[node name="Lvl5" type="Sprite2D" parent="Map" parent_id_path=PackedInt32Array(398342888) index="0" unique_id=1673463940]
-modulate = Color(1, 1, 1, 0.42352942)
-position = Vector2(644.00006, 370.99997)
-scale = Vector2(1.2588117, 1.2446042)
+[node name="Lvl6" type="Sprite2D" parent="Map" parent_id_path=PackedInt32Array(398342888) index="0" unique_id=913200385]
+visible = false
+position = Vector2(650.50006, 375.5)
+scale = Vector2(1.1148438, 1.0791668)
+texture = ExtResource("2_myn83")
+
+[node name="Lvl5" type="Sprite2D" parent="Map" parent_id_path=PackedInt32Array(398342888) index="1" unique_id=1203342532]
+position = Vector2(649.0001, 373.50003)
+scale = Vector2(1.1093751, 1.0819445)
 texture = ExtResource("2_dtfwk")
 metadata/_edit_lock_ = true
 
-[node name="OuterWall" parent="Map" parent_id_path=PackedInt32Array(398342888) index="1" unique_id=1196197006]
-metadata/_edit_lock_ = true
-
-[node name="Outer Wall" type="StaticBody2D" parent="Map/OuterWall" index="0" unique_id=1442274323]
+[node name="Outer Wall" type="StaticBody2D" parent="Map/OuterWall" parent_id_path=PackedInt32Array(1196197006) index="0" unique_id=1442274323]
 position = Vector2(642.99994, 39.000004)
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/OuterWall/Outer Wall" index="0" unique_id=1030691468]
 shape = SubResource("RectangleShape2D_myn83")
@@ -170,9 +211,8 @@ shape = SubResource("RectangleShape2D_myn83")
 occluder = SubResource("OccluderPolygon2D_wj752")
 occluder_light_mask = 1023
 
-[node name="Outer Wall2" type="StaticBody2D" parent="Map/OuterWall" index="1" unique_id=938792102]
+[node name="Outer Wall2" type="StaticBody2D" parent="Map/OuterWall" parent_id_path=PackedInt32Array(1196197006) index="1" unique_id=938792102]
 position = Vector2(642, 706)
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/OuterWall/Outer Wall2" index="0" unique_id=948623800]
 position = Vector2(0, -1)
@@ -182,23 +222,22 @@ shape = SubResource("RectangleShape2D_myn83")
 occluder = SubResource("OccluderPolygon2D_wj752")
 occluder_light_mask = 1023
 
-[node name="Outer Wall3" type="StaticBody2D" parent="Map/OuterWall" index="2" unique_id=546119074]
+[node name="Outer Wall3" type="StaticBody2D" parent="Map/OuterWall" parent_id_path=PackedInt32Array(1196197006) index="2" unique_id=546119074]
 position = Vector2(25, 371)
 metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/OuterWall/Outer Wall3" index="0" unique_id=1752207970]
-shape = SubResource("RectangleShape2D_7nygn")
+position = Vector2(9.5, 0)
+shape = SubResource("RectangleShape2D_pt0sv")
 metadata/_edit_group_ = true
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Map/OuterWall/Outer Wall3" index="1" unique_id=399343881]
 occluder = SubResource("OccluderPolygon2D_lkkcx")
 occluder_light_mask = 1023
 
-[node name="Outer Wall4" type="StaticBody2D" parent="Map/OuterWall" index="3" unique_id=1989240510]
+[node name="Outer Wall4" type="StaticBody2D" parent="Map/OuterWall" parent_id_path=PackedInt32Array(1196197006) index="3" unique_id=1989240510]
 position = Vector2(1260, 372)
 metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/OuterWall/Outer Wall4" index="0" unique_id=1708958955]
 shape = SubResource("RectangleShape2D_7nygn")
@@ -208,13 +247,12 @@ metadata/_edit_group_ = true
 occluder = SubResource("OccluderPolygon2D_lkkcx")
 occluder_light_mask = 1023
 
-[node name="InnerWall" parent="Map" parent_id_path=PackedInt32Array(398342888) index="2" unique_id=1358634834]
+[node name="InnerWall" parent="Map" parent_id_path=PackedInt32Array(398342888) index="3" unique_id=1358634834]
 metadata/_edit_lock_ = true
 
 [node name="Inner Wall" type="StaticBody2D" parent="Map/InnerWall" index="0" unique_id=382384463]
-position = Vector2(992, 335)
+position = Vector2(1004, 314)
 metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/InnerWall/Inner Wall" index="0" unique_id=520301042]
 shape = SubResource("RectangleShape2D_08vl7")
@@ -225,11 +263,11 @@ occluder = SubResource("OccluderPolygon2D_pt0sv")
 occluder_light_mask = 1023
 
 [node name="Inner Wall2" type="StaticBody2D" parent="Map/InnerWall" index="1" unique_id=1212234990]
-position = Vector2(647, 469)
+position = Vector2(639, 456)
 metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/InnerWall/Inner Wall2" index="0" unique_id=1836629901]
+position = Vector2(7, 0)
 shape = SubResource("RectangleShape2D_t788b")
 metadata/_edit_group_ = true
 
@@ -238,12 +276,11 @@ occluder = SubResource("OccluderPolygon2D_f11tu")
 occluder_light_mask = 1023
 
 [node name="Inner Wall3" type="StaticBody2D" parent="Map/InnerWall" index="2" unique_id=1536560299]
-position = Vector2(846, 418)
+position = Vector2(865, 390)
 metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/InnerWall/Inner Wall3" index="0" unique_id=1099116635]
-position = Vector2(-1, 13)
+position = Vector2(-9.5, 13)
 shape = SubResource("RectangleShape2D_x0sqe")
 metadata/_edit_group_ = true
 
@@ -252,12 +289,11 @@ occluder = SubResource("OccluderPolygon2D_dtfwk")
 occluder_light_mask = 1023
 
 [node name="Inner Wall4" type="StaticBody2D" parent="Map/InnerWall" index="3" unique_id=915334545]
-position = Vector2(510, 361)
+position = Vector2(513, 276)
 metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/InnerWall/Inner Wall4" index="0" unique_id=1977906162]
-position = Vector2(0, 9.5)
+position = Vector2(-5.5, 9.5)
 shape = SubResource("RectangleShape2D_wj752")
 metadata/_edit_group_ = true
 
@@ -266,11 +302,11 @@ occluder = SubResource("OccluderPolygon2D_7nygn")
 occluder_light_mask = 1023
 
 [node name="Inner Wall5" type="StaticBody2D" parent="Map/InnerWall" index="4" unique_id=1198425307]
-position = Vector2(279, 301)
+position = Vector2(280, 291)
 metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/InnerWall/Inner Wall5" index="0" unique_id=246662290]
+position = Vector2(10.5, 0)
 shape = SubResource("RectangleShape2D_lkkcx")
 metadata/_edit_group_ = true
 
@@ -278,51 +314,24 @@ metadata/_edit_group_ = true
 occluder = SubResource("OccluderPolygon2D_08vl7")
 occluder_light_mask = 1023
 
-[node name="Inner Wall6" type="StaticBody2D" parent="Map/InnerWall" index="5" unique_id=959672921]
-position = Vector2(392, 499)
+[node name="Inner Wall8" type="StaticBody2D" parent="Map/InnerWall" index="5" unique_id=783730548]
+position = Vector2(776, 521)
 metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/InnerWall/Inner Wall6" index="0" unique_id=947906368]
-shape = SubResource("RectangleShape2D_pt0sv")
-metadata/_edit_group_ = true
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/InnerWall/Inner Wall6" index="1" unique_id=772529613]
-occluder = SubResource("OccluderPolygon2D_t788b")
-occluder_light_mask = 1023
-
-[node name="Inner Wall7" type="StaticBody2D" parent="Map/InnerWall" index="6" unique_id=942556122]
-position = Vector2(392, 278)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/InnerWall/Inner Wall7" index="0" unique_id=1049123861]
-shape = SubResource("RectangleShape2D_f11tu")
-metadata/_edit_group_ = true
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/InnerWall/Inner Wall7" index="1" unique_id=1625865186]
-occluder = SubResource("OccluderPolygon2D_ykvih")
-occluder_light_mask = 1023
-
-[node name="Inner Wall8" type="StaticBody2D" parent="Map/InnerWall" index="7" unique_id=783730548]
-position = Vector2(748, 536)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/InnerWall/Inner Wall8" index="0" unique_id=164843778]
-shape = SubResource("RectangleShape2D_rp22a")
+shape = SubResource("RectangleShape2D_0cmla")
 metadata/_edit_group_ = true
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Map/InnerWall/Inner Wall8" index="1" unique_id=1433980602]
-occluder = SubResource("OccluderPolygon2D_cow3m")
+occluder = SubResource("OccluderPolygon2D_xsvsw")
 occluder_light_mask = 1023
 
-[node name="Inner Wall9" type="StaticBody2D" parent="Map/InnerWall" index="8" unique_id=243784531]
-position = Vector2(749, 329)
+[node name="Inner Wall9" type="StaticBody2D" parent="Map/InnerWall" index="6" unique_id=243784531]
+position = Vector2(508, 505)
 metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/InnerWall/Inner Wall9" index="0" unique_id=1951732777]
+position = Vector2(-5, -3)
 shape = SubResource("RectangleShape2D_rp22a")
 metadata/_edit_group_ = true
 
@@ -330,25 +339,12 @@ metadata/_edit_group_ = true
 occluder = SubResource("OccluderPolygon2D_cow3m")
 occluder_light_mask = 1023
 
-[node name="Inner Wall10" type="StaticBody2D" parent="Map/InnerWall" index="9" unique_id=703870536]
-position = Vector2(392, 71)
-metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/InnerWall/Inner Wall10" index="0" unique_id=1584358369]
-shape = SubResource("RectangleShape2D_36ddn")
-metadata/_edit_group_ = true
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/InnerWall/Inner Wall10" index="1" unique_id=1027862476]
-occluder = SubResource("OccluderPolygon2D_x3xif")
-occluder_light_mask = 1023
-
-[node name="Inner Wall11" type="StaticBody2D" parent="Map/InnerWall" index="10" unique_id=425258653]
+[node name="Inner Wall11" type="StaticBody2D" parent="Map/InnerWall" index="7" unique_id=425258653]
 position = Vector2(512, 71)
 metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/InnerWall/Inner Wall11" index="0" unique_id=1086611734]
+position = Vector2(-5, 0)
 shape = SubResource("RectangleShape2D_36ddn")
 metadata/_edit_group_ = true
 
@@ -356,10 +352,9 @@ metadata/_edit_group_ = true
 occluder = SubResource("OccluderPolygon2D_x3xif")
 occluder_light_mask = 1023
 
-[node name="Inner Wall12" type="StaticBody2D" parent="Map/InnerWall" index="11" unique_id=1911742158]
-position = Vector2(746, 696)
+[node name="Inner Wall12" type="StaticBody2D" parent="Map/InnerWall" index="8" unique_id=1911742158]
+position = Vector2(773, 687)
 metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/InnerWall/Inner Wall12" index="0" unique_id=1788095502]
 shape = SubResource("RectangleShape2D_1sss4")
@@ -369,10 +364,9 @@ metadata/_edit_group_ = true
 occluder = SubResource("OccluderPolygon2D_agagt")
 occluder_light_mask = 1023
 
-[node name="Inner Wall13" type="StaticBody2D" parent="Map/InnerWall" index="12" unique_id=1277756840]
-position = Vector2(845, 698)
+[node name="Inner Wall13" type="StaticBody2D" parent="Map/InnerWall" index="9" unique_id=1277756840]
+position = Vector2(861, 689)
 metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/InnerWall/Inner Wall13" index="0" unique_id=994657561]
 shape = SubResource("RectangleShape2D_1sss4")
@@ -382,10 +376,9 @@ metadata/_edit_group_ = true
 occluder = SubResource("OccluderPolygon2D_agagt")
 occluder_light_mask = 1023
 
-[node name="Inner Wall14" type="StaticBody2D" parent="Map/InnerWall" index="13" unique_id=1841791074]
-position = Vector2(989, 698)
+[node name="Inner Wall14" type="StaticBody2D" parent="Map/InnerWall" index="10" unique_id=1841791074]
+position = Vector2(1004, 696)
 metadata/_edit_group_ = true
-metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/InnerWall/Inner Wall14" index="0" unique_id=1757073228]
 shape = SubResource("RectangleShape2D_1sss4")
@@ -395,31 +388,30 @@ metadata/_edit_group_ = true
 occluder = SubResource("OccluderPolygon2D_agagt")
 occluder_light_mask = 1023
 
-[node name="Inner Wall15" type="StaticBody2D" parent="Map/InnerWall" index="14" unique_id=831115153]
-position = Vector2(746, 246)
-metadata/_edit_lock_ = true
+[node name="Inner Wall15" type="StaticBody2D" parent="Map/InnerWall" index="11" unique_id=831115153]
+position = Vector2(752, 210)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/InnerWall/Inner Wall15" index="0" unique_id=590240505]
+position = Vector2(1, 13)
 shape = SubResource("RectangleShape2D_qauki")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Map/InnerWall/Inner Wall15" index="1" unique_id=1905048381]
 occluder = SubResource("OccluderPolygon2D_580di")
 occluder_light_mask = 1023
 
-[node name="Inner Wall16" type="StaticBody2D" parent="Map/InnerWall" index="15" unique_id=306162411]
-position = Vector2(392, 560)
-metadata/_edit_lock_ = true
+[node name="Inner Wall16" type="StaticBody2D" parent="Map/InnerWall" index="12" unique_id=306162411]
+position = Vector2(396, 550)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/InnerWall/Inner Wall16" index="0" unique_id=1922005420]
+position = Vector2(0, -2.6875)
 shape = SubResource("RectangleShape2D_vsdsk")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Map/InnerWall/Inner Wall16" index="1" unique_id=874416843]
 occluder = SubResource("OccluderPolygon2D_6de43")
 occluder_light_mask = 1023
 
-[node name="Inner Wall17" type="StaticBody2D" parent="Map/InnerWall" index="16" unique_id=2131725577]
-position = Vector2(692, 564)
-metadata/_edit_lock_ = true
+[node name="Inner Wall17" type="StaticBody2D" parent="Map/InnerWall" index="13" unique_id=2131725577]
+position = Vector2(713, 565)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/InnerWall/Inner Wall17" index="0" unique_id=818572830]
 shape = SubResource("RectangleShape2D_aba7e")
@@ -428,31 +420,19 @@ shape = SubResource("RectangleShape2D_aba7e")
 occluder = SubResource("OccluderPolygon2D_wpgnl")
 occluder_light_mask = 1023
 
-[node name="Inner Wall18" type="StaticBody2D" parent="Map/InnerWall" index="17" unique_id=12061631]
-position = Vector2(338, 250)
-metadata/_edit_lock_ = true
+[node name="Inner Wall18" type="StaticBody2D" parent="Map/InnerWall" index="14" unique_id=12061631]
+position = Vector2(397, 278)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/InnerWall/Inner Wall18" index="0" unique_id=902800476]
+position = Vector2(0, 12.6875)
 shape = SubResource("RectangleShape2D_vu4qo")
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Map/InnerWall/Inner Wall18" index="1" unique_id=742872799]
 occluder = SubResource("OccluderPolygon2D_uf8ug")
 occluder_light_mask = 1023
 
-[node name="Inner Wall19" type="StaticBody2D" parent="Map/InnerWall" index="18" unique_id=553690631]
-position = Vector2(192, 211)
-metadata/_edit_lock_ = true
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/InnerWall/Inner Wall19" index="0" unique_id=1858168840]
-shape = SubResource("RectangleShape2D_6jnbq")
-
-[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/InnerWall/Inner Wall19" index="1" unique_id=1772496129]
-occluder = SubResource("OccluderPolygon2D_t7cd5")
-occluder_light_mask = 1023
-
-[node name="Inner Wall20" type="StaticBody2D" parent="Map/InnerWall" index="19" unique_id=1939729071]
-position = Vector2(237, 317)
-metadata/_edit_lock_ = true
+[node name="Inner Wall20" type="StaticBody2D" parent="Map/InnerWall" index="15" unique_id=1939729071]
+position = Vector2(237, 421)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/InnerWall/Inner Wall20" index="0" unique_id=697304943]
 shape = SubResource("RectangleShape2D_qlpoc")
@@ -461,9 +441,8 @@ shape = SubResource("RectangleShape2D_qlpoc")
 occluder = SubResource("OccluderPolygon2D_j63b7")
 occluder_light_mask = 1023
 
-[node name="Inner Wall21" type="StaticBody2D" parent="Map/InnerWall" index="20" unique_id=708075561]
-position = Vector2(71, 317)
-metadata/_edit_lock_ = true
+[node name="Inner Wall21" type="StaticBody2D" parent="Map/InnerWall" index="16" unique_id=708075561]
+position = Vector2(71, 421)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/InnerWall/Inner Wall21" index="0" unique_id=483482583]
 shape = SubResource("RectangleShape2D_qlpoc")
@@ -472,24 +451,42 @@ shape = SubResource("RectangleShape2D_qlpoc")
 occluder = SubResource("OccluderPolygon2D_j63b7")
 occluder_light_mask = 1023
 
-[node name="Room Light" type="Node2D" parent="Map" parent_id_path=PackedInt32Array(398342888) index="3" unique_id=241524177]
+[node name="Inner Wall22" type="StaticBody2D" parent="Map/InnerWall" index="17" unique_id=766207753]
+position = Vector2(237, 239)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/InnerWall/Inner Wall22" index="0" unique_id=546381132]
+shape = SubResource("RectangleShape2D_qlpoc")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/InnerWall/Inner Wall22" index="1" unique_id=719118461]
+occluder = SubResource("OccluderPolygon2D_j63b7")
+occluder_light_mask = 1023
+
+[node name="Inner Wall23" type="StaticBody2D" parent="Map/InnerWall" index="18" unique_id=2127816061]
+position = Vector2(71, 239)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/InnerWall/Inner Wall23" index="0" unique_id=1003038179]
+shape = SubResource("RectangleShape2D_qlpoc")
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Map/InnerWall/Inner Wall23" index="1" unique_id=173664892]
+occluder = SubResource("OccluderPolygon2D_j63b7")
+occluder_light_mask = 1023
+
+[node name="Room Light" type="Node2D" parent="Map" parent_id_path=PackedInt32Array(398342888) index="4" unique_id=241524177]
 script = ExtResource("3_dtfwk")
 
 [node name="Room1" type="PointLight2D" parent="Map/Room Light" index="0" unique_id=859314072]
 position = Vector2(1135, 405)
-scale = Vector2(6.1250014, 13.031249)
+scale = Vector2(6.0937505, 11.749999)
 color = Color(1, 1, 0.79607844, 1)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_x0sqe")
-metadata/_edit_lock_ = true
 
 [node name="Room2" type="PointLight2D" parent="Map/Room Light" index="1" unique_id=433639716]
-position = Vector2(913, 476.74997)
-scale = Vector2(4.0000024, 7.023438)
+position = Vector2(913, 456.24997)
+scale = Vector2(4.0000024, 7.6640625)
 color = Color(1, 1, 0.79607844, 1)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_x0sqe")
-metadata/_edit_lock_ = true
 
 [node name="Room2_1" type="PointLight2D" parent="Map/Room Light" index="2" unique_id=784622181]
 position = Vector2(755, 170.62503)
@@ -497,15 +494,13 @@ scale = Vector2(7.5, 4.8867173)
 color = Color(1, 1, 0.79607844, 1)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_x0sqe")
-metadata/_edit_lock_ = true
 
 [node name="Room2_2" type="PointLight2D" parent="Map/Room Light" index="3" unique_id=1865601788]
-position = Vector2(569.00006, 472.20313)
-scale = Vector2(3.5937502, 7.149902)
+position = Vector2(569.00006, 452.5)
+scale = Vector2(3.5937502, 7.765625)
 color = Color(1, 1, 0.79607844, 1)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_x0sqe")
-metadata/_edit_lock_ = true
 
 [node name="Room2_3" type="PointLight2D" parent="Map/Room Light" index="4" unique_id=654725349]
 position = Vector2(342.99997, 624)
@@ -513,23 +508,20 @@ scale = Vector2(9.718749, 4)
 color = Color(1, 1, 0.79607844, 1)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_x0sqe")
-metadata/_edit_lock_ = true
 
 [node name="Room2_4" type="PointLight2D" parent="Map/Room Light" index="5" unique_id=2012866475]
-position = Vector2(150.5, 409)
-scale = Vector2(3.8281248, 4.8437505)
+position = Vector2(155, 487)
+scale = Vector2(3.8281248, 1.9375004)
 color = Color(1, 1, 0.79607844, 1)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_x0sqe")
-metadata/_edit_lock_ = true
 
 [node name="Room3" type="PointLight2D" parent="Map/Room Light" index="6" unique_id=1480643239]
-position = Vector2(791.00006, 433.00003)
-scale = Vector2(7.437498, 8.5)
+position = Vector2(781.00006, 409)
+scale = Vector2(7.437498, 9.781249)
 color = Color(1, 1, 0.79607844, 1)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_x0sqe")
-metadata/_edit_lock_ = true
 
 [node name="Room4" type="PointLight2D" parent="Map/Room Light" index="7" unique_id=1273228129]
 position = Vector2(712.00006, 640)
@@ -537,119 +529,188 @@ scale = Vector2(3.0312471, 2.9062502)
 color = Color(1, 1, 0.79607844, 1)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_x0sqe")
-metadata/_edit_lock_ = true
 
-[node name="Room5" type="PointLight2D" parent="Map/Room Light" index="8" unique_id=1573955760]
-position = Vector2(690, 403)
-scale = Vector2(5.0624995, 4.84375)
+[node name="Room7" type="PointLight2D" parent="Map/Room Light" index="8" unique_id=1837641652]
+position = Vector2(435, 418.00003)
+scale = Vector2(4.4375005, 5.1875)
 color = Color(1, 1, 0.79607844, 1)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_x0sqe")
-metadata/_edit_lock_ = true
 
-[node name="Room6" type="PointLight2D" parent="Map/Room Light" index="9" unique_id=1069408230]
-position = Vector2(446, 143.00002)
-scale = Vector2(5.0624995, 15.796876)
+[node name="Room8" type="PointLight2D" parent="Map/Room Light" index="9" unique_id=1100331924]
+position = Vector2(440.5, 150)
+scale = Vector2(4.359375, 4.4375)
 color = Color(1, 1, 0.79607844, 1)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_x0sqe")
-metadata/_edit_lock_ = true
 
-[node name="Room7" type="PointLight2D" parent="Map/Room Light" index="10" unique_id=1837641652]
-position = Vector2(332.99997, 417)
-scale = Vector2(3.7187507, 5.1875)
+[node name="Room9" type="PointLight2D" parent="Map/Room Light" index="10" unique_id=1191809306]
+position = Vector2(152, 339)
+scale = Vector2(4.031249, 3.9062507)
 color = Color(1, 1, 0.79607844, 1)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_x0sqe")
-metadata/_edit_lock_ = true
 
-[node name="Room8" type="PointLight2D" parent="Map/Room Light" index="11" unique_id=1100331924]
-position = Vector2(333, 148)
-scale = Vector2(3.1250005, 4.4375)
-color = Color(1, 1, 0.79607844, 1)
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_x0sqe")
-metadata/_edit_lock_ = true
-
-[node name="Room9" type="PointLight2D" parent="Map/Room Light" index="12" unique_id=1191809306]
-position = Vector2(156.00003, 261)
-scale = Vector2(4.031249, 3.28125)
-color = Color(1, 1, 0.79607844, 1)
-shadow_enabled = true
-texture = SubResource("GradientTexture2D_x0sqe")
-metadata/_edit_lock_ = true
-
-[node name="Room10" type="PointLight2D" parent="Map/Room Light" index="13" unique_id=1394408228]
+[node name="Room10" type="PointLight2D" parent="Map/Room Light" index="11" unique_id=1394408228]
 position = Vector2(156, 129.00003)
 scale = Vector2(5.4999995, 4.7500014)
 color = Color(1, 1, 0.79607844, 1)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_x0sqe")
-metadata/_edit_lock_ = true
 
-[node name="r1" type="Area2D" parent="Map/Room Light" index="14" unique_id=689870329]
+[node name="r1" type="Area2D" parent="Map/Room Light" index="12" unique_id=689870329]
 position = Vector2(1129, 372)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Room Light/r1" index="0" unique_id=2109515820]
 shape = SubResource("RectangleShape2D_dtfwk")
 
-[node name="r2" type="Area2D" parent="Map/Room Light" index="15" unique_id=1999361074]
+[node name="r2" type="Area2D" parent="Map/Room Light" index="13" unique_id=1999361074]
 position = Vector2(925, 477)
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Map/Room Light/r2" index="0" unique_id=462991569]
-polygon = PackedVector2Array(-76, 222, 59, 221, 64, -433, -413, -434, -410, 88, -651, 90, -655, -155, -896, -155, -896, 223, -282, 222, -283, -236, -75, -236)
+polygon = PackedVector2Array(-60, 222, 59, 221, 64, -433, -413, -434, -410, 88, -651, 90, -654, -49, -896, -49, -896, 223, -294, 222, -294, -273, -57, -271)
 
-[node name="r3" type="Area2D" parent="Map/Room Light" index="16" unique_id=2057558366]
+[node name="r3" type="Area2D" parent="Map/Room Light" index="14" unique_id=2057558366]
 position = Vector2(797, 475)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Room Light/r3" index="0" unique_id=904564920]
-shape = SubResource("RectangleShape2D_ykvih")
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="Map/Room Light/r3" index="0" unique_id=1010474380]
+position = Vector2(17, 3)
+polygon = PackedVector2Array(-36, 222, 43, 222, 44, -263, -171, -263, -170, 83, -42, 83, -42, -4, -32, -4)
 
-[node name="r4" type="Area2D" parent="Map/Room Light" index="17" unique_id=1288204627]
+[node name="r4" type="Area2D" parent="Map/Room Light" index="15" unique_id=1288204627]
 position = Vector2(-1, -1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Room Light/r4" index="0" unique_id=928426802]
-position = Vector2(699, 633)
+position = Vector2(706.5, 634.5)
 shape = SubResource("RectangleShape2D_cow3m")
 
-[node name="r5" type="Area2D" parent="Map/Room Light" index="18" unique_id=1773258256]
-position = Vector2(697, 406)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Room Light/r5" index="0" unique_id=1014114363]
-shape = SubResource("RectangleShape2D_x3xif")
-
-[node name="r6" type="Area2D" parent="Map/Room Light" index="19" unique_id=771875410]
-position = Vector2(453, 302)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Room Light/r6" index="0" unique_id=1812786247]
-shape = SubResource("RectangleShape2D_agagt")
-
-[node name="r7" type="Area2D" parent="Map/Room Light" index="20" unique_id=1682988929]
+[node name="r7" type="Area2D" parent="Map/Room Light" index="16" unique_id=1682988929]
 position = Vector2(337, 403)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Room Light/r7" index="0" unique_id=73890018]
+position = Vector2(61, 13)
 shape = SubResource("RectangleShape2D_580di")
 
-[node name="r8" type="Area2D" parent="Map/Room Light" index="21" unique_id=1234731708]
+[node name="r8" type="Area2D" parent="Map/Room Light" index="17" unique_id=1234731708]
 position = Vector2(336, 147)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Room Light/r8" index="0" unique_id=451874319]
+position = Vector2(62.5, 12)
 shape = SubResource("RectangleShape2D_6de43")
 
-[node name="r9" type="Area2D" parent="Map/Room Light" index="22" unique_id=2084272761]
+[node name="r9" type="Area2D" parent="Map/Room Light" index="18" unique_id=2084272761]
 position = Vector2(154, 264)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Room Light/r9" index="0" unique_id=1605386544]
+position = Vector2(2, 72)
 shape = SubResource("RectangleShape2D_wpgnl")
 
-[node name="r10" type="Area2D" parent="Map/Room Light" index="23" unique_id=1655234281]
+[node name="r10" type="Area2D" parent="Map/Room Light" index="19" unique_id=1655234281]
 position = Vector2(154, 126)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Room Light/r10" index="0" unique_id=82901064]
+position = Vector2(0, 18)
 shape = SubResource("RectangleShape2D_uf8ug")
 
+[node name="Node2D" type="StaticBody2D" parent="Map" parent_id_path=PackedInt32Array(398342888) index="5" unique_id=1945561829]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Node2D" index="0" unique_id=1066305949]
+position = Vector2(1115, 159)
+shape = SubResource("RectangleShape2D_f11tu")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Map/Node2D" index="1" unique_id=1419534110]
+position = Vector2(1052, 152)
+shape = SubResource("RectangleShape2D_ykvih")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Map/Node2D" index="2" unique_id=1004886484]
+position = Vector2(1222, 166)
+shape = SubResource("RectangleShape2D_x3xif")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Map/Node2D" index="3" unique_id=921466569]
+position = Vector2(1136, 395)
+shape = SubResource("RectangleShape2D_agagt")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Map/Node2D" index="4" unique_id=1638671549]
+position = Vector2(1035, 396)
+shape = SubResource("RectangleShape2D_6jnbq")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Map/Node2D" index="5" unique_id=1295795990]
+position = Vector2(1078, 509)
+shape = SubResource("RectangleShape2D_t7cd5")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Map/Node2D" index="6" unique_id=2002277341]
+position = Vector2(1107, 280)
+shape = SubResource("RectangleShape2D_j63b7")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Map/Node2D" index="7" unique_id=1008393733]
+position = Vector2(1223, 611)
+shape = SubResource("RectangleShape2D_j63b7")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Map/Node2D" index="8" unique_id=1384350432]
+position = Vector2(672, 496)
+shape = SubResource("RectangleShape2D_j63b7")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Map/Node2D" index="9" unique_id=887182908]
+position = Vector2(719, 341)
+shape = SubResource("RectangleShape2D_shbvv")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Map/Node2D" index="10" unique_id=1508819373]
+position = Vector2(833, 342)
+shape = SubResource("RectangleShape2D_vqpho")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Map/Node2D" index="11" unique_id=865245461]
+position = Vector2(686, 668.5)
+shape = SubResource("RectangleShape2D_42b1k")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Map/Node2D" index="12" unique_id=1974180385]
+position = Vector2(732, 592)
+shape = SubResource("RectangleShape2D_eb58f")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Map/Node2D" index="13" unique_id=243891038]
+position = Vector2(327, 344)
+shape = SubResource("RectangleShape2D_kig76")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Map/Node2D" index="14" unique_id=479754611]
+position = Vector2(357, 457)
+shape = SubResource("RectangleShape2D_cn7mc")
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="Map/Node2D" index="15" unique_id=1471571224]
+position = Vector2(458, 79)
+shape = SubResource("RectangleShape2D_dhvgi")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Map/Node2D" index="16" unique_id=1258303479]
+position = Vector2(355, 169)
+shape = SubResource("RectangleShape2D_foxgn")
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="Map/Node2D" index="17" unique_id=797276546]
+position = Vector2(155, 160)
+shape = SubResource("RectangleShape2D_vvbdx")
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="Map/Node2D" index="18" unique_id=309294570]
+position = Vector2(153, 105)
+shape = SubResource("RectangleShape2D_ba0kd")
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="Map/Node2D" index="19" unique_id=1200170133]
+position = Vector2(71, 93)
+shape = SubResource("RectangleShape2D_xlpgn")
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="Map/Node2D" index="20" unique_id=2135075045]
+position = Vector2(240, 92)
+shape = SubResource("RectangleShape2D_xlpgn")
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="Map/Node2D" index="21" unique_id=358896218]
+position = Vector2(232, 339)
+shape = SubResource("RectangleShape2D_e58nn")
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="Map/Node2D" index="22" unique_id=328243147]
+position = Vector2(74, 341)
+shape = SubResource("RectangleShape2D_e58nn")
+
 [node name="Player" parent="." index="1" unique_id=1866997068]
-position = Vector2(1173, 406)
+position = Vector2(1197, 391)
+
+[node name="DirectionalLight2D" parent="." index="4" unique_id=921657011]
+energy = 4.76
 
 [connection signal="body_entered" from="Map/Room Light/r1" to="Map/Room Light" method="_on_r_1_body_entered"]
 [connection signal="body_exited" from="Map/Room Light/r1" to="Map/Room Light" method="_on_r_1_body_exited"]
@@ -659,10 +720,6 @@ position = Vector2(1173, 406)
 [connection signal="body_exited" from="Map/Room Light/r3" to="Map/Room Light" method="_on_r_3_body_exited"]
 [connection signal="body_entered" from="Map/Room Light/r4" to="Map/Room Light" method="_on_r_4_body_entered"]
 [connection signal="body_exited" from="Map/Room Light/r4" to="Map/Room Light" method="_on_r_4_body_exited"]
-[connection signal="body_entered" from="Map/Room Light/r5" to="Map/Room Light" method="_on_r_5_body_entered"]
-[connection signal="body_exited" from="Map/Room Light/r5" to="Map/Room Light" method="_on_r_5_body_exited"]
-[connection signal="body_entered" from="Map/Room Light/r6" to="Map/Room Light" method="_on_r_6_body_entered"]
-[connection signal="body_exited" from="Map/Room Light/r6" to="Map/Room Light" method="_on_r_6_body_exited"]
 [connection signal="body_entered" from="Map/Room Light/r7" to="Map/Room Light" method="_on_r_7_body_entered"]
 [connection signal="body_exited" from="Map/Room Light/r7" to="Map/Room Light" method="_on_r_7_body_exited"]
 [connection signal="body_entered" from="Map/Room Light/r8" to="Map/Room Light" method="_on_r_8_body_entered"]
