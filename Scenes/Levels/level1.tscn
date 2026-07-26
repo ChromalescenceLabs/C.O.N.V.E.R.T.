@@ -21,7 +21,7 @@ gradient = SubResource("Gradient_hkfpk")
 size = Vector2(30.75, 377.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ukdm"]
-size = Vector2(420, 20)
+size = Vector2(420, 27)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i36j2"]
 size = Vector2(1198, 9.25)
@@ -238,7 +238,7 @@ position = Vector2(1265, 531)
 shape = SubResource("RectangleShape2D_16p8j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/border" index="1" unique_id=1687703869]
-position = Vector2(1071, 728)
+position = Vector2(1071, 708.5)
 shape = SubResource("RectangleShape2D_1ukdm")
 
 [node name="Outer Wall" type="StaticBody2D" parent="Map/OuterWall" parent_id_path=PackedInt32Array(1196197006) index="0" unique_id=1980500774]
@@ -656,7 +656,7 @@ scale = Vector2(0.91, 0.91)
 shape = SubResource("CircleShape2D_rr7wi")
 
 [node name="Player" parent="." index="1" unique_id=1866997068]
-position = Vector2(1062, 674)
+position = Vector2(1043, 671)
 
 [node name="Camera2D" type="Camera2D" parent="Player" index="2" unique_id=1960302298]
 zoom = Vector2(3, 3)

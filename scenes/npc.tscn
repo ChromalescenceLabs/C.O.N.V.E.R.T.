@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://cplpl7j2tbep3"]
 
-[ext_resource type="Script" uid="uid://bqw427ysb3dky" path="res://scripts/npc.gd" id="1_nh2m4"]
-[ext_resource type="Texture2D" uid="uid://by12bj5k4s6pr" path="res://assets/sprites/icon.svg" id="2_abqhh"]
+[ext_resource type="Script" uid="uid://bqw427ysb3dky" path="res://Scripts/npc.gd" id="1_nh2m4"]
+[ext_resource type="Texture2D" uid="uid://by12bj5k4s6pr" path="res://Assets/sprites/icon.svg" id="2_abqhh"]
+[ext_resource type="Texture2D" uid="uid://doht4q8ojrbaq" path="res://Assets/robot.png" id="2_g6unj"]
 [ext_resource type="Shader" uid="uid://do1ix7qqip6e8" path="res://shader/qte.gdshader" id="3_rv78h"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tcuxl"]
@@ -24,6 +25,7 @@ shader_parameter/border_width = 0.05
 [node name="NPC" type="CharacterBody2D" unique_id=1011810883 node_paths=PackedStringArray("points")]
 script = ExtResource("1_nh2m4")
 points = [null]
+robot = ExtResource("2_g6unj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1459622165]
 shape = SubResource("CircleShape2D_tcuxl")
