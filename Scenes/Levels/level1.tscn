@@ -2,8 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://euqf1tvxyhrn" path="res://scenes/Levels/level_base.tscn" id="1_16p8j"]
 [ext_resource type="Texture2D" uid="uid://v0kas1moddc3" path="res://assets/level_placeholders/lvl1.png" id="2_1ukdm"]
-[ext_resource type="Script" uid="uid://ch55eo1pa3bs0" path="res://scripts/level_1.gd" id="2_klhba"]
+[ext_resource type="Script" uid="uid://ch55eo1pa3bs0" path="res://scripts/Levels/level_1.gd" id="2_klhba"]
 [ext_resource type="Script" uid="uid://cvvigmbt7348e" path="res://scripts/Levels/room_light1.gd" id="3_1ukdm"]
+[ext_resource type="PackedScene" uid="uid://cplpl7j2tbep3" path="res://scenes/npc.tscn" id="5_ifky7"]
+[ext_resource type="Script" uid="uid://cu0fg5dvoeuhn" path="res://scripts/Levels/Lvl1Target.gd" id="6_c6375"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_16p8j"]
 size = Vector2(30.75, 377.5)
@@ -114,6 +116,27 @@ size = Vector2(20, 100.50894)
 
 [sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ay16s"]
 polygon = PackedVector2Array(-10.196167, -46.787125, 10.210632, -44.651337, 10.944153, 49.958237, -9.659912, 50.643967)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ifky7"]
+radius = 21.023796
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_c6375"]
+vertices = PackedVector2Array(21.15625, 210.61719, 20.65625, 87.61719, 27.296875, 139.11719, 312.03906, 125.46094, 315.1875, 108.09375, 312.3125, 208.85938)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 4, 5), PackedInt32Array(5, 0, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(1, 231, 332, 229, 339, -16, 317, -15, 295, 106, 45, 118, 28, -14, 0, -16)])
+agent_radius = 20.25
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_ylpj7"]
+vertices = PackedVector2Array(243.25, 6.4765625, 355.64063, -6.3828125, 360.75, -6.203125, 236.78125, 131.09375, 149.75, 144.65625, 92.71094, 138.03125, 169.4375, 276.03125, 79.65625, 277.42188, 80.88281, 216.77344, 94.75, 215.71094, 175.07031, 212.92969, 149.75, 210.11719, 65.25, 139.00781, 65.25, 4.4765625, 243.25, -151.42969, 348.70313, -155.07031)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4, 5), PackedInt32Array(6, 7, 8, 9, 10), PackedInt32Array(11, 10, 9), PackedInt32Array(11, 9, 5, 4), PackedInt32Array(5, 12, 13, 0), PackedInt32Array(1, 0, 14, 15)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(59, 298, 188, 296, 197, 195, 170, 192, 170, 162, 247, 150, 405, -25, 375, -26, 368, -176, 223, -171, 223, -14, 45, -16, 45, 160, 73, 159, 74, 197, 61, 198)])
+agent_radius = 20.25
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_ifky7"]
+vertices = PackedVector2Array(244.20313, 336, 241.32031, 513.0625, 199.04688, 464.79688, 194.5625, 320.22656, 244.20313, 203.92188, -145.82031, 506.32813, -52.109375, 464.79688, -46.5, 319.17188, -137.15625, 327.3203, -174.24219, 327.22656, -61.039063, 193.03125, -61.03125, 193.03125, 282.6875, 118.77344, 322.52344, 117.17969, 307.39844, 197.79688, 139.28125, 136.82813, -0.15625, 125.49219, 27.039063, 130.75781)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3, 4), PackedInt32Array(2, 1, 5, 6), PackedInt32Array(7, 8, 9, 10, 11), PackedInt32Array(6, 5, 8, 7), PackedInt32Array(12, 13, 14, 4, 15), PackedInt32Array(3, 7, 11, 16, 17), PackedInt32Array(3, 17, 15, 4)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-191, 335, -145.34845, 335.10284, -154, 514, 249, 521, 252, 336, 252, 211, 314, 205, 332, 109, 282, 111, 139, 129, 28, 123, -3, 117, -67, 188)])
+agent_radius = 7.8
 
 [node name="Level" unique_id=89423142 instance=ExtResource("1_16p8j")]
 script = ExtResource("2_klhba")
@@ -436,6 +459,109 @@ limit_bottom = 913
 color = Color(0.09998604, 0.09998598, 0.09998601, 1)
 energy = 8.67
 
+[node name="NPCs" type="Node2D" parent="." index="5" unique_id=158098791]
+
+[node name="Rob1" type="Node2D" parent="NPCs" index="0" unique_id=80290851]
+
+[node name="NPC" parent="NPCs/Rob1" index="0" unique_id=1011810883 node_paths=PackedStringArray("points") instance=ExtResource("5_ifky7")]
+position = Vector2(1038, 247)
+points = [NodePath("../Marker2D"), NodePath("../Marker2D2")]
+
+[node name="Marker2D" type="Marker2D" parent="NPCs/Rob1" index="1" unique_id=1909241828]
+position = Vector2(910, 248)
+
+[node name="Marker2D2" type="Marker2D" parent="NPCs/Rob1" index="2" unique_id=1165527077]
+position = Vector2(1177, 243)
+
+[node name="Rob2" type="Node2D" parent="NPCs" index="1" unique_id=148829772]
+
+[node name="NPC2" parent="NPCs/Rob2" index="0" unique_id=1224917670 node_paths=PackedStringArray("points") instance=ExtResource("5_ifky7")]
+position = Vector2(539, 292)
+points = [NodePath("../Marker2D3"), NodePath("../Marker2D4")]
+
+[node name="Marker2D3" type="Marker2D" parent="NPCs/Rob2" index="1" unique_id=2020646239]
+position = Vector2(535, 280)
+
+[node name="Marker2D4" type="Marker2D" parent="NPCs/Rob2" index="2" unique_id=1614746751]
+position = Vector2(806, 270)
+
+[node name="Rob3" type="Node2D" parent="NPCs" index="2" unique_id=1630096966]
+
+[node name="NPC2" parent="NPCs/Rob3" index="0" unique_id=529073529 node_paths=PackedStringArray("points") instance=ExtResource("5_ifky7")]
+position = Vector2(453, 423)
+points = [NodePath("../Marker2D3"), NodePath("../Marker2D4"), NodePath("../Marker2D5"), NodePath("../Marker2D6")]
+
+[node name="Marker2D3" type="Marker2D" parent="NPCs/Rob3" index="1" unique_id=1462091688]
+position = Vector2(432, 588)
+
+[node name="Marker2D4" type="Marker2D" parent="NPCs/Rob3" index="2" unique_id=1608214828]
+position = Vector2(748, 596)
+
+[node name="Marker2D5" type="Marker2D" parent="NPCs/Rob3" index="3" unique_id=364880522]
+position = Vector2(746, 412)
+
+[node name="Marker2D6" type="Marker2D" parent="NPCs/Rob3" index="4" unique_id=1409582714]
+position = Vector2(454, 422)
+
+[node name="Target" type="Node2D" parent="NPCs" index="3" unique_id=95930836]
+script = ExtResource("6_c6375")
+
+[node name="NPC" parent="NPCs/Target" index="0" unique_id=522298467 node_paths=PackedStringArray("points") instance=ExtResource("5_ifky7")]
+position = Vector2(331, 285)
+points = [NodePath("../Marker2D"), NodePath("../Marker2D2"), NodePath("../Marker2D3"), NodePath("../Marker2D4"), NodePath("../Marker2D5")]
+mintime = 3
+maxtime = 4
+
+[node name="KillArea" type="Area2D" parent="NPCs/Target/NPC" index="4" unique_id=1373468285]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPCs/Target/NPC/KillArea" index="0" unique_id=1100809797]
+shape = SubResource("CircleShape2D_ifky7")
+
+[node name="Marker2D" type="Marker2D" parent="NPCs/Target" index="1" unique_id=2134223411]
+position = Vector2(228, 495)
+
+[node name="Marker2D2" type="Marker2D" parent="NPCs/Target" index="2" unique_id=1232870979]
+position = Vector2(147, 495)
+
+[node name="Marker2D3" type="Marker2D" parent="NPCs/Target" index="3" unique_id=586434064]
+position = Vector2(138, 303)
+
+[node name="Marker2D4" type="Marker2D" parent="NPCs/Target" index="4" unique_id=1751876072]
+position = Vector2(312, 100)
+
+[node name="Marker2D5" type="Marker2D" parent="NPCs/Target" index="5" unique_id=1889230060]
+position = Vector2(404, 97)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." index="6" unique_id=1788768191]
+position = Vector2(877, 78)
+navigation_polygon = SubResource("NavigationPolygon_c6375")
+metadata/_edit_lock_ = true
+
+[node name="NavigationRegion2D3" type="NavigationRegion2D" parent="." index="7" unique_id=865754294]
+position = Vector2(61, 247)
+navigation_polygon = SubResource("NavigationPolygon_ylpj7")
+metadata/_edit_lock_ = true
+
+[node name="NavigationRegion2D2" type="NavigationRegion2D" parent="." index="8" unique_id=324645293]
+position = Vector2(528, 110)
+navigation_polygon = SubResource("NavigationPolygon_ifky7")
+metadata/_edit_lock_ = true
+
+[node name="Polygon2D" type="Polygon2D" parent="NavigationRegion2D2" index="0" unique_id=1593690113]
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(-39, 327, -44, 457, 191, 457, 187, 328)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="9" unique_id=356167517]
+
+[node name="KillLabel" type="Label" parent="CanvasLayer" index="0" unique_id=2040105819]
+visible = false
+offset_left = 1062.0
+offset_top = 632.0
+offset_right = 1266.0
+offset_bottom = 711.0
+theme_override_font_sizes/font_size = 58
+text = "[E] KILL"
+
 [connection signal="body_entered" from="Map/Room Light/r1" to="Map/Room Light" method="_on_r_1_body_entered"]
 [connection signal="body_exited" from="Map/Room Light/r1" to="Map/Room Light" method="_on_r_1_body_exited"]
 [connection signal="body_entered" from="Map/Room Light/r2" to="Map/Room Light" method="_on_r_2_body_entered"]
@@ -446,3 +572,5 @@ energy = 8.67
 [connection signal="body_exited" from="Map/Room Light/r4" to="Map/Room Light" method="_on_r_4_body_exited"]
 [connection signal="body_entered" from="Map/Room Light/r5" to="Map/Room Light" method="_on_r_5_body_entered"]
 [connection signal="body_exited" from="Map/Room Light/r5" to="Map/Room Light" method="_on_r_5_body_exited"]
+[connection signal="body_entered" from="NPCs/Target/NPC/KillArea" to="NPCs/Target" method="_on_kill_area_body_entered"]
+[connection signal="body_exited" from="NPCs/Target/NPC/KillArea" to="NPCs/Target" method="_on_kill_area_body_exited"]
