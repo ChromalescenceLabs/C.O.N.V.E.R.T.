@@ -3,8 +3,11 @@ extends Node2D
 const MISSION_END = preload("uid://brtmt3juhpp44")
 @onready var kill_label: Label = $"../../CanvasLayer/KillLabel"
 
+func _ready() -> void:
+	set_process_input(false)
+
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("Interact"):
+	if event.is_action_pressed("Kill"):
 		var end = MISSION_END.instantiate()
 		end.status = "Success"
 		end.next_scene = "uid://cqjc8fkilwk2g"

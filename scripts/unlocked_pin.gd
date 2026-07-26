@@ -21,7 +21,7 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		canLock= false
 		posPin = 56.0
 	
-	body.call_deferred("setActivePin",null)
+	body.call_deferred("setActivePin", null)
 
 func reset():
 	posPin = 56.0

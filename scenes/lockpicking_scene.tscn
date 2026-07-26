@@ -46,92 +46,115 @@ _data = {
 }
 
 [node name="lockpicking scene" type="Node2D" unique_id=1257632734]
+process_mode = 3
+position = Vector2(506, 270)
 script = ExtResource("1_o0kaa")
 lockedPin = ExtResource("2_w5biu")
 unlockedPin = ExtResource("3_vn4w1")
 
 [node name="camBg" type="ColorRect" parent="." unique_id=1411303050]
+process_mode = 3
 offset_left = -223.0
 offset_top = -117.0
 offset_right = 476.0
 offset_bottom = 286.0
 color = Color(0.14512813, 0.1509448, 0.18533576, 1)
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=403337680]
-position = Vector2(118, 75)
-scale = Vector2(1.1982507, 2.0885305)
-zoom = Vector2(2, 2)
+metadata/_edit_use_anchors_ = true
 
 [node name="bg" type="ColorRect" parent="." unique_id=1873464727]
+process_mode = 3
 offset_right = 239.0
 offset_bottom = 141.0
 color = Color(0.30351982, 0.35001537, 0.41934097, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="walls" type="ColorRect" parent="." unique_id=522840010]
+process_mode = 3
 offset_right = 83.0
 offset_bottom = 86.0
+metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect" type="ColorRect" parent="walls" unique_id=925138682]
+process_mode = 3
 layout_mode = 0
 offset_left = 104.0
 offset_right = 123.0
 offset_bottom = 86.0
+metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect2" type="ColorRect" parent="walls" unique_id=1391023255]
+process_mode = 3
 layout_mode = 0
 offset_left = 144.0
 offset_right = 163.0
 offset_bottom = 86.0
+metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect3" type="ColorRect" parent="walls" unique_id=1542700956]
+process_mode = 3
 layout_mode = 0
 offset_left = 184.0
 offset_right = 203.0
 offset_bottom = 86.0
+metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect4" type="ColorRect" parent="walls" unique_id=1345495095]
+process_mode = 3
 layout_mode = 0
 offset_left = 224.0
 offset_right = 243.0
 offset_bottom = 117.0
+metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect5" type="ColorRect" parent="walls" unique_id=1518265690]
+process_mode = 3
 layout_mode = 0
 offset_top = 115.0
 offset_right = 243.0
 offset_bottom = 140.0
+metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect6" type="ColorRect" parent="walls" unique_id=387441404]
+process_mode = 3
 layout_mode = 0
 offset_right = 239.0
 offset_bottom = 11.0
+metadata/_edit_use_anchors_ = true
 
 [node name="lockpick" type="CharacterBody2D" parent="." unique_id=1122938603]
+process_mode = 3
 position = Vector2(214, 97)
 script = ExtResource("2_36kgi")
 
 [node name="Sprite2D" type="Sprite2D" parent="lockpick" unique_id=894806788]
+process_mode = 3
 
 [node name="lockpick" type="ColorRect" parent="lockpick/Sprite2D" unique_id=1897357895]
+process_mode = 3
 offset_left = -253.0
 offset_top = 5.0
 offset_right = 2.0
 offset_bottom = 11.0
 color = Color(0.70125324, 0.5407481, 0.61011446, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="ColorRect" type="ColorRect" parent="lockpick/Sprite2D/lockpick" unique_id=1848285570]
+process_mode = 3
 layout_mode = 0
 offset_left = 248.0
 offset_top = -10.0
 offset_right = 258.0
 offset_bottom = 6.0
 color = Color(0.70125324, 0.5407481, 0.61011446, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lockpick" unique_id=1230953834]
+process_mode = 3
 position = Vector2(0, -0.5)
 shape = SubResource("RectangleShape2D_p3nbc")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=525738960]
+process_mode = 3
 offset_left = -162.0
 offset_top = -79.0
 offset_right = 12.0
@@ -141,15 +164,20 @@ theme_override_fonts/normal_font = ExtResource("5_vn4w1")
 text = "Space - Lock the pin
 A/D - move
 W - go up"
+metadata/_edit_use_anchors_ = true
 
 [node name="black" type="ColorRect" parent="." unique_id=1311005623]
+process_mode = 3
 modulate = Color(1, 1, 1, 0)
 z_index = 100
-offset_left = -464.0
-offset_top = -262.0
-offset_right = 735.0
-offset_bottom = 444.0
+offset_left = -555.0
+offset_top = -326.0
+offset_right = 644.0
+offset_bottom = 380.0
+scale = Vector2(1.16, 1.16)
 color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="black" unique_id=294205124]
+process_mode = 3
 libraries/ = SubResource("AnimationLibrary_vn4w1")
