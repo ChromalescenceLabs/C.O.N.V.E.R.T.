@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://brnavpy720b6r"]
 
-[ext_resource type="PackedScene" uid="uid://euqf1tvxyhrn" path="res://Scenes/Levels/level_base.tscn" id="1_16p8j"]
-[ext_resource type="Texture2D" uid="uid://nuj7vyx11abh" path="res://Assets/level_maps/lvl1.png" id="2_1ukdm"]
-[ext_resource type="Script" uid="uid://ch55eo1pa3bs0" path="res://Scripts/Levels/level_1.gd" id="2_klhba"]
-[ext_resource type="Script" uid="uid://cvvigmbt7348e" path="res://Scripts/Levels/room_light1.gd" id="3_1ukdm"]
-[ext_resource type="PackedScene" uid="uid://cplpl7j2tbep3" path="res://Scenes/npc.tscn" id="5_ifky7"]
-[ext_resource type="Script" uid="uid://cu0fg5dvoeuhn" path="res://Scripts/Levels/Lvl1Target.gd" id="6_c6375"]
-[ext_resource type="PackedScene" uid="uid://b835m4itbrm1m" path="res://Scenes/door.tscn" id="7_ylpj7"]
-[ext_resource type="Script" uid="uid://bxmegus6iay4j" path="res://Scripts/door_instructions.gd" id="8_ar5rt"]
-[ext_resource type="PackedScene" uid="uid://bo80tcnotim01" path="res://Scenes/key.tscn" id="9_a4rx7"]
+[ext_resource type="PackedScene" uid="uid://euqf1tvxyhrn" path="res://scenes/Levels/level_base.tscn" id="1_16p8j"]
+[ext_resource type="Texture2D" uid="uid://nuj7vyx11abh" path="res://assets/level_maps/lvl1.png" id="2_1ukdm"]
+[ext_resource type="Script" uid="uid://ch55eo1pa3bs0" path="res://scripts/Levels/level_1.gd" id="2_klhba"]
+[ext_resource type="Script" uid="uid://cvvigmbt7348e" path="res://scripts/Levels/room_light1.gd" id="3_1ukdm"]
+[ext_resource type="PackedScene" uid="uid://cplpl7j2tbep3" path="res://scenes/npc.tscn" id="5_ifky7"]
+[ext_resource type="Script" uid="uid://cu0fg5dvoeuhn" path="res://scripts/Levels/Lvl1Target.gd" id="6_c6375"]
+[ext_resource type="PackedScene" uid="uid://b835m4itbrm1m" path="res://scenes/door.tscn" id="7_ylpj7"]
+[ext_resource type="Script" uid="uid://bxmegus6iay4j" path="res://scripts/door_instructions.gd" id="8_ar5rt"]
+[ext_resource type="PackedScene" uid="uid://bo80tcnotim01" path="res://scenes/key.tscn" id="9_a4rx7"]
+[ext_resource type="PackedScene" uid="uid://dcnqgatj8d0wl" path="res://scenes/countdown.tscn" id="9_v6sju"]
 
 [sub_resource type="Gradient" id="Gradient_hkfpk"]
 offsets = PackedFloat32Array(0.15172414)
@@ -831,6 +832,9 @@ theme_override_font_sizes/font_size = 58
 text = "[L] LOCKPICK
 [O] OPEN"
 
+[node name="CountdownDisplay" parent="CanvasLayer" index="2" unique_id=1102513215 instance=ExtResource("9_v6sju")]
+mins = 3
+
 [node name="Key" parent="." index="11" unique_id=2109840467 instance=ExtResource("9_a4rx7")]
 position = Vector2(693, 507)
 rotation = 0.7330383
@@ -854,3 +858,4 @@ rotation = 0.7330383
 
 [editable path="Doors/Door3"]
 [editable path="Doors/Door2"]
+[editable path="CanvasLayer/CountdownDisplay"]

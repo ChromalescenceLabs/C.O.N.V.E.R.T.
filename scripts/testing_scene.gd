@@ -4,10 +4,6 @@ extends Node2D
 @onready var overall_cam: Camera2D = $OverallCam
 
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("Interact"):
-		var STATE = npc.STATE
-		npc.current_state = STATE.DISTRACTED
-		npc.stay = true
 	if event.is_action_pressed("Space"):
 		camToggle()
 
