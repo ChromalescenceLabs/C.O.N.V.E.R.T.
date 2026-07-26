@@ -42,6 +42,7 @@ position_smoothing_enabled = true
 [node name="NPC" parent="." unique_id=1011810883 node_paths=PackedStringArray("points") instance=ExtResource("2_2j2p2")]
 position = Vector2(383, 186)
 points = [NodePath("../Node2D/Marker2D"), NodePath("../Node2D/Marker2D2"), NodePath("../Node2D/Marker2D3"), NodePath("../Node2D/Distraction")]
+type = "NPC"
 
 [node name="Node2D" type="Node2D" parent="." unique_id=502214511]
 
@@ -68,3 +69,24 @@ enabled = false
 
 [node name="CountdownDisplay" parent="CanvasLayer" unique_id=1102513215 instance=ExtResource("4_dh6dg")]
 mins = 2
+
+[node name="NPC2" parent="." unique_id=801392702 node_paths=PackedStringArray("points") instance=ExtResource("2_2j2p2")]
+position = Vector2(328, 101)
+points = [NodePath("../Node2D2/Marker2D"), NodePath("../Node2D2/Marker2D2"), NodePath("../Node2D2/Marker2D3"), NodePath("../Node2D2/Distraction")]
+
+[node name="Node2D2" type="Node2D" parent="." unique_id=350836269]
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="Node2D2" unique_id=1591833757]
+navigation_polygon = SubResource("NavigationPolygon_ifns1")
+
+[node name="Marker2D" type="Marker2D" parent="Node2D2" unique_id=684949138]
+position = Vector2(79, 102)
+
+[node name="Marker2D2" type="Marker2D" parent="Node2D2" unique_id=1999362855]
+position = Vector2(210, 171)
+
+[node name="Marker2D3" type="Marker2D" parent="Node2D2" unique_id=754321665]
+position = Vector2(285, 146)
+
+[node name="Distraction" type="Marker2D" parent="Node2D2" unique_id=72534360]
+position = Vector2(473, 239)

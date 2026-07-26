@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bqw427ysb3dky" path="res://scripts/npc.gd" id="1_nh2m4"]
 [ext_resource type="Texture2D" uid="uid://by12bj5k4s6pr" path="res://assets/sprites/icon.svg" id="2_abqhh"]
 [ext_resource type="Shader" uid="uid://do1ix7qqip6e8" path="res://shader/qte.gdshader" id="3_rv78h"]
+[ext_resource type="FontFile" uid="uid://ctnamrpfg2i2y" path="res://Fonts/Personal Services.ttf" id="4_7n8xq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tcuxl"]
 radius = 15.033297
@@ -21,6 +22,9 @@ shader_parameter/width_in = 0.58
 shader_parameter/width_out = 0.86
 shader_parameter/border_width = 0.05
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_4wlns"]
+radius = 152.64894
+
 [node name="NPC" type="CharacterBody2D" unique_id=1011810883 node_paths=PackedStringArray("points")]
 script = ExtResource("1_nh2m4")
 points = [null]
@@ -32,16 +36,27 @@ shape = SubResource("CircleShape2D_tcuxl")
 scale = Vector2(0.23437499, 0.23437476)
 texture = ExtResource("2_abqhh")
 
-[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=710778795]
+[node name="guard" type="Area2D" parent="Sprite2D" unique_id=710778795]
 rotation = 1.5707964
 scale = Vector2(4.266667, 4.266671)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/Area2D" unique_id=87064079]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/guard" unique_id=87064079]
 polygon = PackedVector2Array(0, 0, 128, -56, 128, 56, 0, 0)
 
-[node name="Polygon2D" type="Polygon2D" parent="Sprite2D/Area2D" unique_id=558079404]
+[node name="Polygon2D" type="Polygon2D" parent="Sprite2D/guard" unique_id=558079404]
 color = Color(0.93333334, 0.57254905, 0.70980394, 0.6745098)
 polygon = PackedVector2Array(128, 56, 128, -56, 0, 0)
+
+[node name="target" type="Area2D" parent="Sprite2D" unique_id=117288627]
+rotation = 1.5707964
+scale = Vector2(4.266667, 4.266671)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite2D/target" unique_id=428441549]
+polygon = PackedVector2Array(0, 0, 72.00007, -39.999966, 72.00007, 39.999958, 0, 0)
+
+[node name="Polygon2D" type="Polygon2D" parent="Sprite2D/target" unique_id=1424095430]
+color = Color(0.93333334, 0.57254905, 0.70980394, 0.6745098)
+polygon = PackedVector2Array(72.00007, 39.999958, 72.00007, -39.999966, 0, 0)
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="." unique_id=51221625]
 avoidance_enabled = true
@@ -62,6 +77,27 @@ offset_bottom = -20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[connection signal="body_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Sprite2D/Area2D" to="." method="_on_area_2d_body_exited"]
+[node name="interact" type="Area2D" parent="." unique_id=1760992170]
+scale = Vector2(0.23437499, 0.23437476)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interact" unique_id=338714479]
+position = Vector2(0, -34.13337)
+shape = SubResource("CircleShape2D_4wlns")
+
+[node name="intButton" type="Button" parent="interact" unique_id=1176107949]
+offset_left = 85.33334
+offset_top = -34.13336
+offset_right = 153.6
+offset_bottom = 34.133377
+theme_override_fonts/font = ExtResource("4_7n8xq")
+theme_override_font_sizes/font_size = 27
+text = "E
+"
+
+[connection signal="body_entered" from="Sprite2D/guard" to="." method="_on_guard_body_entered"]
+[connection signal="body_exited" from="Sprite2D/guard" to="." method="_on_guard_body_exited"]
+[connection signal="body_entered" from="Sprite2D/target" to="." method="_on_target_body_entered"]
+[connection signal="body_exited" from="Sprite2D/target" to="." method="_on_target_body_exited"]
 [connection signal="target_reached" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_target_reached"]
+[connection signal="body_entered" from="interact" to="." method="_on_interact_body_entered"]
+[connection signal="body_exited" from="interact" to="." method="_on_interact_body_exited"]
