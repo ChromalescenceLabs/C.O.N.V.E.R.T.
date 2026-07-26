@@ -1,14 +1,21 @@
 [gd_scene format=3 uid="uid://brnavpy720b6r"]
 
 [ext_resource type="PackedScene" uid="uid://euqf1tvxyhrn" path="res://Scenes/Levels/level_base.tscn" id="1_16p8j"]
+[ext_resource type="Texture2D" uid="uid://nuj7vyx11abh" path="res://Assets/level_maps/lvl1.png" id="2_1ukdm"]
 [ext_resource type="Script" uid="uid://ch55eo1pa3bs0" path="res://Scripts/Levels/level_1.gd" id="2_klhba"]
 [ext_resource type="Script" uid="uid://cvvigmbt7348e" path="res://Scripts/Levels/room_light1.gd" id="3_1ukdm"]
-[ext_resource type="Texture2D" uid="uid://dmsmkjkhtoc2i" path="res://Assets/level_debug/lvl1.png" id="3_hkfpk"]
 [ext_resource type="PackedScene" uid="uid://cplpl7j2tbep3" path="res://Scenes/npc.tscn" id="5_ifky7"]
 [ext_resource type="Script" uid="uid://cu0fg5dvoeuhn" path="res://Scripts/Levels/Lvl1Target.gd" id="6_c6375"]
 [ext_resource type="PackedScene" uid="uid://b835m4itbrm1m" path="res://Scenes/door.tscn" id="7_ylpj7"]
 [ext_resource type="Script" uid="uid://bxmegus6iay4j" path="res://Scripts/door_instructions.gd" id="8_ar5rt"]
 [ext_resource type="PackedScene" uid="uid://bo80tcnotim01" path="res://Scenes/key.tscn" id="9_a4rx7"]
+
+[sub_resource type="Gradient" id="Gradient_hkfpk"]
+offsets = PackedFloat32Array(0.15172414)
+colors = PackedColorArray(0.28118682, 0.28118688, 0.28118682, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ir7pk"]
+gradient = SubResource("Gradient_hkfpk")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_16p8j"]
 size = Vector2(30.75, 377.5)
@@ -177,6 +184,15 @@ radius = 34.083668
 [sub_resource type="CircleShape2D" id="CircleShape2D_rr7wi"]
 radius = 47.252686
 
+[sub_resource type="Gradient" id="Gradient_ir7pk"]
+offsets = PackedFloat32Array(0, 0.25172412, 0.62413794, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.3448276, 0.3448276, 0.3448276, 1, 0.04974758, 0.04974758, 0.04974758, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ilsv2"]
+gradient = SubResource("Gradient_ir7pk")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_ifky7"]
 radius = 21.023796
 
@@ -204,16 +220,21 @@ agent_radius = 7.8
 [node name="Level" unique_id=89423142 instance=ExtResource("1_16p8j")]
 script = ExtResource("2_klhba")
 
-[node name="Lvl1" type="Sprite2D" parent="Map" parent_id_path=PackedInt32Array(398342888) index="0" unique_id=366867198]
-position = Vector2(649.5, 353)
-scale = Vector2(1.0226562, 1.0444444)
-texture = ExtResource("3_hkfpk")
+[node name="Sprite2D" type="Sprite2D" parent="Map" parent_id_path=PackedInt32Array(398342888) index="0" unique_id=1285020841]
+position = Vector2(677.5, 372)
+scale = Vector2(6.2929688, 854)
+texture = SubResource("GradientTexture1D_ir7pk")
 
-[node name="border" type="StaticBody2D" parent="Map" parent_id_path=PackedInt32Array(398342888) index="1" unique_id=251642636]
+[node name="Lvl1" type="Sprite2D" parent="Map" parent_id_path=PackedInt32Array(398342888) index="1" unique_id=715830871]
+position = Vector2(648, 347.5)
+scale = Vector2(1.0265625, 1.0458333)
+texture = ExtResource("2_1ukdm")
+
+[node name="border" type="StaticBody2D" parent="Map" parent_id_path=PackedInt32Array(398342888) index="2" unique_id=251642636]
 metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Map/border" index="0" unique_id=2076595690]
-position = Vector2(1289.625, 526.75)
+position = Vector2(1265, 531)
 shape = SubResource("RectangleShape2D_16p8j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/border" index="1" unique_id=1687703869]
@@ -423,7 +444,7 @@ metadata/_edit_group_ = true
 occluder = SubResource("OccluderPolygon2D_ay16s")
 occluder_light_mask = 1023
 
-[node name="Room Light" type="Node2D" parent="Map" parent_id_path=PackedInt32Array(398342888) index="4" unique_id=548466789]
+[node name="Room Light" type="Node2D" parent="Map" parent_id_path=PackedInt32Array(398342888) index="5" unique_id=548466789]
 script = ExtResource("3_1ukdm")
 
 [node name="Room1" type="PointLight2D" parent="Map/Room Light" index="0" unique_id=2063477918]
@@ -507,7 +528,7 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Room Light/r5" index="0" unique_id=2054624625]
 shape = SubResource("RectangleShape2D_bvs0b")
 
-[node name="obstacles" type="StaticBody2D" parent="Map" parent_id_path=PackedInt32Array(398342888) index="5" unique_id=1112588912]
+[node name="obstacles" type="StaticBody2D" parent="Map" parent_id_path=PackedInt32Array(398342888) index="6" unique_id=1112588912]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/obstacles" index="0" unique_id=1150338698]
 position = Vector2(1192, 530)
@@ -644,6 +665,14 @@ limit_top = 0
 limit_right = 1280
 limit_bottom = 720
 limit_smoothed = true
+
+[node name="Room1" type="PointLight2D" parent="Player" index="3" unique_id=457087946]
+position = Vector2(-7.1525574e-06, -1.5258789e-05)
+scale = Vector2(5.0000024, 4.804687)
+color = Color(1, 1, 0.79607844, 1)
+energy = 0.36
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_ilsv2")
 
 [node name="Camera2D" parent="." index="3" unique_id=2043686662]
 position = Vector2(0, -3)
