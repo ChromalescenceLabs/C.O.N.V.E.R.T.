@@ -1,9 +1,16 @@
 [gd_scene format=3 uid="uid://oew0jxo2b2v3"]
 
-[ext_resource type="PackedScene" uid="uid://euqf1tvxyhrn" path="res://Scenes/Levels/level_base.tscn" id="1_x0sqe"]
-[ext_resource type="Texture2D" uid="uid://cl0dhapy7sit0" path="res://Assets/level_maps/lvl5.png" id="2_dtfwk"]
-[ext_resource type="Texture2D" uid="uid://dhj3rxi0y5d0h" path="res://Assets/level_debug/Lvl5.png" id="2_myn83"]
-[ext_resource type="Script" uid="uid://c7g4b35clq4wk" path="res://Scripts/Levels/room_light5.gd" id="3_dtfwk"]
+[ext_resource type="PackedScene" uid="uid://euqf1tvxyhrn" path="res://scenes/Levels/level_base.tscn" id="1_x0sqe"]
+[ext_resource type="Texture2D" uid="uid://cl0dhapy7sit0" path="res://assets/level_maps/lvl5.png" id="2_dtfwk"]
+[ext_resource type="Script" uid="uid://csd2judxm5tfn" path="res://scripts/level_5.gd" id="2_g2ko1"]
+[ext_resource type="Texture2D" uid="uid://dhj3rxi0y5d0h" path="res://assets/level_debug/Lvl5.png" id="2_myn83"]
+[ext_resource type="Script" uid="uid://c7g4b35clq4wk" path="res://scripts/Levels/room_light5.gd" id="3_dtfwk"]
+[ext_resource type="PackedScene" uid="uid://b835m4itbrm1m" path="res://scenes/door.tscn" id="5_ouii0"]
+[ext_resource type="Script" uid="uid://bxmegus6iay4j" path="res://scripts/door_instructions.gd" id="6_q3auo"]
+[ext_resource type="PackedScene" uid="uid://dcnqgatj8d0wl" path="res://scenes/countdown.tscn" id="9_b33i4"]
+[ext_resource type="PackedScene" uid="uid://dpd25bnuilq0h" path="res://scenes/laptop.tscn" id="9_g2ko1"]
+[ext_resource type="PackedScene" uid="uid://cplpl7j2tbep3" path="res://scenes/npc.tscn" id="10_hx76g"]
+[ext_resource type="Texture2D" uid="uid://cwipd1cpl4wq6" path="res://assets/sprites/752229928_1346392821012164_4834134262353039793_n-removebg-preview.png" id="11_b33i4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_myn83"]
 size = Vector2(1244.0135, 9.25)
@@ -187,7 +194,43 @@ size = Vector2(56, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e58nn"]
 size = Vector2(50, 94)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dubw4"]
+size = Vector2(89, 18)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_niewd"]
+size = Vector2(91, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2ko1"]
+size = Vector2(90, 40.283936)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hx76g"]
+size = Vector2(65, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b33i4"]
+size = Vector2(74, 40.283936)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3jqrr"]
+size = Vector2(116.000015, 40.283936)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s0m82"]
+size = Vector2(80, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1a2v"]
+size = Vector2(78, 40.283936)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_doo7i"]
+size = Vector2(82, 24)
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_hx76g"]
+vertices = PackedVector2Array(970.21094, 682, 877.2578, 682, 890.2578, 176.84375, 982.78125, 90.13281, 527.8672, 95.86719, 608.7969, 181.15625, 521.8672, 565.1328, 618.78906, 687.0078, 64.03125, 687.97656, 268.07813, 561.8672, 64.96094, 435.90625, 267.0703, 434.09375)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 3, 2, 5), PackedInt32Array(6, 4, 5, 7), PackedInt32Array(6, 7, 8, 9), PackedInt32Array(9, 8, 10, 11)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(980, 692, 867, 692, 880, 187, 619, 191, 629, 697, 54, 698, 55, 426, 277, 424, 278, 552, 512, 555, 518, 86, 993, 80)])
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3jqrr"]
+radius = 404.18814
+
 [node name="Level" unique_id=89423142 instance=ExtResource("1_x0sqe")]
+script = ExtResource("2_g2ko1")
 
 [node name="Lvl6" type="Sprite2D" parent="Map" parent_id_path=PackedInt32Array(398342888) index="0" unique_id=913200385]
 visible = false
@@ -201,7 +244,10 @@ scale = Vector2(1.1093751, 1.0819445)
 texture = ExtResource("2_dtfwk")
 metadata/_edit_lock_ = true
 
-[node name="Outer Wall" type="StaticBody2D" parent="Map/OuterWall" parent_id_path=PackedInt32Array(1196197006) index="0" unique_id=1442274323]
+[node name="OuterWall" parent="Map" parent_id_path=PackedInt32Array(398342888) index="2" unique_id=1196197006]
+metadata/_edit_lock_ = true
+
+[node name="Outer Wall" type="StaticBody2D" parent="Map/OuterWall" index="0" unique_id=1442274323]
 position = Vector2(642.99994, 39.000004)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/OuterWall/Outer Wall" index="0" unique_id=1030691468]
@@ -211,7 +257,7 @@ shape = SubResource("RectangleShape2D_myn83")
 occluder = SubResource("OccluderPolygon2D_wj752")
 occluder_light_mask = 1023
 
-[node name="Outer Wall2" type="StaticBody2D" parent="Map/OuterWall" parent_id_path=PackedInt32Array(1196197006) index="1" unique_id=938792102]
+[node name="Outer Wall2" type="StaticBody2D" parent="Map/OuterWall" index="1" unique_id=938792102]
 position = Vector2(642, 706)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/OuterWall/Outer Wall2" index="0" unique_id=948623800]
@@ -222,7 +268,7 @@ shape = SubResource("RectangleShape2D_myn83")
 occluder = SubResource("OccluderPolygon2D_wj752")
 occluder_light_mask = 1023
 
-[node name="Outer Wall3" type="StaticBody2D" parent="Map/OuterWall" parent_id_path=PackedInt32Array(1196197006) index="2" unique_id=546119074]
+[node name="Outer Wall3" type="StaticBody2D" parent="Map/OuterWall" index="2" unique_id=546119074]
 position = Vector2(25, 371)
 metadata/_edit_group_ = true
 
@@ -235,7 +281,7 @@ metadata/_edit_group_ = true
 occluder = SubResource("OccluderPolygon2D_lkkcx")
 occluder_light_mask = 1023
 
-[node name="Outer Wall4" type="StaticBody2D" parent="Map/OuterWall" parent_id_path=PackedInt32Array(1196197006) index="3" unique_id=1989240510]
+[node name="Outer Wall4" type="StaticBody2D" parent="Map/OuterWall" index="3" unique_id=1989240510]
 position = Vector2(1260, 372)
 metadata/_edit_group_ = true
 
@@ -248,6 +294,7 @@ occluder = SubResource("OccluderPolygon2D_lkkcx")
 occluder_light_mask = 1023
 
 [node name="InnerWall" parent="Map" parent_id_path=PackedInt32Array(398342888) index="3" unique_id=1358634834]
+visible = false
 metadata/_edit_lock_ = true
 
 [node name="Inner Wall" type="StaticBody2D" parent="Map/InnerWall" index="0" unique_id=382384463]
@@ -473,6 +520,7 @@ occluder_light_mask = 1023
 
 [node name="Room Light" type="Node2D" parent="Map" parent_id_path=PackedInt32Array(398342888) index="4" unique_id=241524177]
 script = ExtResource("3_dtfwk")
+metadata/_edit_lock_ = true
 
 [node name="Room1" type="PointLight2D" parent="Map/Room Light" index="0" unique_id=859314072]
 position = Vector2(1135, 405)
@@ -578,10 +626,10 @@ position = Vector2(17, 3)
 polygon = PackedVector2Array(-36, 222, 43, 222, 44, -263, -171, -263, -170, 83, -42, 83, -42, -4, -32, -4)
 
 [node name="r4" type="Area2D" parent="Map/Room Light" index="15" unique_id=1288204627]
-position = Vector2(-1, -1)
+position = Vector2(591, 141)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Room Light/r4" index="0" unique_id=928426802]
-position = Vector2(706.5, 634.5)
+position = Vector2(888, 641)
 shape = SubResource("RectangleShape2D_cow3m")
 
 [node name="r7" type="Area2D" parent="Map/Room Light" index="16" unique_id=1682988929]
@@ -613,6 +661,7 @@ position = Vector2(0, 18)
 shape = SubResource("RectangleShape2D_uf8ug")
 
 [node name="Node2D" type="StaticBody2D" parent="Map" parent_id_path=PackedInt32Array(398342888) index="5" unique_id=1945561829]
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/Node2D" index="0" unique_id=1066305949]
 position = Vector2(1115, 159)
@@ -707,10 +756,226 @@ position = Vector2(74, 341)
 shape = SubResource("RectangleShape2D_e58nn")
 
 [node name="Player" parent="." index="1" unique_id=1866997068]
-position = Vector2(1197, 391)
+position = Vector2(1200.9999, 353)
+
+[node name="Camera2D" type="Camera2D" parent="Player" index="2" unique_id=464434309]
+zoom = Vector2(3, 3)
+
+[node name="Camera2D" parent="." index="3" unique_id=2043686662]
+enabled = false
 
 [node name="DirectionalLight2D" parent="." index="4" unique_id=921657011]
 energy = 4.76
+
+[node name="Doors" type="Node2D" parent="." index="5" unique_id=1732138295]
+
+[node name="Door" parent="Doors" index="0" unique_id=411034440 instance=ExtResource("5_ouii0")]
+position = Vector2(1003, 629)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" parent="Doors/Door" index="0" unique_id=670395670]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_dubw4")
+
+[node name="ColorRect" parent="Doors/Door" index="1" unique_id=818202410]
+offset_left = -45.374268
+offset_right = 44.882324
+
+[node name="CollisionShape2D" parent="Doors/Door/DoorInteract" parent_id_path=PackedInt32Array(411034440, 1400001827) index="0" unique_id=1275663308]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_niewd")
+
+[node name="Instructions" type="Area2D" parent="Doors/Door" index="3" unique_id=444233463]
+rotation = 1.5707964
+script = ExtResource("6_q3auo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door/Instructions" index="0" unique_id=1504555614]
+position = Vector2(0, 1)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_g2ko1")
+
+[node name="Door2" parent="Doors" index="1" unique_id=1683250493 instance=ExtResource("5_ouii0")]
+position = Vector2(851, 628)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" parent="Doors/Door2" index="0" unique_id=670395670]
+position = Vector2(4.5, 0)
+
+[node name="ColorRect" parent="Doors/Door2" index="1" unique_id=818202410]
+offset_left = -34.94098
+offset_right = 38.25476
+metadata/_edit_use_anchors_ = true
+
+[node name="CollisionShape2D" parent="Doors/Door2/DoorInteract" parent_id_path=PackedInt32Array(1683250493, 1400001827) index="0" unique_id=1275663308]
+position = Vector2(5.5, 0)
+shape = SubResource("RectangleShape2D_hx76g")
+
+[node name="Instructions" type="Area2D" parent="Doors/Door2" index="3" unique_id=958410181]
+rotation = 1.5707964
+script = ExtResource("6_q3auo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door2/Instructions" index="0" unique_id=1891395941]
+position = Vector2(0, -1)
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_b33i4")
+
+[node name="Door3" parent="Doors" index="2" unique_id=1601298689 instance=ExtResource("5_ouii0")]
+position = Vector2(510, 155)
+rotation = 1.5707964
+
+[node name="ColorRect" parent="Doors/Door3" index="1" unique_id=818202410]
+offset_left = -57.47712
+offset_right = 57.47712
+
+[node name="Instructions" type="Area2D" parent="Doors/Door3" index="3" unique_id=1935091189]
+rotation = 1.5707964
+script = ExtResource("6_q3auo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door3/Instructions" index="0" unique_id=1513374098]
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_3jqrr")
+
+[node name="Door4" parent="Doors" index="3" unique_id=1796851443 instance=ExtResource("5_ouii0")]
+position = Vector2(509, 400)
+rotation = 1.5707964
+
+[node name="Instructions" type="Area2D" parent="Doors/Door4" index="3" unique_id=858203617]
+rotation = 1.5707964
+script = ExtResource("6_q3auo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door4/Instructions" index="0" unique_id=1021861623]
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_3jqrr")
+
+[node name="Door5" parent="Doors" index="4" unique_id=1449417657 instance=ExtResource("5_ouii0")]
+position = Vector2(155, 248)
+
+[node name="ColorRect" parent="Doors/Door5" index="1" unique_id=818202410]
+offset_left = -39.0
+offset_right = 39.0
+
+[node name="CollisionShape2D" parent="Doors/Door5/DoorInteract" parent_id_path=PackedInt32Array(1449417657, 1400001827) index="0" unique_id=1275663308]
+shape = SubResource("RectangleShape2D_s0m82")
+
+[node name="Instructions" type="Area2D" parent="Doors/Door5" index="3" unique_id=1366000828]
+rotation = 1.5707964
+script = ExtResource("6_q3auo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doors/Door5/Instructions" index="0" unique_id=1249935355]
+rotation = 1.5707964
+shape = SubResource("RectangleShape2D_r1a2v")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="6" unique_id=104054847]
+
+[node name="PickpocketLabel" type="Label" parent="CanvasLayer" index="0" unique_id=1038230708]
+visible = false
+offset_left = 819.0
+offset_top = 615.0
+offset_right = 1250.0
+offset_bottom = 694.0
+theme_override_font_sizes/font_size = 58
+text = "[F] PICKPOCKET"
+
+[node name="KillLabel" type="Label" parent="CanvasLayer" index="1" unique_id=1052260042]
+visible = false
+offset_left = 1062.0
+offset_top = 632.0
+offset_right = 1266.0
+offset_bottom = 711.0
+theme_override_font_sizes/font_size = 58
+text = "[E] KILL"
+
+[node name="LockpickLabel" type="Label" parent="CanvasLayer" index="2" unique_id=1326106068]
+visible = false
+offset_left = 70.0
+offset_top = 45.0
+offset_right = 274.0
+offset_bottom = 124.0
+scale = Vector2(0.605, 0.605)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 9
+theme_override_constants/shadow_offset_y = 5
+theme_override_font_sizes/font_size = 58
+text = "[L] LOCKPICK
+[O] OPEN"
+
+[node name="CountdownDisplay" parent="CanvasLayer" index="3" unique_id=1102513215 instance=ExtResource("9_b33i4")]
+mins = 3
+
+[node name="confrotn" type="RichTextLabel" parent="CanvasLayer" index="4" unique_id=1183429924]
+visible = false
+offset_left = 218.0
+offset_top = 282.0
+offset_right = 1071.0
+offset_bottom = 444.0
+theme_override_font_sizes/normal_font_size = 118
+bbcode_enabled = true
+text = "[shake]CONFRONT [E]"
+fit_content = true
+
+[node name="Laptop" parent="." index="7" unique_id=961706132 instance=ExtResource("9_g2ko1")]
+position = Vector2(719, 337)
+scale = Vector2(1.92, 1.92)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="8" unique_id=412819195]
+position = Vector2(116, 398)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0" unique_id=1487624420]
+position = Vector2(41, 12)
+shape = SubResource("RectangleShape2D_doo7i")
+
+[node name="ColorRect" type="ColorRect" parent="StaticBody2D" index="1" unique_id=1571132174]
+offset_right = 82.0
+offset_bottom = 24.0
+color = Color(0.20955932, 0.55860347, 0.27314797, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="NPCs" type="Node2D" parent="." index="9" unique_id=1120761514]
+
+[node name="Node2D" type="Node2D" parent="NPCs" index="0" unique_id=1549348405]
+
+[node name="NPC" parent="NPCs/Node2D" index="0" unique_id=1011810883 node_paths=PackedStringArray("points") instance=ExtResource("10_hx76g")]
+position = Vector2(590, 143)
+points = [NodePath("../Marker2D"), NodePath("../Marker2D2"), NodePath("../Marker2D3")]
+
+[node name="Marker2D" type="Marker2D" parent="NPCs/Node2D" index="1" unique_id=1491264075]
+position = Vector2(590, 143)
+
+[node name="Marker2D2" type="Marker2D" parent="NPCs/Node2D" index="2" unique_id=389697099]
+position = Vector2(925, 149)
+
+[node name="Marker2D3" type="Marker2D" parent="NPCs/Node2D" index="3" unique_id=1496878186]
+position = Vector2(928, 474)
+
+[node name="Node2D3" type="Node2D" parent="NPCs" index="1" unique_id=551800636]
+position = Vector2(590, 142)
+
+[node name="NPC" parent="NPCs/Node2D3" index="0" unique_id=818461314 node_paths=PackedStringArray("points") instance=ExtResource("10_hx76g")]
+position = Vector2(-190, 490)
+points = [NodePath("../Marker2D"), NodePath("../Marker2D2"), NodePath("../Marker2D3")]
+
+[node name="Marker2D" type="Marker2D" parent="NPCs/Node2D3" index="1" unique_id=544665497]
+position = Vector2(-37, 483)
+
+[node name="Marker2D2" type="Marker2D" parent="NPCs/Node2D3" index="2" unique_id=793508775]
+position = Vector2(-16, 193)
+
+[node name="Marker2D3" type="Marker2D" parent="NPCs/Node2D3" index="3" unique_id=667395718]
+position = Vector2(-448, 481)
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." index="10" unique_id=803704731]
+navigation_polygon = SubResource("NavigationPolygon_hx76g")
+metadata/_edit_lock_ = true
+
+[node name="75222992813463928210121644834134262353039793NRemovebgPreview" type="Sprite2D" parent="." index="11" unique_id=2114061379]
+position = Vector2(155, 120)
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("11_b33i4")
+
+[node name="Area2D" type="Area2D" parent="75222992813463928210121644834134262353039793NRemovebgPreview" index="0" unique_id=1965399184]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="75222992813463928210121644834134262353039793NRemovebgPreview/Area2D" index="0" unique_id=347250389]
+shape = SubResource("CircleShape2D_3jqrr")
 
 [connection signal="body_entered" from="Map/Room Light/r1" to="Map/Room Light" method="_on_r_1_body_entered"]
 [connection signal="body_exited" from="Map/Room Light/r1" to="Map/Room Light" method="_on_r_1_body_exited"]
@@ -728,3 +993,22 @@ energy = 4.76
 [connection signal="body_exited" from="Map/Room Light/r9" to="Map/Room Light" method="_on_r_9_body_exited"]
 [connection signal="body_entered" from="Map/Room Light/r10" to="Map/Room Light" method="_on_r_10_body_entered"]
 [connection signal="body_exited" from="Map/Room Light/r10" to="Map/Room Light" method="_on_r_10_body_exited"]
+[connection signal="body_entered" from="Doors/Door/Instructions" to="Doors/Door/Instructions" method="_on_body_entered"]
+[connection signal="body_exited" from="Doors/Door/Instructions" to="Doors/Door/Instructions" method="_on_body_exited"]
+[connection signal="body_entered" from="Doors/Door2/Instructions" to="Doors/Door2/Instructions" method="_on_body_entered"]
+[connection signal="body_exited" from="Doors/Door2/Instructions" to="Doors/Door2/Instructions" method="_on_body_exited"]
+[connection signal="body_entered" from="Doors/Door3/Instructions" to="Doors/Door3/Instructions" method="_on_body_entered"]
+[connection signal="body_exited" from="Doors/Door3/Instructions" to="Doors/Door3/Instructions" method="_on_body_exited"]
+[connection signal="body_entered" from="Doors/Door4/Instructions" to="Doors/Door4/Instructions" method="_on_body_entered"]
+[connection signal="body_exited" from="Doors/Door4/Instructions" to="Doors/Door4/Instructions" method="_on_body_exited"]
+[connection signal="body_entered" from="Doors/Door5/Instructions" to="Doors/Door5/Instructions" method="_on_body_entered"]
+[connection signal="body_exited" from="Doors/Door5/Instructions" to="Doors/Door5/Instructions" method="_on_body_exited"]
+[connection signal="body_entered" from="75222992813463928210121644834134262353039793NRemovebgPreview/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="75222992813463928210121644834134262353039793NRemovebgPreview/Area2D" to="." method="_on_area_2d_body_exited"]
+
+[editable path="Doors/Door"]
+[editable path="Doors/Door2"]
+[editable path="Doors/Door3"]
+[editable path="Doors/Door4"]
+[editable path="Doors/Door5"]
+[editable path="CanvasLayer/CountdownDisplay"]

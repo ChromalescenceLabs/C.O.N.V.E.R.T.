@@ -27,9 +27,6 @@ func _input(event: InputEvent) -> void:
 					$Sentence.start()
 					$Sentence.setNextChar(currentLetterInd)
 				else:
-					print ("done")
-					$black/AnimationPlayer.play("fade in")
-					await $black/AnimationPlayer.animation_finished
 					queue_free()
 
 		else:

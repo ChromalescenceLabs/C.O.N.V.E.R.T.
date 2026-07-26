@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://hh6xl27v66yi" path="res://scripts/door_interact.gd" id="1_hpvv5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5f452"]
-size = Vector2(64, 18)
+size = Vector2(76, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hpvv5"]
 size = Vector2(65, 40)

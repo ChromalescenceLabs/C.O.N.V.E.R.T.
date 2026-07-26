@@ -20,7 +20,6 @@ texture = ExtResource("2_81yxx")
 path_desired_distance = 10.0
 avoidance_enabled = true
 radius = 24.0
-debug_enabled = true
 
 [connection signal="target_reached" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_target_reached"]
 [connection signal="velocity_computed" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_velocity_computed"]

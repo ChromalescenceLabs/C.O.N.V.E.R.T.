@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cwpfdb1yi3evk"]
+
+[ext_resource type="AudioStream" uid="uid://cleyc4tatokxt" path="res://assets/sound/LVL 1.mp3" id="1_ejojg"]
+[ext_resource type="Script" uid="uid://vq3hghev1b37" path="res://scripts/music.gd" id="1_wia2r"]
+[ext_resource type="AudioStream" uid="uid://bvuf6v61wpipg" path="res://assets/sound/LVL 3.mp3" id="2_wia2r"]
+[ext_resource type="AudioStream" uid="uid://chrmsaql685ud" path="res://assets/sound/LVL 5.mp3" id="3_mobtd"]
+[ext_resource type="AudioStream" uid="uid://cku0d47rlsbq0" path="res://assets/sound/DEAD.mp3" id="4_keplp"]
+[ext_resource type="AudioStream" uid="uid://bnvfkfp0h0voh" path="res://assets/sound/Title Screen.mp3" id="6_mobtd"]
+
+[node name="Music" type="Node" unique_id=84447910]
+script = ExtResource("1_wia2r")
+
+[node name="LVL1" type="AudioStreamPlayer" parent="." unique_id=419767998]
+stream = ExtResource("1_ejojg")
+
+[node name="LVL2" type="AudioStreamPlayer" parent="." unique_id=27462435]
+stream = ExtResource("2_wia2r")
+
+[node name="LVL3" type="AudioStreamPlayer" parent="." unique_id=1785915834]
+stream = ExtResource("3_mobtd")
+
+[node name="Dead" type="AudioStreamPlayer" parent="." unique_id=1145375027]
+stream = ExtResource("4_keplp")
+
+[node name="TitleScreen" type="AudioStreamPlayer" parent="." unique_id=1988304025]
+stream = ExtResource("6_mobtd")

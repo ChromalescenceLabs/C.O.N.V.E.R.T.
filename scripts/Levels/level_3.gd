@@ -29,7 +29,7 @@ func _input(event: InputEvent) -> void:
 	if allow_kill and kill_vacinity:
 			var end = MISSION_END.instantiate()
 			end.status = "Success"
-			end.next_scene = "uid://oew0jxo2b2v3"
+			end.next_scene = "uid://nrjfmedp5qge"
 			add_child(end)
 	else:
 		if event.is_action_pressed("click"):
